@@ -26,7 +26,7 @@ class App extends React.Component {
           <div className="flyout">
             <Navbar darkMode={this.state.darkMode} />
             <main>
-              <Routes globalProps={{...this.state}} />
+              <Routes globalProps={{ ...this.state }} />
             </main>
             <Footer darkMode={this.state.darkMode} />
           </div>
