@@ -1,24 +1,21 @@
 <p align="center">
   <a href="https://www.aichner-christian.com/" target="_blank" rel="noopener noreferrer">
-    <img src="https://github.com/aichner/React-MDB-Firebase-Template/blob/master/src/assets/react-mdb-firebase.jpg?raw=true" alt="Agency Logo" height="250" style="max-width: 100%" />
+    <img src="https://github.com/aichner/Company-Homepage/blob/master/src/assets/content/agency.jpg?raw=true" alt="Agency Logo" height="250" style="max-width: 100%" />
   </a>
 </p>
 
-<h3 align="center">Official React + MDB + Firebase Template</h3>
+<h3 align="center">Official Company Homepage</h3>
 
 <p align="center">
-  This repository serves as an entry point for future React MDB Basic projects of the
-  Advertisement Agency Christian Aichner.
+  Open Source official company homepage of the Advertisement Agency Christian Aichner.
   <br>
   <br>
-  <a href="https://github.com/aichner/React-MDB-Firebase-Template/issues/new?template=bug_report.md">Report bug</a>
+  <a href="https://github.com/aichner/Company-Homepage/issues/new?template=bug_report.md">Report bug</a>
   ·
-  <a href="https://github.com/aichner/React-MDB-Firebase-Template/issues/new?template=feature_request.md">Request feature</a>
-  ·
-  <a href="https://www.aichner-christian.com/damn/dev">Blog</a>
+  <a href="https://github.com/aichner/Company-Homepage/issues/new?template=feature_request.md">Request feature</a>
   <br>
   <br>
-  <a href="https://www.codacy.com/app/aichner/React-MDB-Firebase-Template">
+  <a href="https://www.codacy.com/app/aichner/Company-Homepage">
     <img src="https://api.codacy.com/project/badge/Grade/579c145ee6cf4d7e8ae7c1c78a13617a" />
   </a>
   <a href="https://liberapay.com/aichner/donate">
@@ -47,8 +44,8 @@
 
 ## [](#quick-start)Quick start
 
-- Clone the repository: `git clone https://github.com/aichner/React-MDB-Firebase-Template.git react-mdb-firebase`
-- Go to the new folder `cd react-mdb-firebase`
+- Clone the repository: `git clone https://github.com/aichner/Company-Homepage.git company-homepage`
+- Go to the new folder `cd company-homepage`
 - (Optional) For a better experience purchase MDB React Pro and change the source of `"mdbreact"` in the `package.json`
 - Run `npm install`
 - Rename your `fbConfig.js.template` to `fbConfig.js` in your `src/config` and import your firebase configuration
@@ -59,16 +56,16 @@ The demo site will now be accessible at [http://localhost:3000/](http://localhos
 ## [](#bug-and-feature-requests)Bugs and feature requests
 
 Have a bug or a feature request? Please first search for existing and closed issues. If your problem or idea is not
-addressed yet, [please open a new issue](https://github.com/aichner/React-MDB-Firebase-Template/issues/new/choose).
+addressed yet, [please open a new issue](https://github.com/aichner/Company-Homepage/issues/new/choose).
 
 ## [](#contributing)Contributing
 
-![GitHub last commit](https://img.shields.io/github/last-commit/aichner/React-MDB-Firebase-Template)
-![GitHub issues](https://img.shields.io/github/issues-raw/aichner/React-MDB-Firebase-Template)
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/aichner/React-MDB-Firebase-Template?color=green)
+![GitHub last commit](https://img.shields.io/github/last-commit/aichner/Company-Homepage)
+![GitHub issues](https://img.shields.io/github/issues-raw/aichner/Company-Homepage)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/aichner/Company-Homepage?color=green)
 
 Please read through our
-[contributing guidelines](https://github.com/aichner/React-MDB-Firebase-Template/blob/master/CONTRIBUTING.md). Included are
+[contributing guidelines](https://github.com/aichner/Company-Homepage/blob/master/CONTRIBUTING.md). Included are
 directions for opening issues, coding standards, and notes on development.
 
 All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by
@@ -85,7 +82,7 @@ Get updates on our development and chat/talk with the project maintainers and co
 
 ## [](#versioning)Versioning
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/aichner/React-MDB-Firebase-Template)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/aichner/Company-Homepage)
 
 For transparency into our release cycle and in striving to maintain backward compatibility, this repository is
 maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to
@@ -98,6 +95,12 @@ those rules whenever possible.
 - <https://twitter.com/realaichner>
 - <https://www.facebook.com/aichner.christian>
 - <https://github.com/Aichnerc>
+
+**Luca Allmaier**
+
+- <https://www.instagram.com/luca_allmaier/>
+- <https://www.facebook.com/luca.allmaier.1>
+- <https://github.com/LucaAllmaier>
 
 ## [](#thanks)Thanks
 
