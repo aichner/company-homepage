@@ -6,16 +6,16 @@
 }
 
 // Custom colors
-.bg-dark {
+.agency-dark {
   background-color: $dark !important;
   &.darken-1 {
-    background-color: darken($dark, 5%) !important;
+    background-color: darken($dark, 2%) !important;
   }
   &.darken-2 {
-    background-color: darken($dark, 10%) !important;
+    background-color: darken($dark, 5%) !important;
   }
   &.darken-3 {
-    background-color: darken($dark, 15%) !important;
+    background-color: darken($dark, 10%) !important;
   }
   &.lighten-1 {
     background-color: lighten($dark, 10%) !important;
@@ -27,7 +27,7 @@
     background-color: lighten($dark, 30%) !important;
   }
 }
-.bg-red {
+.agency-red {
   background-color: $red !important;
   &.darken-1 {
     background-color: darken($red, 10%) !important;
@@ -48,25 +48,17 @@
     background-color: lighten($red, 30%) !important;
   }
 }
-.bg-green {
-  background-color: $green !important;
-  &.darken-1 {
-    background-color: darken($green, 10%) !important;
+// Custom buttons
+.btn-agency-red {
+  background-color: $red !important;
+  color: white;
+  &:hover {
+    background-color: darken($red, 10%) !important;
+    color: white;
   }
-  &.darken-2 {
-    background-color: darken($green, 20%) !important;
-  }
-  &.darken-3 {
-    background-color: darken($green, 30%) !important;
-  }
-  &.lighten-1 {
-    background-color: lighten($green, 10%) !important;
-  }
-  &.lighten-2 {
-    background-color: lighten($green, 20%) !important;
-  }
-  &.lighten-3 {
-    background-color: lighten($green, 30%) !important;
+  &:focus {
+    background-color: darken($red, 20%) !important;
+    color: white;
   }
 }
 
@@ -103,10 +95,10 @@
 }
 
 // Fix icon spacing in buttons
-.btn{
-	i{
-		padding-right: .2rem;
-	}
+.btn {
+  i {
+    padding-right: 0.2rem;
+  }
 }
 
 /** 
