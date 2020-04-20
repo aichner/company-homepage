@@ -7,8 +7,7 @@
 <h3 align="center">Official Company Homepage</h3>
 
 <p align="center">
-  This repository serves as an entry point for future React MDB Basic projects of the
-  Advertisement Agency Christian Aichner.
+  Open Source official company homepage of the Advertisement Agency Christian Aichner.
   <br>
   <br>
   <a href="https://github.com/aichner/Company-Homepage/issues/new?template=bug_report.md">Report bug</a>
