@@ -17,9 +17,15 @@ import {
 
 class Routes extends React.Component {
   render() {
+    const { globalProps } = this.props;
+
     return (
       <Switch>
-        <Route exact path="/" render={(props) => <HomePage {...props} />} />
+        <Route
+          exact
+          path="/"
+          render={(props) => <HomePage {...props} globalProps={globalProps} />}
+        />
         <Route
           exact
           path="/login"
