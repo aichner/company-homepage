@@ -4,7 +4,10 @@ import React from "react";
 
 //> Components
 // Sections
-import { Hero } from "../../organisms/sections";
+import {
+  Hero,
+  ContactForm,
+} from "../../organisms/sections";
 
 //> CSS
 // All organisms use their own scss implementation
@@ -20,6 +23,7 @@ class HomePage extends React.Component {
     return (
       <>
         <Hero darkMode={globalProps.darkMode} />
+        <ContactForm darkMode={globalProps.darkMode} />
       </>
     );
   }

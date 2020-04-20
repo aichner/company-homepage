@@ -1,9 +1,11 @@
 //> Components
 // Import all components to export them for easy access from parent components
 import Hero from "./Hero";
+import ContactForm from "./ContactForm";
 
 export {
   Hero,
+  ContactForm,
 };
 
 /**
