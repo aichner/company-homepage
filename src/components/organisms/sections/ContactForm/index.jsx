@@ -27,12 +27,20 @@ import "./contactForm.scss";
 // To be added
 
 class ContactForm extends React.Component {
-  state = {
+  state = {};
 
+  componentDidMount = () => {};
+
+  onTextChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
   };
 
-  componentDidMount = () => {
-
+  onCheckChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.checked,
+    });
   };
 
   render() {
@@ -46,8 +54,18 @@ class ContactForm extends React.Component {
               <MDBCol md="6">
                 <MDBCard>
                   <MDBCardBody className="py-5 my-5">
-                    <MDBInput label="Dein Name" />
-                    <MDBInput label="Deine Email Adresse" />
+                    <MDBInput
+                      label="Dein Name"
+                      name="fullname"
+                      value={this.state.fullname}
+                      onChange={(e) => this.onTextChange(e)}
+                    />
+                    <MDBInput
+                      label="Deine Email Adresse"
+                      name="email"
+                      value={this.state.email}
+                      onChange={(e) => this.onTextChange(e)}
+                    />
                     <br />
                     <MDBInput type="textarea" label="Dein Anliegen" />
                   </MDBCardBody>
