@@ -7,6 +7,7 @@ import React from "react";
 import {
   Hero,
   ContactForm,
+  Services,
 } from "../../organisms/sections";
 
 //> CSS
@@ -24,6 +25,7 @@ class HomePage extends React.Component {
       <>
         <Hero darkMode={globalProps.darkMode} />
         <ContactForm darkMode={globalProps.darkMode} />
+        <Services darkMode={globalProps.darkMode} />
       </>
     );
   }
