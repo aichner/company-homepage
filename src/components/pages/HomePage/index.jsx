@@ -8,6 +8,7 @@ import {
   Hero,
   ContactForm,
   Services,
+  CallToAction,
 } from "../../organisms/sections";
 
 //> CSS
@@ -25,6 +26,7 @@ class HomePage extends React.Component {
       <>
         <Hero darkMode={globalProps.darkMode} />
         <Services darkMode={globalProps.darkMode} />
+        <CallToAction darkMode={globalProps.darkMode} />
         <ContactForm darkMode={globalProps.darkMode} />
       </>
     );
