@@ -24,8 +24,8 @@ class HomePage extends React.Component {
     return (
       <>
         <Hero darkMode={globalProps.darkMode} />
-        <ContactForm darkMode={globalProps.darkMode} />
         <Services darkMode={globalProps.darkMode} />
+        <ContactForm darkMode={globalProps.darkMode} />
       </>
     );
   }
