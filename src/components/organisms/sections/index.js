@@ -3,11 +3,13 @@
 import Hero from "./Hero";
 import ContactForm from "./ContactForm";
 import Services from "./Services";
+import CallToAction from "./CallToAction";
 
 export {
   Hero,
   ContactForm,
   Services,
+  CallToAction,
 };
 
 /**
