@@ -4,12 +4,14 @@ import Hero from "./Hero";
 import ContactForm from "./ContactForm";
 import Services from "./Services";
 import CallToAction from "./CallToAction";
+import Trusted from "./Trusted";
 
 export {
   Hero,
   ContactForm,
   Services,
   CallToAction,
+  Trusted,
 };
 
 /**
