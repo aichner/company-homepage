@@ -17,6 +17,9 @@ import {
   BrandingPage,
 } from "./components/pages";
 
+//> MessagePage content
+const messagePage = ["about", "privacy"];
+
 class Routes extends React.Component {
   render() {
     const { globalProps } = this.props;
@@ -54,6 +57,18 @@ class Routes extends React.Component {
             <BrandingPage {...props} globalProps={globalProps} />
           )}
         />
+        {messagePage.map((page, i) => {
+          return (
+            <Route
+              key={i}
+              exact
+              path={"/" + page}
+              render={(props) => (
+                <MessagePage {...props} globalProps={globalProps} />
+              )}
+            />
+          );
+        })}
         <Route component={HomePage} />
       </Switch>
     );
