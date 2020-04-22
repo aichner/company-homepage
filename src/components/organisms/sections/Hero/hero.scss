@@ -1,0 +1,119 @@
+@import "../../../../utilities/variables";
+
+#hero {
+  // Basic setup
+  h1 {
+    font-size: 4.2rem;
+  }
+  // Left column text more center
+  .col-md-6:first-child {
+    margin-bottom: 6rem !important;
+  }
+  .gradient {
+    background: -moz-linear-gradient(
+      45deg,
+      rgba(42, 27, 161, 0.7),
+      rgba(29, 210, 177, 0.7) 100%
+    );
+    background: -webkit-linear-gradient(
+      45deg,
+      rgba(42, 27, 161, 0.7),
+      rgba(29, 210, 177, 0.7) 100%
+    );
+    background: -webkit-gradient(
+      linear,
+      45deg,
+      from(rgba(42, 27, 161, 0.7)),
+      to(rgba(29, 210, 177, 0.7))
+    );
+    background: -o-linear-gradient(
+      45deg,
+      rgba(42, 27, 161, 0.7),
+      rgba(29, 210, 177, 0.7) 100%
+    );
+    background: linear-gradient(
+      45deg,
+      rgba(42, 27, 161, 0.7),
+      rgba(29, 210, 177, 0.7) 100%
+    );
+  }
+  .hero-view {
+    max-height: 100vh;
+  }
+  .container,
+  #hero .hero-row {
+    max-height: 100%;
+  }
+  h6 {
+    line-height: 1.7;
+  }
+
+  // Dark mode
+  &.dark {
+    background: linear-gradient(to top, $agencyDark 0%, darken($agencyDark, 10%) 100%);
+    color: white;
+  }
+
+  // Light mode
+  &.light {
+    background: linear-gradient(to top, white 0%, darken(white, 10%) 100%);
+    color: $agencyDark !important;
+  }
+}
+
+#seperator {
+  background-image: url("../../../../assets/bg/title-curve.svg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem 0 2rem 0;
+  width: 100%;
+  min-height: 400px;
+  max-height: 500px;
+  margin-top: -220px;
+  position: relative;
+  z-index: 1;
+
+  .row {
+    margin-top: 8rem;
+  }
+
+  // Custom button
+  .btn-start {
+    text-transform: unset;
+  }
+
+  // Custom container fix
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1440px;
+    }
+  }
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019-2020 Werbeagentur Christian Aichner
+ */

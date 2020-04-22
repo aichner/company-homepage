@@ -6,73 +6,73 @@
 }
 
 // Custom colors
-.bg-dark {
-  background-color: $dark !important;
+.agency-dark {
+  background-color: $agencyDark !important;
   &.darken-1 {
-    background-color: darken($dark, 5%) !important;
+    background-color: darken($agencyDark, 2%) !important;
   }
   &.darken-2 {
-    background-color: darken($dark, 10%) !important;
+    background-color: darken($agencyDark, 5%) !important;
   }
   &.darken-3 {
-    background-color: darken($dark, 15%) !important;
+    background-color: darken($agencyDark, 10%) !important;
   }
   &.lighten-1 {
-    background-color: lighten($dark, 10%) !important;
+    background-color: lighten($agencyDark, 10%) !important;
   }
   &.lighten-2 {
-    background-color: lighten($dark, 20%) !important;
+    background-color: lighten($agencyDark, 20%) !important;
   }
   &.lighten-3 {
-    background-color: lighten($dark, 30%) !important;
+    background-color: lighten($agencyDark, 30%) !important;
   }
 }
-.bg-red {
-  background-color: $red !important;
+.agency-red {
+  background-color: $agencyRed !important;
   &.darken-1 {
-    background-color: darken($red, 10%) !important;
+    background-color: darken($agencyRed, 10%) !important;
   }
   &.darken-2 {
-    background-color: darken($red, 20%) !important;
+    background-color: darken($agencyRed, 20%) !important;
   }
   &.darken-3 {
-    background-color: darken($red, 30%) !important;
+    background-color: darken($agencyRed, 30%) !important;
   }
   &.lighten-1 {
-    background-color: lighten($red, 10%) !important;
+    background-color: lighten($agencyRed, 10%) !important;
   }
   &.lighten-2 {
-    background-color: lighten($red, 20%) !important;
+    background-color: lighten($agencyRed, 20%) !important;
   }
   &.lighten-3 {
-    background-color: lighten($red, 30%) !important;
+    background-color: lighten($agencyRed, 30%) !important;
   }
 }
-.bg-green {
-  background-color: $green !important;
-  &.darken-1 {
-    background-color: darken($green, 10%) !important;
+// Custom buttons
+.btn-agency-red {
+  background-color: $agencyRed !important;
+  color: white;
+  &:hover {
+    background-color: darken($agencyRed, 10%) !important;
+    color: white;
   }
-  &.darken-2 {
-    background-color: darken($green, 20%) !important;
+  &:focus {
+    background-color: darken($agencyRed, 20%) !important;
+    color: white;
   }
-  &.darken-3 {
-    background-color: darken($green, 30%) !important;
-  }
-  &.lighten-1 {
-    background-color: lighten($green, 10%) !important;
-  }
-  &.lighten-2 {
-    background-color: lighten($green, 20%) !important;
-  }
-  &.lighten-3 {
-    background-color: lighten($green, 30%) !important;
+}
+.btn-outline-agency-red {
+  color: $agencyRed !important;
+  background-color: transparent !important;
+  border: 2px solid $agencyRed !important;
+  &:hover {
+    border: 2px solid darken($agencyRed,10%) !important;
   }
 }
 
 // Custom text
 .red-text {
-  color: $red !important;
+  color: $agencyRed !important;
 }
 .pink-text {
   color: $pink !important;
@@ -81,6 +81,9 @@
 // Buttons
 .btn {
   box-shadow: none !important;
+  i {
+    margin-right: 0.3rem;
+  }
   &:hover {
     box-shadow: none;
   }
@@ -103,10 +106,10 @@
 }
 
 // Fix icon spacing in buttons
-.btn{
-	i{
-		padding-right: .2rem;
-	}
+.btn {
+  i {
+    padding-right: 0.2rem;
+  }
 }
 
 /** 

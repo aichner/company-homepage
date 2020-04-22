@@ -1,9 +1,12 @@
-$agencyDark: #212529;
-$agencyRed: #f61a42;
-$green: #77bd43;
-$pink: #ea4aaa;
+.dev-main {
+  min-height: 100vh;
+  overflow: hidden;
+  #dev {
+    min-height: 100vh;
+  }
+}
 
-/** 
+/**
  * SPDX-License-Identifier: (EUPL-1.2)
  * Copyright © 2019-2020 Werbeagentur Christian Aichner
  */

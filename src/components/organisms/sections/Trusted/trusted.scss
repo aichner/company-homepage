@@ -1,7 +1,9 @@
-$agencyDark: #212529;
-$agencyRed: #f61a42;
-$green: #77bd43;
-$pink: #ea4aaa;
+#trusted {
+  background: #e7e7e7;
+  img {
+    max-height: 100px;
+  }
+}
 
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)

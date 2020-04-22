@@ -1,0 +1,30 @@
+#services {
+  &::before {
+    content: " ";
+    background: linear-gradient(#e6e6e6, white);
+    height: 300px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  .col-md-4 {
+    padding: 0;
+  }
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.dark-mode {
+  #services {
+    img {
+      filter: invert(1);
+    }
+  }
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019-2020 Werbeagentur Christian Aichner
+ */

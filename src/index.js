@@ -4,6 +4,10 @@ import React from "react";
 // This serves as an entry point to the DOM and server renderers for React
 import ReactDOM from "react-dom";
 
+//> Additional libraries
+// Parallax
+import { ParallaxProvider } from "react-scroll-parallax";
+
 //> Font Awesome
 // Font Awesome is an awesome icon library
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -81,9 +85,9 @@ const store = createStore(
 store.firebaseAuthIsReady.then(() => {
   // Render the DOM
   ReactDOM.render(
-    <Provider store={store}>
+    <ParallaxProvider store={store}>
       <App />
-    </Provider>,
+    </ParallaxProvider>,
     document.getElementById("root")
   );
   registerServiceWorker();

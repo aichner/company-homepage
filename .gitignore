@@ -10,6 +10,9 @@ package-lock.json
 # Production
 /build
 
+# Copyrighted material like partner company logos
+/src/assets/content/trusted/*
+
 # MDB
 mdbreact-*
 
