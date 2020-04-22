@@ -1,34 +1,30 @@
 //> React
 // Contains all the functionality necessary to define React components
-import React from 'react';
+import React from "react";
 
 //> Additional libraries
 // Parallax
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax } from "react-scroll-parallax";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
-import {
-  MDBRow,
-  MDBCol,
-  MDBBtn,
-  MDBView,
-  MDBIcon,
-  MDBMask,
-} from 'mdbreact';
+import { MDBRow, MDBCol, MDBBtn, MDBView, MDBIcon, MDBMask } from "mdbreact";
 
 //> Images
 // Rocket
-import rocket from '../../../../assets/content/icons/rocket.png';
+import rocket from "../../../../assets/content/icons/rocket.png";
 //import rocket_pen from '../../../../assets/content/icons/rocket_pen.png';
-import planet1 from '../../../../assets/content/icons/planet1.jpg';
+import planet1 from "../../../../assets/content/icons/planet1.jpg";
 
+//> CSS
+import "./callToAction.scss";
 
 class CallToAction extends React.Component {
   render() {
-    const { globalstore } = this.props;
+    const { darkMode } = this.props;
+
     return (
-      <div id="calltoaction">
+      <section id="calltoaction">
         <MDBRow>
           <MDBCol className="text-center">
             <MDBRow className="space-left">
@@ -48,12 +44,13 @@ class CallToAction extends React.Component {
                   <MDBMask />
                 </MDBView>
               </MDBCol>
-              <MDBCol>
-              </MDBCol>
+              <MDBCol></MDBCol>
             </MDBRow>
           </MDBCol>
           <MDBCol md="auto" className="text-center">
-            <h2 className="gidole">Es ist einfach, <strong>jetzt</strong> zu starten!</h2>
+            <h2 className="gidole">
+              Es ist einfach, <strong>jetzt</strong> zu starten!
+            </h2>
             <p>Und der Einstieg ist kostenlos. Zwei Dinge die jeder liebt.</p>
             <MDBBtn color="agency-red" size="lg">
               <MDBIcon icon="rocket" className="pr-2" />
@@ -73,7 +70,7 @@ class CallToAction extends React.Component {
             </MDBRow>
           </MDBCol>
         </MDBRow>
-      </div>
+      </section>
     );
   }
 }

@@ -1,111 +1,110 @@
-#calltoaction{
+#calltoaction {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
-  h2{
-      font-size: 4.625rem;
+  h2 {
+    font-size: 4.625rem;
   }
-  p{
-      font-size: 1.5rem;
+  p {
+    font-size: 1.5rem;
   }
-  .row{
-      margin: 0;
+  .row {
+    margin: 0;
   }
   // Parallax
-  @mixin my-rotating-mixin($speed){
-      animation: rotatingplanet $speed infinite linear !important;
+  @mixin my-rotating-mixin($speed) {
+    animation: rotatingplanet $speed infinite linear !important;
   }
-  .space-left{
-      .view{
-          overflow: visible;
+  .space-left {
+    .view {
+      overflow: visible;
+    }
+    max-height: 200px;
+    .rocket {
+      img {
+        max-width: 130px;
+        height: auto;
       }
-      max-height: 200px;
-      .rocket{
-          img{
-              max-width: 130px;
-              height: auto;
-          }
+    }
+    .planet1 {
+      text-align: center;
+      animation: rotation 2s infinite linear;
+      img {
+        max-width: 100px;
+        height: auto;
       }
-      .planet1{
-          text-align: center;
-          animation: rotation 2s infinite linear;
-          img{
-              max-width: 100px;
-              height: auto;
-          }
-          @include my-rotating-mixin(20s);
-      }
+      @include my-rotating-mixin(20s);
+    }
   }
-  .space-right{
-      max-height: 200px;
-      figure{
-          margin: 0 !important;
+  .space-right {
+    max-height: 200px;
+    figure {
+      margin: 0 !important;
+    }
+    .view {
+      overflow: visible;
+    }
+    .planet2 {
+      text-align: center;
+      animation: rotation 10s infinite linear;
+      img {
+        max-width: 150px;
+        height: auto;
+        display: inline-block;
       }
-      .view{
-          overflow: visible;
-      }
-      .planet2{
-          text-align: center;
-          animation: rotation 10s infinite linear;
-          img{
-              max-width: 150px;
-              height: auto;
-              display: inline-block;
-          }
-          @include my-rotating-mixin(40s);
-      }
+      @include my-rotating-mixin(40s);
+    }
   }
   // Custom animations
   .fly {
-      animation: flyingrocket 6s infinite ease !important;
+    animation: flyingrocket 6s infinite ease !important;
   }
   @keyframes rotatingplanet {
-      from {
-          -moz-transform: rotate(0deg);
-          -webkit-transform: rotate(0deg);
-          -o-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
-      }
-      to {
-          -moz-transform: rotate(359deg);
-          -webkit-transform: rotate(359deg);
-          -o-transform: rotate(359deg);
-          -ms-transform: rotate(359deg);
-          transform: rotate(359deg);
-      }
+    from {
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -moz-transform: rotate(359deg);
+      -webkit-transform: rotate(359deg);
+      -o-transform: rotate(359deg);
+      -ms-transform: rotate(359deg);
+      transform: rotate(359deg);
+    }
   }
   @keyframes flyingrocket {
-      0% {
-          -moz-transform: scale(1) rotate(0deg) translate(0px, 0px);
-          -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px);
-          -o-transform: scale(1) rotate(0deg) translate(0px, 0px);
-          -ms-transform: scale(1) rotate(0deg) translate(0px, 0px);
-          transform: scale(1) rotate(0deg) translate(0px, 0px);
-      }
-      33% {
-          -moz-transform: scale(1.05) rotate(4deg) translate(-4px, 0px);
-          -webkit-transform: scale(1.05) rotate(4deg) translate(-4px, 0px);
-          -o-transform: scale(1.05) rotate(4deg) translate(-4px, 0px);
-          -ms-transform: scale(1.05) rotate(4deg) translate(-4px, 0px);
-          transform: scale(1.05) rotate(4deg) translate(-4px, 0px);
-      }
-      66% {
-          -moz-transform: scale(1.05) rotate(2deg) translate(-8px, 0px);
-          -webkit-transform: scale(1.05) rotate(2deg) translate(-8px, 0px);
-          -o-transform: scale(1.05) rotate(2deg) translate(-8px, 0px);
-          -ms-transform: scale(1.05) rotate(2deg) translate(-8px, 0px);
-          transform: scale(1.05) rotate(2deg) translate(-8px, 0px);
-      }
-      100% {
-          -moz-transform: scale(1) rotate(0deg) translate(0px, 0px);
-          -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px);
-          -o-transform: scale(1) rotate(0deg) translate(0px, 0px);
-          -ms-transform: scale(1) rotate(0deg) translate(0px, 0px);
-          transform: scale(1) rotate(0deg) translate(0px, 0px);
-      }
+    0% {
+      -moz-transform: scale(1) rotate(0deg) translate(0px, 0px);
+      -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px);
+      -o-transform: scale(1) rotate(0deg) translate(0px, 0px);
+      -ms-transform: scale(1) rotate(0deg) translate(0px, 0px);
+      transform: scale(1) rotate(0deg) translate(0px, 0px);
+    }
+    33% {
+      -moz-transform: scale(1.05) rotate(4deg) translate(-4px, 0px);
+      -webkit-transform: scale(1.05) rotate(4deg) translate(-4px, 0px);
+      -o-transform: scale(1.05) rotate(4deg) translate(-4px, 0px);
+      -ms-transform: scale(1.05) rotate(4deg) translate(-4px, 0px);
+      transform: scale(1.05) rotate(4deg) translate(-4px, 0px);
+    }
+    66% {
+      -moz-transform: scale(1.05) rotate(2deg) translate(-8px, 0px);
+      -webkit-transform: scale(1.05) rotate(2deg) translate(-8px, 0px);
+      -o-transform: scale(1.05) rotate(2deg) translate(-8px, 0px);
+      -ms-transform: scale(1.05) rotate(2deg) translate(-8px, 0px);
+      transform: scale(1.05) rotate(2deg) translate(-8px, 0px);
+    }
+    100% {
+      -moz-transform: scale(1) rotate(0deg) translate(0px, 0px);
+      -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px);
+      -o-transform: scale(1) rotate(0deg) translate(0px, 0px);
+      -ms-transform: scale(1) rotate(0deg) translate(0px, 0px);
+      transform: scale(1) rotate(0deg) translate(0px, 0px);
+    }
   }
 }
-
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
