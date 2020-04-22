@@ -1,7 +1,7 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
-// Links (replaces <a> tags)
+// React Router DOM bindings
 import { Link } from "react-router-dom";
 
 //> MDB
@@ -154,7 +154,7 @@ class Footer extends React.PureComponent {
               <h5 className="title">Dienste</h5>
               <hr className="agency-red mb-4 mt-0 d-inline-block" />
               <ul>
-                <Link to="/service/online-presence">
+                {/*<Link to="/service/online-presence">
                   <li className="list-unstyled">
                     <MDBIcon icon="globe" />
                     Online-Präsenz
@@ -177,13 +177,19 @@ class Footer extends React.PureComponent {
                     <MDBIcon icon="user-tie" />
                     Ihr Image
                   </li>
+                </Link>*/}
+                <Link to="/analysis">
+                  <li className="list-unstyled">
+                    <MDBIcon icon="signature" />
+                    Kostenlose Analyse
+                  </li>
                 </Link>
                 <Link to="/printing">
                   <li className="list-unstyled">
                     <MDBIcon icon="vector-square" />
                     3D Druck Service
-                    <MDBBadge pill color="warning" className="ml-2">
-                      Soon
+                    <MDBBadge pill color="elegant-color" className="ml-2">
+                      Beta
                     </MDBBadge>
                   </li>
                 </Link>
