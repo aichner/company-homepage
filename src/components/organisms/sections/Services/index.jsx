@@ -82,11 +82,11 @@ class Services extends React.PureComponent {
                     <h4 className="font-weight-bold mt-3">{service.title}</h4>
                     <p className="lead">{service.lead}</p>
                     <p>{service.text}</p>
-                    <Link to={service.action.link}>
+                    {/*<Link to={service.action.link}>
                       <MDBBtn color={service.action.color} rounded>
                         {service.action.text}
                       </MDBBtn>
-                    </Link>
+                    </Link>*/}
                   </div>
                 </MDBCol>
               );
