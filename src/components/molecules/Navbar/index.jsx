@@ -1,6 +1,7 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
+import { withRouter, Link } from "react-router-dom";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -13,15 +14,24 @@ import {
   MDBNavItem,
   MDBNavLink,
   MDBContainer,
+  MDBSmoothScroll,
+  MDBBtn,
 } from "mdbreact";
 
-// React Logo
-import { ReactComponent as Logo } from "../../../assets/logo.svg";
+//> Images
+// Logo
+import { ReactComponent as Logo } from "../../../assets/content/logo_main.svg";
+
+//> CSS
+import "./navbar.scss";
 
 class Navbar extends React.Component {
-  state = {
-    collapseID: "",
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapseID: "",
+    };
+  }
 
   toggleCollapse = (collapseID) => () =>
     this.setState((prevState) => ({
@@ -33,6 +43,17 @@ class Navbar extends React.Component {
     this.state.collapseID === collapseID && this.setState({ collapseID: "" });
   };
 
+  // Get navbar mode
+  _getMode = () => {
+    let opts = {};
+    if (this.props.darkMode) {
+      opts["dark"] = "dark";
+    } else {
+      opts["light"] = "light";
+    }
+    return opts;
+  };
+
   render() {
     const overlay = (
       <div
@@ -42,14 +63,25 @@ class Navbar extends React.Component {
       />
     );
 
+    // Get react-router-dom location and navbar collapseID
+    const { location } = this.props;
     const { collapseID } = this.state;
+
+    // Debugging
+    console.log(location);
+
     return (
       <div>
-        <MDBNavbar color="white" light expand="md" fixed="top" scrolling>
+        <MDBNavbar
+          color={this.props.darkMode ? "agency-dark" : "white"}
+          {...this._getMode()}
+          expand="md"
+          fixed="top"
+          scrolling
+        >
           <MDBContainer>
-            <MDBNavbarBrand href="/" className="py-0 font-weight-bold">
-              <Logo style={{ height: "2.5rem", width: "2.5rem" }} />
-              <strong className="align-middle">MDB React Firebase Template</strong>
+            <MDBNavbarBrand href="/" className="py-1 font-weight-bold">
+              <Logo id="logo" />
             </MDBNavbarBrand>
             <MDBNavbarToggler
               onClick={this.toggleCollapse("mainNavbarCollapse")}
@@ -61,21 +93,26 @@ class Navbar extends React.Component {
             >
               <MDBNavbarNav right>
                 <MDBNavItem>
-                  <MDBNavLink
-                    exact
-                    to="/"
-                    onClick={this.closeCollapse("mainNavbarCollapse")}
-                  >
-                    <strong>Home</strong>
-                  </MDBNavLink>
+                  <Link to="/me">
+                    <MDBBtn size="md" color="agency-red">
+                      Kostenlose Analyse
+                    </MDBBtn>
+                  </Link>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink
-                    exact
-                    to="/login"
-                    onClick={this.closeCollapse("mainNavbarCollapse")}
-                  >
-                    <strong>Login</strong>
+                  {location.pathname === "/" ? (
+                    <MDBSmoothScroll to="hero" active>
+                      Home
+                    </MDBSmoothScroll>
+                  ) : (
+                    <MDBNavLink exact to="/">
+                      Home
+                    </MDBNavLink>
+                  )}
+                </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink exact to="/kisy">
+                    Login
                   </MDBNavLink>
                 </MDBNavItem>
               </MDBNavbarNav>
@@ -88,9 +125,9 @@ class Navbar extends React.Component {
   }
 }
 
-export default Navbar;
+export default withRouter(Navbar);
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
- * Copyright © 2019-2020 Werbeagentur Christian Aichner
+ * Copyright © 2019 Werbeagentur Christian Aichner
  */

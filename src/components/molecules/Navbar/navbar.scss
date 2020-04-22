@@ -1,0 +1,41 @@
+@import "../../../utilities/variables";
+
+.navbar {
+  li {
+    align-self: center;
+    .btn {
+      margin-right: 2rem;
+    }
+  }
+  // Brand image size
+  svg {
+    // Color of logo
+    &#logo {
+      height: 3rem;
+      .st0 {
+        fill: #ffffff;
+      }
+      .st1 {
+        fill: $agencyRed;
+      }
+    }
+  }
+  &.white {
+    svg {
+      // Color of logo
+      &#logo {
+        .st0 {
+          fill: $agencyDark;
+        }
+        .st1 {
+          fill: $agencyRed;
+        }
+      }
+    }
+  }
+}
+
+/** 
+* SPDX-License-Identifier: (EUPL-1.2)
+* Copyright © 2019 Werbeagentur Christian Aichner
+*/
