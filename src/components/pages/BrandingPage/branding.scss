@@ -1,0 +1,81 @@
+#branding {
+  margin-top: 4rem;
+  // Dark mode
+  &.dark {
+    background: #3e3e3e;
+    color: white;
+    .light-item {
+      color: #212529;
+    }
+    .c-light {
+      color: #212529;
+    }
+  }
+  // Card
+  .card {
+    margin-bottom: 1rem;
+  }
+  // SVG Logos
+  svg {
+    margin: 1.5em 0 1.5em 0;
+    &.logo-dark {
+      .st0 {
+        fill: #ffffff;
+      }
+      .st1 {
+        fill: #f61a42;
+      }
+    }
+    &.logo-light {
+      .st0 {
+        fill: #212529;
+      }
+      .st1 {
+        fill: #f61a42;
+      }
+    }
+  }
+  // Wedding logo
+  img {
+    margin: 1.5em 0 1.5em 0;
+  }
+  // List
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  // Color palette
+  .c-red {
+    background: #f61a42;
+    color: white;
+    table {
+      color: white;
+      td {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+  .c-dark {
+    background: #212529;
+    color: white;
+    table {
+      color: white;
+      td {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+  .c-light {
+    background: #e5e5e5;
+    table {
+      td {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019 Werbeagentur Christian Aichner
+ */
