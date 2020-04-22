@@ -1,0 +1,54 @@
+#contactForm {
+  background: lightslategrey;
+  textarea {
+    min-height: 50px;
+    max-height: 300px;
+  }
+  .splitter {
+    overflow: hidden;
+  }
+  .or {
+    position: relative !important;
+    padding-bottom: 16px !important;
+    padding-top: 16px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-bottom: var(--spacing-rule-text-vertical, 16px) !important;
+    padding-top: var(--spacing-rule-text-vertical, 16px) !important;
+    padding-left: var(--spacing-rule-text-horizontal, 16px) !important;
+    padding-right: var(--spacing-rule-text-horizontal, 16px) !important;
+  }
+  .or-text {
+    overflow-wrap: break-word !important;
+    margin: 0px !important;
+    &::before {
+      border-bottom-width: var(--border-rule-border-width, 1px) !important;
+      border-bottom-color: #e4e4e4 !important;
+      content: "" !important;
+      position: absolute !important;
+      border-bottom-width: 1px !important;
+      border-bottom-style: solid !important;
+      border-bottom-color: rgb(228, 228, 228) !important;
+      top: 50% !important;
+      right: 100% !important;
+      width: 5000px !important;
+    }
+    &::after {
+      border-bottom-width: var(--border-rule-border-width, 1px) !important;
+      border-bottom-color: #e4e4e4 !important;
+      content: "" !important;
+      position: absolute !important;
+      border-bottom-width: 1px !important;
+      border-bottom-style: solid !important;
+      border-bottom-color: rgb(228, 228, 228) !important;
+      top: 50% !important;
+      left: 100% !important;
+      width: 5000px !important;
+    }
+  }
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019 Werbeagentur Christian Aichner
+ */
