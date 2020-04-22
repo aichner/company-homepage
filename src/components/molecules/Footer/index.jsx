@@ -119,7 +119,8 @@ class Footer extends React.PureComponent {
               tag="a"
               floating
               social="wa"
-              href="https://api.whatsapp.com/send?phone=4368120502754&text=Hey%2C%20ich%20bin%20interessiert%20an%20einem%20Angebot%20eurer%20Agentur."
+              href="https://api.whatsapp.com/send?phone=4368120502754&
+              text=Hey%2C%20ich%20bin%20an%20einem%20Angebot%20eurer%20Agentur%20interessiert."
               rel="noopener noreferrer"
               target="_blank"
             >

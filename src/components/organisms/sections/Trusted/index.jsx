@@ -31,7 +31,7 @@ class Trusted extends React.PureComponent {
           </h2>
           <p className="lead">
             Wir bieten Dir <strong>hochwertige</strong>, auf Deine Vision
-            zugeschnittene Lösungen in sämtlichen Bereichen des Marketing.
+            zugeschnittene Lösungen in sämtlichen Bereichen des Marketings.
           </p>
           <MDBRow className="flex-center">
             <MDBCol md="2" className="p-3">
@@ -99,5 +99,5 @@ export default Trusted;
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
- * Copyright © 2019 Werbeagentur Christian Aichner
+ * Copyright © 2019-2020 Werbeagentur Christian Aichner
  */

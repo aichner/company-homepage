@@ -50,13 +50,14 @@
 
   // Dark mode
   &.dark {
-    background: linear-gradient(to top, $dark 0%, darken($dark, 10%) 100%);
+    background: linear-gradient(to top, $agencyDark 0%, darken($agencyDark, 10%) 100%);
     color: white;
   }
+
   // Light mode
   &.light {
     background: linear-gradient(to top, white 0%, darken(white, 10%) 100%);
-    color: $dark !important;
+    color: $agencyDark !important;
   }
 }
 
@@ -114,5 +115,5 @@
 
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)
- * Copyright © 2019 Werbeagentur Christian Aichner
+ * Copyright © 2019-2020 Werbeagentur Christian Aichner
  */

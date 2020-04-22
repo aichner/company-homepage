@@ -15,7 +15,6 @@ import { MDBRow, MDBCol, MDBBtn, MDBView, MDBIcon, MDBMask } from "mdbreact";
 //> Images
 // Rocket
 import rocket from "../../../../assets/content/icons/rocket.png";
-//import rocket_pen from '../../../../assets/content/icons/rocket_pen.png';
 import planet1 from "../../../../assets/content/icons/planet1.jpg";
 
 //> CSS
@@ -53,7 +52,7 @@ class CallToAction extends React.Component {
             <h2 className="gidole">
               Es ist einfach, <strong>jetzt</strong> zu starten!
             </h2>
-            <p>Und der Einstieg und Erstberatung sind kostenlos.</p>
+            <p>Und der Einstieg und die Erstberatung sind kostenlos.</p>
             <Link to="/analysis">
               <MDBBtn color="agency-red" size="lg">
                 <MDBIcon icon="rocket" className="pr-2" />

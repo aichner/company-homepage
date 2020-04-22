@@ -1,5 +1,7 @@
 #calltoaction {
+  // Hide overflow once the animation can exceed the width sometimes
   overflow: hidden;
+
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
   h2 {
@@ -11,6 +13,7 @@
   .row {
     margin: 0;
   }
+
   // Parallax
   @mixin my-rotating-mixin($speed) {
     animation: rotatingplanet $speed infinite linear !important;
@@ -55,6 +58,7 @@
       @include my-rotating-mixin(40s);
     }
   }
+
   // Custom animations
   .fly {
     animation: flyingrocket 6s infinite ease !important;

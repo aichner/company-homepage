@@ -7,72 +7,72 @@
 
 // Custom colors
 .agency-dark {
-  background-color: $dark !important;
+  background-color: $agencyDark !important;
   &.darken-1 {
-    background-color: darken($dark, 2%) !important;
+    background-color: darken($agencyDark, 2%) !important;
   }
   &.darken-2 {
-    background-color: darken($dark, 5%) !important;
+    background-color: darken($agencyDark, 5%) !important;
   }
   &.darken-3 {
-    background-color: darken($dark, 10%) !important;
+    background-color: darken($agencyDark, 10%) !important;
   }
   &.lighten-1 {
-    background-color: lighten($dark, 10%) !important;
+    background-color: lighten($agencyDark, 10%) !important;
   }
   &.lighten-2 {
-    background-color: lighten($dark, 20%) !important;
+    background-color: lighten($agencyDark, 20%) !important;
   }
   &.lighten-3 {
-    background-color: lighten($dark, 30%) !important;
+    background-color: lighten($agencyDark, 30%) !important;
   }
 }
 .agency-red {
-  background-color: $red !important;
+  background-color: $agencyRed !important;
   &.darken-1 {
-    background-color: darken($red, 10%) !important;
+    background-color: darken($agencyRed, 10%) !important;
   }
   &.darken-2 {
-    background-color: darken($red, 20%) !important;
+    background-color: darken($agencyRed, 20%) !important;
   }
   &.darken-3 {
-    background-color: darken($red, 30%) !important;
+    background-color: darken($agencyRed, 30%) !important;
   }
   &.lighten-1 {
-    background-color: lighten($red, 10%) !important;
+    background-color: lighten($agencyRed, 10%) !important;
   }
   &.lighten-2 {
-    background-color: lighten($red, 20%) !important;
+    background-color: lighten($agencyRed, 20%) !important;
   }
   &.lighten-3 {
-    background-color: lighten($red, 30%) !important;
+    background-color: lighten($agencyRed, 30%) !important;
   }
 }
 // Custom buttons
 .btn-agency-red {
-  background-color: $red !important;
+  background-color: $agencyRed !important;
   color: white;
   &:hover {
-    background-color: darken($red, 10%) !important;
+    background-color: darken($agencyRed, 10%) !important;
     color: white;
   }
   &:focus {
-    background-color: darken($red, 20%) !important;
+    background-color: darken($agencyRed, 20%) !important;
     color: white;
   }
 }
 .btn-outline-agency-red {
-  color: $red !important;
+  color: $agencyRed !important;
   background-color: transparent !important;
-  border: 2px solid $red !important;
+  border: 2px solid $agencyRed !important;
   &:hover {
-    border: 2px solid darken($red,10%) !important;
+    border: 2px solid darken($agencyRed,10%) !important;
   }
 }
 
 // Custom text
 .red-text {
-  color: $red !important;
+  color: $agencyRed !important;
 }
 .pink-text {
   color: $pink !important;

@@ -35,8 +35,6 @@ class ContactForm extends React.Component {
     note: "",
   };
 
-  componentDidMount = () => {};
-
   onTextChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -61,7 +59,7 @@ class ContactForm extends React.Component {
                 <MDBCardBody className="py-5">
                   <h3 className="font-weight-bold">Kontakt aufnehmen</h3>
                   <p className="text-muted">
-                    Du hast eine Projekt-Idee und bist Dir nicht sicher um deren
+                    Du hast eine Projektidee und bist Dir nicht sicher um deren
                     Umsetzung? Du benötigst einen Web-Shop, Imagefilm, eine
                     Website oder eine individuelle Applikation? Zögere nicht und
                     kontaktiere uns.
@@ -192,7 +190,10 @@ class ContactForm extends React.Component {
                         Du kannst uns täglich von 9:00 bis 18:00 telefonisch
                         unter
                         <br />
-                        <strong>+43 681 205 027 54</strong> erreichen.
+                        <strong>
+                          <a href="tel:+4368120502754">+43 681 205 027 54</a>
+                        </strong>{" "}
+                        erreichen.
                       </span>
                     </MDBAlert>
                   )}

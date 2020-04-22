@@ -29,6 +29,7 @@ import "./navbar.scss";
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       collapseID: "",
     };
@@ -45,13 +46,15 @@ class Navbar extends React.Component {
   };
 
   // Get navbar mode
-  _getMode = () => {
+  getMode = () => {
     let opts = {};
+
     if (this.props.darkMode) {
       opts["dark"] = "dark";
     } else {
       opts["light"] = "light";
     }
+
     return opts;
   };
 
@@ -69,13 +72,13 @@ class Navbar extends React.Component {
     const { collapseID } = this.state;
 
     // Debugging
-    console.log(location);
+    //console.log(location);
 
     return (
       <div>
         <MDBNavbar
           color={this.props.darkMode ? "agency-dark" : "white"}
-          {...this._getMode()}
+          {...this.getMode()}
           expand="md"
           fixed="top"
           scrolling
@@ -144,5 +147,5 @@ export default withRouter(Navbar);
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
- * Copyright © 2019 Werbeagentur Christian Aichner
+ * Copyright © 2019-2020 Werbeagentur Christian Aichner
  */

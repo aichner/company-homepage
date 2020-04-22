@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 
 //> Additional libraries
 // Parallax
-import { ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxProvider } from "react-scroll-parallax";
 
 //> Font Awesome
 // Font Awesome is an awesome icon library

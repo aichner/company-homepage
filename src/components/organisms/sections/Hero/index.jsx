@@ -4,6 +4,10 @@ import React from "react";
 // Router
 import { Link } from "react-router-dom";
 
+//> Additional
+// Chart
+import { Radar } from "react-chartjs-2";
+
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
@@ -16,8 +20,6 @@ import {
   MDBCard,
   MDBCardBody,
 } from "mdbreact";
-// Chart
-import { Radar } from "react-chartjs-2";
 
 //> Images
 // Working svg
@@ -54,7 +56,6 @@ class HomePage extends React.Component {
     let min = Math.ceil(10);
     let max = Math.floor(100);
     let arr = [1, 2, 3, 4, 5, 6, 7, 8];
-
     let results = arr.map((item, i) => {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     });
