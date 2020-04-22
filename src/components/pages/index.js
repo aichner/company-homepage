@@ -5,8 +5,18 @@ import MessagePage from "./MessagePage";
 import LoginPage from "./LoginPage";
 import ProfilePage from "./ProfilePage";
 import DevelopmentPage from "./DevelopmentPage";
+import PrintingPage from "./PrintingPage";
+import BrandingPage from "./BrandingPage";
 
-export { HomePage, MessagePage, LoginPage, ProfilePage, DevelopmentPage };
+export {
+  HomePage,
+  MessagePage,
+  LoginPage,
+  ProfilePage,
+  DevelopmentPage,
+  PrintingPage,
+  BrandingPage,
+};
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
