@@ -13,6 +13,8 @@ import {
   MessagePage,
   LoginPage,
   ProfilePage,
+  PrintingPage,
+  BrandingPage,
 } from "./components/pages";
 
 class Routes extends React.Component {
@@ -29,12 +31,28 @@ class Routes extends React.Component {
         <Route
           exact
           path="/login"
-          render={(props) => <LoginPage {...props} />}
+          render={(props) => <LoginPage {...props} globalProps={globalProps} />}
         />
         <Route
           exact
           path="/profile"
-          render={(props) => <ProfilePage {...props} />}
+          render={(props) => (
+            <ProfilePage {...props} globalProps={globalProps} />
+          )}
+        />
+        <Route
+          exact
+          path="/printing"
+          render={(props) => (
+            <PrintingPage {...props} globalProps={globalProps} />
+          )}
+        />
+        <Route
+          exact
+          path="/branding"
+          render={(props) => (
+            <BrandingPage {...props} globalProps={globalProps} />
+          )}
         />
         <Route component={HomePage} />
       </Switch>
