@@ -9,6 +9,7 @@ import {
   ContactForm,
   Services,
   CallToAction,
+  Trusted,
 } from "../../organisms/sections";
 
 //> CSS
@@ -22,14 +23,19 @@ class HomePage extends React.Component {
   render() {
     const { globalProps } = this.props;
 
-    return (
-      <>
-        <Hero darkMode={globalProps.darkMode} />
-        <Services darkMode={globalProps.darkMode} />
-        <CallToAction darkMode={globalProps.darkMode} />
-        <ContactForm darkMode={globalProps.darkMode} />
-      </>
-    );
+    if (globalProps) {
+      return (
+        <>
+          <Hero darkMode={globalProps.darkMode} />
+          <Services darkMode={globalProps.darkMode} />
+          <Trusted darkmode={globalProps.darkMode} />
+          <CallToAction darkMode={globalProps.darkMode} />
+          <ContactForm darkMode={globalProps.darkMode} />
+        </>
+      );
+    } else {
+      return null;
+    }
   }
 }
 
