@@ -61,6 +61,14 @@
     color: white;
   }
 }
+.btn-outline-agency-red {
+  color: $red !important;
+  background-color: transparent !important;
+  border: 2px solid $red !important;
+  &:hover {
+    border: 2px solid darken($red,10%) !important;
+  }
+}
 
 // Custom text
 .red-text {
@@ -73,6 +81,9 @@
 // Buttons
 .btn {
   box-shadow: none !important;
+  i {
+    margin-right: 0.3rem;
+  }
   &:hover {
     box-shadow: none;
   }
