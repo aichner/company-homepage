@@ -1,6 +1,8 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
+// React Router DOM bindings
+import { Link } from "react-router-dom";
 
 //> Additional libraries
 // Parallax
@@ -51,11 +53,13 @@ class CallToAction extends React.Component {
             <h2 className="gidole">
               Es ist einfach, <strong>jetzt</strong> zu starten!
             </h2>
-            <p>Und der Einstieg ist kostenlos. Zwei Dinge die jeder liebt.</p>
-            <MDBBtn color="agency-red" size="lg">
-              <MDBIcon icon="rocket" className="pr-2" />
-              Jetzt starten
-            </MDBBtn>
+            <p>Und der Einstieg und Erstberatung sind kostenlos.</p>
+            <Link to="/analysis">
+              <MDBBtn color="agency-red" size="lg">
+                <MDBIcon icon="rocket" className="pr-2" />
+                Jetzt starten
+              </MDBBtn>
+            </Link>
           </MDBCol>
           <MDBCol>
             <MDBRow className="space-right">
