@@ -3,8 +3,13 @@
 .navbar {
   li {
     align-self: center;
-    .btn {
-      margin-right: 2rem;
+    a {
+      font-weight: bold;
+      margin-right: 1rem;
+      color: $agencyDark;
+      &:hover {
+        color: lighten($agencyDark, 10%);
+      }
     }
   }
   // Brand image size

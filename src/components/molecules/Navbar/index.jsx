@@ -16,6 +16,7 @@ import {
   MDBContainer,
   MDBSmoothScroll,
   MDBBtn,
+  MDBIcon,
 } from "mdbreact";
 
 //> Images
@@ -93,10 +94,20 @@ class Navbar extends React.Component {
             >
               <MDBNavbarNav right>
                 <MDBNavItem>
-                  <Link to="/me">
-                    <MDBBtn size="md" color="agency-red">
-                      Kostenlose Analyse
+                  <a
+                    href="https://termin.aichner.cloud"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MDBBtn color="agency-red" outline>
+                      <MDBIcon far icon="calendar" />
+                      Termin
                     </MDBBtn>
+                  </a>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <Link to="/me">
+                    <MDBBtn color="agency-red">Kostenlose Analyse</MDBBtn>
                   </Link>
                 </MDBNavItem>
                 <MDBNavItem>
@@ -111,9 +122,13 @@ class Navbar extends React.Component {
                   )}
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink exact to="/kisy">
+                  <a
+                    href="https://www.kisy.at"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Login
-                  </MDBNavLink>
+                  </a>
                 </MDBNavItem>
               </MDBNavbarNav>
             </MDBCollapse>
