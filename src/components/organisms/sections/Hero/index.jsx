@@ -53,8 +53,7 @@ class HomePage extends React.Component {
   generateRandom = () => {
     let min = Math.ceil(10);
     let max = Math.floor(100);
-
-    let arr = [1, 2, 3, 4, 5, 6, 7];
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8];
 
     let results = arr.map((item, i) => {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -67,12 +66,13 @@ class HomePage extends React.Component {
     return {
       labels: [
         "Website",
-        "Social Media",
-        "Branding",
         "SEO",
+        "Präsenz",
+        "Instagram",
+        "Erscheinungsbild",
         "Image",
-        "Marketing",
-        "Security",
+        "Facebook",
+        "Google Business",
       ],
       datasets: [
         {
@@ -124,7 +124,7 @@ class HomePage extends React.Component {
                   aktuellen Stand Deiner gesamten Online-Präsenz und liefert
                   individuelle und unkomplizierte Lösungen.
                 </p>
-                <Link to="/me">
+                <Link to="/analysis">
                   <MDBBtn size="lg" color="agency-red" className="btn-start">
                     <MDBIcon icon="rocket" className="pr-2" />
                     JETZT kostenlos herausfinden
