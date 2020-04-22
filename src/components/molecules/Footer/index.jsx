@@ -64,7 +64,7 @@ class Footer extends React.PureComponent {
           <MDBCol md="12" className="text-center">
             <h4>Verbinde Dich mit uns!</h4>
           </MDBCol>
-          <MDBCol md="12" className="text-center">
+          <MDBCol md="12" className="text-center social-buttons">
             <MDBBtn
               tag="a"
               floating
@@ -182,8 +182,8 @@ class Footer extends React.PureComponent {
                   <li className="list-unstyled">
                     <MDBIcon icon="vector-square" />
                     3D Druck Service
-                    <MDBBadge pill color="success" className="ml-2">
-                      New
+                    <MDBBadge pill color="warning" className="ml-2">
+                      Soon
                     </MDBBadge>
                   </li>
                 </Link>
@@ -193,13 +193,17 @@ class Footer extends React.PureComponent {
               <h5 className="title">Nützliche Links</h5>
               <hr className="agency-red mb-4 mt-0 d-inline-block" />
               <ul>
-                <Link to="/kisy">
+                <a
+                  href="https://www.kisy.at"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <li className="list-unstyled">
                     <MDBIcon icon="user" />
-                    Kundenportal
+                    Kundenportal (KISy)
                   </li>
-                </Link>
-                <Link to="/faq">
+                </a>
+                {/*<Link to="/faq">
                   <li className="list-unstyled">
                     <MDBIcon icon="question" />
                     FAQ
@@ -210,9 +214,9 @@ class Footer extends React.PureComponent {
                     <MDBIcon icon="rss" />
                     Blog
                   </li>
-                </Link>
+                </Link>*/}
                 <a
-                  href="https://github.com/aichner/React-MDB-Template/blob/master/CONTRIBUTING.md"
+                  href="https://github.com/aichner/React-MDB-Firebase-Template/blob/master/CONTRIBUTING.md"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -245,10 +249,16 @@ class Footer extends React.PureComponent {
               <ul>
                 <Link to="/location">
                   <li className="list-unstyled">
-                    <MDBIcon icon="home" />
-                    Villach, Kärnten, AT
+                    <MDBIcon icon="building" />
+                    Villach-Landskron, Kärnten, AT
                   </li>
                 </Link>
+                <a href="https://termin.aichner.cloud" target="_blank">
+                  <li className="list-unstyled">
+                    <MDBIcon far icon="calendar" />
+                    Termin ausmachen
+                  </li>
+                </a>
                 <a href="mailto:info@aichner-christian.com">
                   <li className="list-unstyled">
                     <MDBIcon far icon="envelope" />

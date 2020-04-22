@@ -1,9 +1,16 @@
 @import "../../../utilities/variables";
 
-// Button WhatsApp
-.btn-wa {
-  background-color: #25d366 !important;
-  color: white !important;
+.social-buttons {
+  .btn {
+    i {
+      padding: 0;
+    }
+  }
+  // Button WhatsApp
+  .btn-wa {
+    background-color: #25d366 !important;
+    color: white !important;
+  }
 }
 
 // Footer
