@@ -10,9 +10,14 @@ import { BrowserRouter as Router } from "react-router-dom";
  * Navbar: Global navigation bar
  */
 import { Footer, Navbar } from "./components/molecules";
+import { DevelopmentPage } from "./components/pages";
 import { ScrollToTop } from "./components/atoms";
 // Routes
 import Routes from "./Routes";
+
+//> Configuration
+// Is the homepage ready to launch?
+const isLive = false;
 
 class App extends React.Component {
   state = {
@@ -20,19 +25,27 @@ class App extends React.Component {
   };
 
   render() {
-    return (
-      <Router>
-        <ScrollToTop>
-          <div className="flyout">
-            <Navbar darkMode={this.state.darkMode} />
-            <main>
-              <Routes globalProps={{ ...this.state }} />
-            </main>
-            <Footer darkMode={this.state.darkMode} />
-          </div>
-        </ScrollToTop>
-      </Router>
-    );
+    if (
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1" ||
+      isLive
+    ) {
+      return (
+        <Router>
+          <ScrollToTop>
+            <div className="flyout">
+              <Navbar darkMode={this.state.darkMode} />
+              <main>
+                <Routes globalProps={{ ...this.state }} />
+              </main>
+              <Footer darkMode={this.state.darkMode} />
+            </div>
+          </ScrollToTop>
+        </Router>
+      );
+    } else {
+      return <DevelopmentPage />;
+    }
   }
 }
 
