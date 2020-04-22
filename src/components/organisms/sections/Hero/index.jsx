@@ -20,7 +20,8 @@ import {
 import { Radar } from "react-chartjs-2";
 
 //> Images
-// To be added
+// Working svg
+import { ReactComponent as Working } from "../../../../assets/content/hero/working.svg";
 
 //> CSS
 import "./hero.scss";
@@ -101,11 +102,7 @@ class HomePage extends React.Component {
                 </MDBBtn>
               </MDBCol>
               <MDBCol md="6" className="py-5">
-                <MDBCard>
-                  <MDBCardBody className="py-5 my-5">
-                    <p className="lead">Test</p>
-                  </MDBCardBody>
-                </MDBCard>
+                <Working />
               </MDBCol>
             </MDBRow>
           </MDBView>
