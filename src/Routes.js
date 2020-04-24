@@ -33,18 +33,6 @@ class Routes extends React.Component {
         />
         <Route
           exact
-          path="/login"
-          render={(props) => <LoginPage {...props} globalProps={globalProps} />}
-        />
-        <Route
-          exact
-          path="/profile"
-          render={(props) => (
-            <ProfilePage {...props} globalProps={globalProps} />
-          )}
-        />
-        <Route
-          exact
           path="/printing"
           render={(props) => (
             <PrintingPage {...props} globalProps={globalProps} />
