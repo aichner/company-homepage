@@ -5,14 +5,9 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 //> Components
-/**
- * HomePage: A basic template page
- */
 import {
   HomePage,
   MessagePage,
-  LoginPage,
-  ProfilePage,
   PrintingPage,
   BrandingPage,
   LocationPage,

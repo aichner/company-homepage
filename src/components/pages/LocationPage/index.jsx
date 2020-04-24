@@ -10,10 +10,6 @@ import {
   MDBCol,
   MDBBtn,
   MDBIcon,
-  MDBPopover,
-  MDBPopoverHeader,
-  MDBPopoverBody,
-  MDBView,
 } from "mdbreact";
 
 //> CSS
@@ -102,6 +98,7 @@ class LocationPage extends React.Component {
                 width="450"
                 height="250"
                 frameBorder="0"
+                title="Location"
                 style={{ Border: 0 }}
                 src={url + `&key=${process.env.REACT_APP_GOOGLE_MAPS}`}
                 allowFullScreen

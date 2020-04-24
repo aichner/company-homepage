@@ -8,7 +8,7 @@ import copy from "copy-to-clipboard";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
-import { MDBContainer, MDBBtn, MDBAlert, MDBIcon, MDBTooltip } from "mdbreact";
+import { MDBContainer, MDBBtn, MDBIcon, MDBTooltip } from "mdbreact";
 
 class MessagePage extends React.Component {
   state = {};

@@ -2,7 +2,7 @@
 // Contains all the functionality necessary to define React components
 import React from "react";
 // Router
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -10,7 +10,6 @@ import {
 	MDBRow,
 	MDBCol,
 	MDBBtn,
-	MDBView,
 	MDBContainer,
 	MDBCard,
 	MDBCardBody,

@@ -263,7 +263,11 @@ class Footer extends React.PureComponent {
 										Villach-Landskron, Kärnten, AT
 									</li>
 								</Link>
-								<a href="https://termin.aichner.cloud" target="_blank">
+								<a
+									href="https://termin.aichner.cloud"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
 									<li className="list-unstyled">
 										<MDBIcon far icon="calendar" />
 										Termin ausmachen

@@ -1,8 +1,6 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
-// Router
-import { Link } from "react-router-dom";
 
 //> Additional
 // Chart
@@ -17,8 +15,6 @@ import {
 	MDBView,
 	MDBContainer,
 	MDBIcon,
-	MDBCard,
-	MDBCardBody,
 	MDBSmoothScroll,
 } from "mdbreact";
 
