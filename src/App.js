@@ -31,7 +31,7 @@ class App extends React.Component {
       isLive
     ) {
       return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <ScrollToTop>
             <div className="flyout">
               <Navbar darkMode={this.state.darkMode} />
