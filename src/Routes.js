@@ -15,6 +15,7 @@ import {
   ProfilePage,
   PrintingPage,
   BrandingPage,
+  LocationPage,
 } from "./components/pages";
 
 //> MessagePage content
@@ -33,21 +34,16 @@ class Routes extends React.Component {
         />
         <Route
           exact
-          path="/login"
-          render={(props) => <LoginPage {...props} globalProps={globalProps} />}
-        />
-        <Route
-          exact
-          path="/profile"
+          path="/printing"
           render={(props) => (
-            <ProfilePage {...props} globalProps={globalProps} />
+            <PrintingPage {...props} globalProps={globalProps} />
           )}
         />
         <Route
           exact
-          path="/printing"
+          path="/location"
           render={(props) => (
-            <PrintingPage {...props} globalProps={globalProps} />
+            <LocationPage {...props} globalProps={globalProps} />
           )}
         />
         <Route

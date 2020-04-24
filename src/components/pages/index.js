@@ -2,20 +2,18 @@
 // Import all components to export them for easy access from parent components
 import HomePage from "./HomePage";
 import MessagePage from "./MessagePage";
-import LoginPage from "./LoginPage";
-import ProfilePage from "./ProfilePage";
 import DevelopmentPage from "./DevelopmentPage";
 import PrintingPage from "./PrintingPage";
 import BrandingPage from "./BrandingPage";
+import LocationPage from "./LocationPage";
 
 export {
   HomePage,
   MessagePage,
-  LoginPage,
-  ProfilePage,
   DevelopmentPage,
   PrintingPage,
   BrandingPage,
+  LocationPage,
 };
 
 /**
