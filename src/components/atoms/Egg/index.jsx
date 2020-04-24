@@ -17,6 +17,7 @@ class Egg extends React.Component {
 
   componentDidMount = () => {
     const res = localStorage.getItem("egg_" + this.props.id);
+
     if (res) {
       this.setState({
         found: true,
@@ -79,3 +80,8 @@ class Egg extends React.Component {
 }
 
 export default Egg;
+
+/**
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019-2020 Werbeagentur Christian Aichner
+ */
