@@ -5,6 +5,7 @@ import MessagePage from "./MessagePage";
 import DevelopmentPage from "./DevelopmentPage";
 import PrintingPage from "./PrintingPage";
 import BrandingPage from "./BrandingPage";
+import LocationPage from "./LocationPage";
 
 export {
   HomePage,
@@ -12,6 +13,7 @@ export {
   DevelopmentPage,
   PrintingPage,
   BrandingPage,
+  LocationPage,
 };
 
 /**
