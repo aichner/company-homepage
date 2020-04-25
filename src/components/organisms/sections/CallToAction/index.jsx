@@ -69,7 +69,7 @@ class CallToAction extends React.Component {
 						</MDBSmoothScroll>
 					</MDBCol>
 					<MDBCol>
-						<MDBRow className="space-right">
+						<MDBRow className="space-right mt-5 mt-sm-0">
 							<MDBCol>
 								<MDBView>
 									<Parallax className="planet2" y={[60, 0]} tagOuter="figure">

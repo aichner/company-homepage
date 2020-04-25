@@ -1,4 +1,6 @@
 #services {
+  // Fix transition
+  margin-top: -1px;
   &::before {
     content: " ";
     background: linear-gradient(#e6e6e6, white);
