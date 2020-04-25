@@ -50,7 +50,7 @@ class Trusted extends React.PureComponent {
 					<MDBRow className="flex-center">
 						{data.map((item, i) => {
 							return (
-								<MDBCol sm="2" className="p-3">
+								<MDBCol sm="2" className="p-3" key={i}>
 									<img src={item.src} alt={item.alt} className="img-fluid" />
 								</MDBCol>
 							);
