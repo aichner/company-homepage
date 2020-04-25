@@ -2,6 +2,10 @@
 // Contains all the functionality necessary to define React components
 import React from "react";
 
+//> Additional
+// React Helmet
+import { Helmet } from "react-helmet";
+
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
@@ -26,16 +30,19 @@ import { ReactComponent as Logo } from "../../../assets/content/logo_full.svg";
 import weddingsLogo from "../../../assets/content/weddings.png";
 
 class BrandingPage extends React.Component {
-	componentDidMount = () => {
-		// Set page title
-		document.title = "Evolving Our Identity";
-	};
-
 	render() {
 		const { globalProps } = this.props;
 
 		return (
 			<div id="branding" className={globalProps.darkMode ? "dark" : undefined}>
+				<Helmet>
+					<title>Evolving Our Identity</title>
+					<meta
+						name="description"
+						content="Du willst über uns berichten?
+						Nutze gerne unsere Ressourcen unter Berücksichtung der auf der Seite angeführten Regeln."
+					/>
+				</Helmet>
 				<MDBContainer className="py-5">
 					<h2 className="text-center mb-5">Logos und Verwendung</h2>
 					<MDBRow className="text-center">

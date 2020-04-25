@@ -10,6 +10,7 @@
     "gh-pages": "^2.2.0",
     "mdbreact": "mdbreact-4.25.6.tgz",
     "node-sass": "^4.13.0",
+    "react-helmet": "^6.0.0",
     "react-redux": "^7.1.1",
     "react-redux-firebase": "^2.4.1",
     "react-router-dom": "^5.0.1",
