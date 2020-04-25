@@ -1,138 +1,138 @@
 @import "../../../utilities/variables";
 
 .social-buttons {
-	.btn {
-		i {
-			padding: 0;
-		}
-	}
-	// Button WhatsApp
-	.btn-wa {
-		background-color: #25d366 !important;
-		color: white !important;
-	}
+  .btn {
+    i {
+      padding: 0;
+    }
+  }
+  // Button WhatsApp
+  .btn-wa {
+    background-color: #25d366 !important;
+    color: white !important;
+  }
 }
 
 // Footer
 footer {
-	transition: all 0.5s ease;
-	a {
-		color: #6c757d !important;
-		&:hover {
-			color: lighten(#6c757d, 10%) !important;
-		}
-	}
+  transition: all 0.5s ease;
+  a {
+    color: #6c757d !important;
+    &:hover {
+      color: lighten(#6c757d, 10%) !important;
+    }
+  }
 
-	// List item style
-	// Footer link icons
-	ul {
-		padding: 0;
-		li {
-			background: rgba(255, 255, 255, 0.05);
-			transition: all 0.1s ease;
-			padding: 1rem !important;
-			align-items: center;
-			i {
-				width: 30px;
-				text-align: center;
-				padding-right: 0.5rem;
-			}
-			&:hover {
-				background: rgba(255, 255, 255, 0.1);
-			}
-			.badge {
-				box-shadow: none;
-			}
-		}
-	}
+  // List item style
+  // Footer link icons
+  ul {
+    padding: 0;
+    li {
+      background: rgba(255, 255, 255, 0.05);
+      transition: all 0.1s ease;
+      padding: 1rem !important;
+      align-items: center;
+      i {
+        width: 30px;
+        text-align: center;
+        padding-right: 0.5rem;
+      }
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .badge {
+        box-shadow: none;
+      }
+    }
+  }
 
-	// Custom pulsating heart
-	.pulse {
-		-webkit-animation: pulse 1s infinite;
-		animation: pulse 1s infinite;
-	}
+  // Custom pulsating heart
+  .pulse {
+    -webkit-animation: pulse 1s infinite;
+    animation: pulse 1s infinite;
+  }
 
-	// Footer column headers
-	.title {
-		text-transform: uppercase;
-		font-weight: bold;
-	}
+  // Footer column headers
+  .title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 
-	// Column header separator
-	.col-md-3,
-	.col-md-4 {
-		hr {
-			width: 60px;
-			height: 1px;
-		}
-	}
+  // Column header separator
+  .col-md-3,
+  .col-md-4 {
+    hr {
+      width: 60px;
+      height: 1px;
+    }
+  }
 
-	// Dark Mode switch
-	.switch-red {
-		label input[type="checkbox"]:checked + .lever {
-			background-color: lighten($agencyRed, 35%);
-			&::after {
-				background-color: $agencyRed !important;
-			}
-		}
-	}
+  // Dark Mode switch
+  .switch-red {
+    label input[type="checkbox"]:checked + .lever {
+      background-color: lighten($agencyRed, 35%);
+      &::after {
+        background-color: $agencyRed !important;
+      }
+    }
+  }
 
-	// Social tab
-	.social {
-		padding: 2rem 0 2rem 0;
-		margin: 0;
-		background-color: rgba(0, 0, 0, 0.1);
-	}
+  // Social tab
+  .social {
+    padding: 2rem 0 2rem 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 
-	// Company img
-	svg {
-		width: 80%;
-		max-width: 200px;
-	}
+  // Company img
+  svg {
+    width: 80%;
+    max-width: 200px;
+  }
 
-	// Dark Mode
-	&.agency-dark {
-		.social {
-			padding: 2rem 0 2rem 0;
-			margin: 0;
-			background-color: rgba(0, 0, 0, 0.2);
-		}
-		svg {
-			&#logo {
-				.st0 {
-					fill: #ffffff;
-				}
-				.st1 {
-					fill: #f61a42;
-				}
-			}
-		}
-	}
+  // Dark Mode
+  &.agency-dark {
+    .social {
+      padding: 2rem 0 2rem 0;
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    svg {
+      &#logo {
+        .st0 {
+          fill: #ffffff;
+        }
+        .st1 {
+          fill: #f61a42;
+        }
+      }
+    }
+  }
 
-	// Light Mode
-	&.white {
-		ul li {
-			background: rgba(0, 0, 0, 0.05);
-			&:hover {
-				background: rgba(0, 0, 0, 0.1);
-			}
-		}
-		.footer-copyright {
-			background: rgba(0, 0, 0, 0.1);
-			color: #212121 !important;
-		}
-		ul {
-			i {
-				color: #212121 !important;
-			}
-			a {
-				color: #212121 !important;
-			}
-		}
-		.btn {
-			color: white;
-		}
-	}
+  // Light Mode
+  &.white {
+    ul li {
+      background: rgba(0, 0, 0, 0.05);
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+    .footer-copyright {
+      background: rgba(0, 0, 0, 0.1);
+      color: #212121 !important;
+    }
+    ul {
+      i {
+        color: #212121 !important;
+      }
+      a {
+        color: #212121 !important;
+      }
+    }
+    .btn {
+      color: white;
+    }
+  }
 }
 
 /** 

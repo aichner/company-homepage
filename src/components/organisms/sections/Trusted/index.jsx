@@ -23,43 +23,43 @@ import e4yIMG from "../../../../assets/content/trusted/e4y.png";
 
 //> Data
 const data = [
-	{ src: pharmaziegasseIMG, alt: "Pharmaziegasse Logo" },
-	{ src: snekIMG, alt: "SNEK" },
-	{ src: gasserPartnerIMG, alt: "Gasser+Partner" },
-	{ src: kelagbigbandIMG, alt: "KELAG BigBand" },
-	{ src: e4yIMG, alt: "Emotions 4 You" },
-	{ src: erlebnishotelIMG, alt: "Erlebnishotel Mölltal" },
-	{ src: psvIMG, alt: "Polizeisportverein" },
-	{ src: rauchIMG, alt: "Andreas Rauch" },
-	{ src: kelagIMG, alt: "KELAG" },
-	{ src: bluelupiIMG, alt: "Blue Lupi" },
+  { src: pharmaziegasseIMG, alt: "Pharmaziegasse Logo" },
+  { src: snekIMG, alt: "SNEK" },
+  { src: gasserPartnerIMG, alt: "Gasser+Partner" },
+  { src: kelagbigbandIMG, alt: "KELAG BigBand" },
+  { src: e4yIMG, alt: "Emotions 4 You" },
+  { src: erlebnishotelIMG, alt: "Erlebnishotel Mölltal" },
+  { src: psvIMG, alt: "Polizeisportverein" },
+  { src: rauchIMG, alt: "Andreas Rauch" },
+  { src: kelagIMG, alt: "KELAG" },
+  { src: bluelupiIMG, alt: "Blue Lupi" },
 ];
 
 class Trusted extends React.PureComponent {
-	render() {
-		return (
-			<div id="trusted">
-				<MDBContainer className="py-5 text-center text-dark">
-					<h2 className="gidole h1-responsive font-weight-bold">
-						Viele Firmen profitieren von unseren Services
-					</h2>
-					<p className="lead">
-						Wir bieten Dir <strong>hochwertige</strong>, auf Deine Vision
-						zugeschnittene Lösungen in sämtlichen Bereichen des Marketings.
-					</p>
-					<MDBRow className="flex-center">
-						{data.map((item, i) => {
-							return (
-								<MDBCol sm="2" className="p-3" key={i}>
-									<img src={item.src} alt={item.alt} className="img-fluid" />
-								</MDBCol>
-							);
-						})}
-					</MDBRow>
-				</MDBContainer>
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div id="trusted">
+        <MDBContainer className="py-5 text-center text-dark">
+          <h2 className="gidole h1-responsive font-weight-bold">
+            Viele Firmen profitieren von unseren Services
+          </h2>
+          <p className="lead">
+            Wir bieten Dir <strong>hochwertige</strong>, auf Deine Vision
+            zugeschnittene Lösungen in sämtlichen Bereichen des Marketings.
+          </p>
+          <MDBRow className="flex-center">
+            {data.map((item, i) => {
+              return (
+                <MDBCol sm="2" className="p-3" key={i}>
+                  <img src={item.src} alt={item.alt} className="img-fluid" />
+                </MDBCol>
+              );
+            })}
+          </MDBRow>
+        </MDBContainer>
+      </div>
+    );
+  }
 }
 
 export default Trusted;
