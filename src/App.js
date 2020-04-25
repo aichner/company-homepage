@@ -17,7 +17,7 @@ import Routes from "./Routes";
 
 //> Configuration
 // Is the homepage ready to launch?
-const isLive = false;
+const isLive = true;
 
 class App extends React.Component {
   state = {

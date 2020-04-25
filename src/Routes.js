@@ -14,7 +14,7 @@ import {
 } from "./components/pages";
 
 //> MessagePage content
-const messagePage = ["about", "privacy"];
+const messagePage = ["about", "privacy", "thankyou"];
 
 class Routes extends React.Component {
   render() {

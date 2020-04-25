@@ -2,7 +2,7 @@
 // Contains all the functionality necessary to define React components
 import React from "react";
 // Router
-//import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -64,7 +64,11 @@ class ContactForm extends React.Component {
 	};
 
 	render() {
-		const { darkMode } = this.props;
+		console.log(this.props);
+		const { darkMode, contact } = this.props;
+
+		// Check if sent and redirect
+		if (contact.contactSuccess) return <Redirect to="/thankyou" />;
 
 		return (
 			<section id="contactForm" className={darkMode ? "dark" : "light"}>
