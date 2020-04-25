@@ -1,8 +1,8 @@
 export const createContact = (newContact) => {
-  return (dispatch, getState, { getFirebase, getFirestore }) => {
+  return (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
 
-    // Create contact post
+    // Create contact contact
     firestore
       .collection("contact")
       .doc()
@@ -14,7 +14,6 @@ export const createContact = (newContact) => {
       })
       .then(() => {
         dispatch({ type: "CONTACT_SUCCESS" });
-        return;
       })
       .catch((err) => {
         dispatch({ type: "CONTACT_ERROR", err });
