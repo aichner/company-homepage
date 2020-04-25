@@ -21,78 +21,45 @@ import snekIMG from "../../../../assets/content/trusted/snek.png";
 import psvIMG from "../../../../assets/content/trusted/psv.png";
 import e4yIMG from "../../../../assets/content/trusted/e4y.png";
 
+//> Data
+const data = [
+	{ src: pharmaziegasseIMG, alt: "Pharmaziegasse Logo" },
+	{ src: snekIMG, alt: "SNEK" },
+	{ src: gasserPartnerIMG, alt: "Gasser+Partner" },
+	{ src: kelagbigbandIMG, alt: "KELAG BigBand" },
+	{ src: e4yIMG, alt: "Emotions 4 You" },
+	{ src: erlebnishotelIMG, alt: "Erlebnishotel Mölltal" },
+	{ src: psvIMG, alt: "Polizeisportverein" },
+	{ src: rauchIMG, alt: "Andreas Rauch" },
+	{ src: kelagIMG, alt: "KELAG" },
+	{ src: bluelupiIMG, alt: "Blue Lupi" },
+];
+
 class Trusted extends React.PureComponent {
-  render() {
-    return (
-      <div id="trusted">
-        <MDBContainer className="py-5 text-center text-dark">
-          <h2 className="gidole h1-responsive font-weight-bold">
-            Viele Firmen profitieren von unseren Services
-          </h2>
-          <p className="lead">
-            Wir bieten Dir <strong>hochwertige</strong>, auf Deine Vision
-            zugeschnittene Lösungen in sämtlichen Bereichen des Marketings.
-          </p>
-          <MDBRow className="flex-center">
-            <MDBCol md="2" className="p-3">
-              <img
-                src={pharmaziegasseIMG}
-                alt="Pharmaziegasse Logo"
-                className="img-fluid"
-              />
-            </MDBCol>
-            <MDBCol md="2" className="p-3">
-              <img src={snekIMG} alt="SNEK" className="img-fluid" />
-            </MDBCol>
-            <MDBCol md="2" className="p-3">
-              <img
-                src={gasserPartnerIMG}
-                alt="Gasser+Partner"
-                className="img-fluid"
-              />
-            </MDBCol>
-            <MDBCol md="2" className="p-3">
-              <img
-                src={kelagbigbandIMG}
-                alt="Kelag Big Band Logo"
-                className="img-fluid"
-              />
-            </MDBCol>
-            <MDBCol md="2" className="p-3">
-              <img src={e4yIMG} alt="Emotions 4 you" className="img-fluid" />
-            </MDBCol>
-            <MDBCol md="2" className="p-3">
-              <img
-                src={erlebnishotelIMG}
-                alt="Erlebnishotel Mölltal Logo"
-                className="img-fluid"
-              />
-            </MDBCol>
-            <MDBCol md="2" className="p-3">
-              <img
-                src={psvIMG}
-                alt="Polizeisportverein Villach"
-                className="img-fluid"
-              />
-            </MDBCol>
-            <MDBCol md="2" className="p-3">
-              <img src={rauchIMG} alt="Andreas Rauch" className="img-fluid" />
-            </MDBCol>
-            <MDBCol md="2" className="p-3">
-              <img src={kelagIMG} alt="Kelag Logo" className="img-fluid" />
-            </MDBCol>
-            <MDBCol md="2" className="p-3">
-              <img
-                src={bluelupiIMG}
-                alt="Blue Lupi Logo"
-                className="img-fluid"
-              />
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div id="trusted">
+				<MDBContainer className="py-5 text-center text-dark">
+					<h2 className="gidole h1-responsive font-weight-bold">
+						Viele Firmen profitieren von unseren Services
+					</h2>
+					<p className="lead">
+						Wir bieten Dir <strong>hochwertige</strong>, auf Deine Vision
+						zugeschnittene Lösungen in sämtlichen Bereichen des Marketings.
+					</p>
+					<MDBRow className="flex-center">
+						{data.map((item, i) => {
+							return (
+								<MDBCol sm="2" className="p-3">
+									<img src={item.src} alt={item.alt} className="img-fluid" />
+								</MDBCol>
+							);
+						})}
+					</MDBRow>
+				</MDBContainer>
+			</div>
+		);
+	}
 }
 
 export default Trusted;
