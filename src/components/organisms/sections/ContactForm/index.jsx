@@ -75,7 +75,7 @@ class ContactForm extends React.Component {
 				<MDBContainer className="py-5">
 					<MDBRow className="flex-center">
 						<MDBCol md="6">
-							<MDBCard>
+							<MDBCard className="mb-3">
 								<MDBCardBody className="py-5">
 									<h3 className="font-weight-bold">Kontakt aufnehmen</h3>
 									<p className="text-muted">

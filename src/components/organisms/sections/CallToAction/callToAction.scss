@@ -2,6 +2,13 @@
   // Hide overflow once the animation can exceed the width sometimes
   overflow: hidden;
 
+  // Mobile view moon
+  .mobile-moon{
+    max-height: 100px;
+    left: 10%;
+    margin: auto;
+  }
+
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
   h2 {

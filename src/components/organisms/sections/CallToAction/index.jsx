@@ -71,10 +71,14 @@ class CallToAction extends React.Component {
 					<MDBCol>
 						<MDBRow className="space-right mt-5 mt-sm-0">
 							<MDBCol>
-								<MDBView>
+								<MDBView className="d-none d-sm-block">
 									<Parallax className="planet2" y={[60, 0]} tagOuter="figure">
 										<img className="rotate" src={planet1} alt="Moon" />
 									</Parallax>
+									<MDBMask />
+								</MDBView>
+								<MDBView className="d-block d-sm-none">
+									<img className="mobile-moon" src={planet1} alt="Moon" />
 									<MDBMask />
 								</MDBView>
 							</MDBCol>
