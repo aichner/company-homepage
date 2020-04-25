@@ -87,9 +87,17 @@ class HomePage extends React.Component {
 
 		return (
 			<section id="hero" className={darkMode ? "dark" : "light"}>
-				<MDBContainer className="py-5">
+				<MDBContainer className="pt-5">
 					<MDBView className="hero-view">
-						<MDBRow className="flex-center">
+						<MDBRow className="flex-center d-flex d-sm-none pt-5 mt-3">
+							<MDBCol md="6" className="text-center">
+								<Radar data={this.getRadarData} options={radarSettings} />
+								<h1 className="mt-3 font-weight-bold pb-4">
+									Deine Vision ist unser Auftrag
+								</h1>
+							</MDBCol>
+						</MDBRow>
+						<MDBRow className="flex-center d-none d-sm-flex desktop">
 							<MDBCol md="6">
 								<h1 className="font-weight-bold pb-4">
 									Deine Vision ist unser Auftrag
@@ -107,6 +115,21 @@ class HomePage extends React.Component {
 						</MDBRow>
 					</MDBView>
 				</MDBContainer>
+				<div className="top-mobile-bg d-block d-sm-none py-3 px-2 text-center">
+					<p className="lead font-weight-bold mb-1">
+						Was taugt Deine Online-Präsenz?
+					</p>
+					<p className="text-muted">
+						Unsere kostenlose Analyse zeigt Dir, welches Potential Deine Online
+						Präsenz besitzt und was Du davon nutzt.
+					</p>
+					<MDBSmoothScroll to="contactForm">
+						<MDBBtn size="lg" color="agency-red" className="btn-start">
+							<MDBIcon icon="rocket" className="pr-2" />
+							JETZT herausfinden
+						</MDBBtn>
+					</MDBSmoothScroll>
+				</div>
 				<MDBContainer
 					fluid
 					id="seperator"
