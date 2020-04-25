@@ -1,25 +1,25 @@
 export const createContact = (newContact) => {
-	return (dispatch, getState, { getFirebase, getFirestore }) => {
-		const firestore = getFirestore();
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firestore = getFirestore();
 
-		// Create contact post
-		firestore
-			.collection("contact")
-			.doc()
-			.set({
-				...newContact,
-				timestamp: new Date().getTime(),
-				assigned: null,
+    // Create contact post
+    firestore
+      .collection("contact")
+      .doc()
+      .set({
+        ...newContact,
+        timestamp: new Date().getTime(),
+        assigned: null,
         processed: false,
-			})
-			.then(() => {
-				dispatch({ type: "CONTACT_SUCCESS" });
-				return;
-			})
-			.catch((err) => {
-				dispatch({ type: "CONTACT_ERROR", err });
-			});
-	};
+      })
+      .then(() => {
+        dispatch({ type: "CONTACT_SUCCESS" });
+        return;
+      })
+      .catch((err) => {
+        dispatch({ type: "CONTACT_ERROR", err });
+      });
+  };
 };
 
 /**

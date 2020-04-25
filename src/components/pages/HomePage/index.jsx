@@ -9,42 +9,42 @@ import { Helmet } from "react-helmet";
 //> Components
 // Sections
 import {
-	Hero,
-	ContactForm,
-	Services,
-	CallToAction,
-	Trusted,
+  Hero,
+  ContactForm,
+  Services,
+  CallToAction,
+  Trusted,
 } from "../../organisms/sections";
 
 //> CSS
 // All organisms use their own scss implementation
 
 class HomePage extends React.Component {
-	render() {
-		const { globalProps } = this.props;
+  render() {
+    const { globalProps } = this.props;
 
-		if (globalProps) {
-			return (
-				<>
-					<Helmet>
-						<title>Werbeagentur Christian Aichner - Ihr Partner</title>
-						<meta
-							name="description"
-							content="Unsere kostenlose Analyse zeigt Dir den aktuellen Stand Deiner gesamten Online-Präsenz und
+    if (globalProps) {
+      return (
+        <>
+          <Helmet>
+            <title>Werbeagentur Christian Aichner - Ihr Partner</title>
+            <meta
+              name="description"
+              content="Unsere kostenlose Analyse zeigt Dir den aktuellen Stand Deiner gesamten Online-Präsenz und
               liefert individuelle und unkomplizierte Lösungen."
-						/>
-					</Helmet>
-					<Hero darkMode={globalProps.darkMode} />
-					<Services darkMode={globalProps.darkMode} />
-					<Trusted darkmode={globalProps.darkMode} />
-					<CallToAction darkMode={globalProps.darkMode} />
-					<ContactForm darkMode={globalProps.darkMode} />
-				</>
-			);
-		} else {
-			return null;
-		}
-	}
+            />
+          </Helmet>
+          <Hero darkMode={globalProps.darkMode} />
+          <Services darkMode={globalProps.darkMode} />
+          <Trusted darkmode={globalProps.darkMode} />
+          <CallToAction darkMode={globalProps.darkMode} />
+          <ContactForm darkMode={globalProps.darkMode} />
+        </>
+      );
+    } else {
+      return null;
+    }
+  }
 }
 
 export default HomePage;
