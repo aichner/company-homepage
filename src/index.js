@@ -64,35 +64,35 @@ const userCollection = "partners";
 const onlyLoadWhenReady = true;
 // Create Redux data-store and store it in store and apply thunk middleware
 const store = createStore(
-	rootReducer,
-	compose(
-		applyMiddleware(
-			thunk.withExtraArgument({
-				getFirebase, // Firebase
-				getFirestore, // Cloud Firestore Database
-			})
-		),
-		reduxFirestore(fbInit),
-		reactReduxFirebase(fbInit, {
-			useFirestoreForProfile: syncUserToAuth,
-			userProfile: userCollection,
-			attachAuthIsReady: onlyLoadWhenReady,
-		})
-	)
+  rootReducer,
+  compose(
+    applyMiddleware(
+      thunk.withExtraArgument({
+        getFirebase, // Firebase
+        getFirestore, // Cloud Firestore Database
+      })
+    ),
+    reduxFirestore(fbInit),
+    reactReduxFirebase(fbInit, {
+      useFirestoreForProfile: syncUserToAuth,
+      userProfile: userCollection,
+      attachAuthIsReady: onlyLoadWhenReady,
+    })
+  )
 );
 
 // Wait until firebase is initialized, then render the DOM
 store.firebaseAuthIsReady.then(() => {
-	// Render the DOM
-	ReactDOM.render(
-		<Provider store={store}>
-			<ParallaxProvider store={store}>
-				<App />
-			</ParallaxProvider>
-		</Provider>,
-		document.getElementById("root")
-	);
-	registerServiceWorker();
+  // Render the DOM
+  ReactDOM.render(
+    <Provider store={store}>
+      <ParallaxProvider store={store}>
+        <App />
+      </ParallaxProvider>
+    </Provider>,
+    document.getElementById("root")
+  );
+  registerServiceWorker();
 });
 
 /**
