@@ -2,6 +2,10 @@
 // Contains all the functionality necessary to define React components
 import React from "react";
 
+//> Additional
+// React Helmet
+import { Helmet } from "react-helmet";
+
 //> Components
 // Sections
 import {
@@ -16,16 +20,20 @@ import {
 // All organisms use their own scss implementation
 
 class HomePage extends React.Component {
-  componentDidMount = () => {
-    document.title = "Ihr verlässlicher Allround-Partner";
-  };
-
   render() {
     const { globalProps } = this.props;
 
     if (globalProps) {
       return (
         <>
+          <Helmet>
+            <title>Werbeagentur Christian Aichner - Ihr Partner</title>
+            <meta
+              name="description"
+              content="Unsere kostenlose Analyse zeigt Dir den aktuellen Stand Deiner gesamten Online-Präsenz und
+              liefert individuelle und unkomplizierte Lösungen."
+            />
+          </Helmet>
           <Hero darkMode={globalProps.darkMode} />
           <Services darkMode={globalProps.darkMode} />
           <Trusted darkmode={globalProps.darkMode} />

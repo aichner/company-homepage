@@ -1,8 +1,6 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
-// Router
-import { Link } from "react-router-dom";
 
 //> Additional
 // Chart
@@ -17,8 +15,7 @@ import {
   MDBView,
   MDBContainer,
   MDBIcon,
-  MDBCard,
-  MDBCardBody,
+  MDBSmoothScroll,
 } from "mdbreact";
 
 //> Images
@@ -90,17 +87,27 @@ class HomePage extends React.Component {
 
     return (
       <section id="hero" className={darkMode ? "dark" : "light"}>
-        <MDBContainer className="py-5">
+        <MDBContainer className="pt-5">
           <MDBView className="hero-view">
-            <MDBRow className="flex-center">
+            <MDBRow className="flex-center d-flex d-sm-none pt-5 mt-3">
+              <MDBCol md="6" className="text-center">
+                <Radar data={this.getRadarData} options={radarSettings} />
+                <h1 className="mt-3 font-weight-bold pb-4">
+                  Deine Vision ist unser Auftrag
+                </h1>
+              </MDBCol>
+            </MDBRow>
+            <MDBRow className="flex-center d-none d-sm-flex desktop">
               <MDBCol md="6">
                 <h1 className="font-weight-bold pb-4">
                   Deine Vision ist unser Auftrag
                 </h1>
-                <MDBBtn size="lg" color="agency-red">
-                  Mehr erfahren
-                  <MDBIcon icon="angle-down" className="pl-2" />
-                </MDBBtn>
+                <MDBSmoothScroll to="services">
+                  <MDBBtn size="lg" color="agency-red">
+                    Mehr erfahren
+                    <MDBIcon icon="angle-down" className="pl-2" />
+                  </MDBBtn>
+                </MDBSmoothScroll>
               </MDBCol>
               <MDBCol md="6" className="py-5">
                 <Working />
@@ -108,6 +115,21 @@ class HomePage extends React.Component {
             </MDBRow>
           </MDBView>
         </MDBContainer>
+        <div className="top-mobile-bg d-block d-sm-none py-3 px-2 text-center">
+          <p className="lead font-weight-bold mb-1">
+            Was taugt Deine Online-Präsenz?
+          </p>
+          <p className="text-muted">
+            Unsere kostenlose Analyse zeigt Dir, welches Potential Deine Online
+            Präsenz besitzt und was Du davon nutzt.
+          </p>
+          <MDBSmoothScroll to="contactForm">
+            <MDBBtn size="lg" color="agency-red" className="btn-start">
+              <MDBIcon icon="rocket" className="pr-2" />
+              JETZT herausfinden
+            </MDBBtn>
+          </MDBSmoothScroll>
+        </div>
         <MDBContainer
           fluid
           id="seperator"
@@ -125,12 +147,12 @@ class HomePage extends React.Component {
                   aktuellen Stand Deiner gesamten Online-Präsenz und liefert
                   individuelle und unkomplizierte Lösungen.
                 </p>
-                <Link to="/analysis">
+                <MDBSmoothScroll to="contactForm">
                   <MDBBtn size="lg" color="agency-red" className="btn-start">
                     <MDBIcon icon="rocket" className="pr-2" />
                     JETZT kostenlos herausfinden
                   </MDBBtn>
-                </Link>
+                </MDBSmoothScroll>
               </MDBCol>
             </MDBRow>
           </MDBContainer>

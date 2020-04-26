@@ -1,7 +1,7 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -45,19 +45,6 @@ class Navbar extends React.Component {
     this.state.collapseID === collapseID && this.setState({ collapseID: "" });
   };
 
-  // Get navbar mode
-  getMode = () => {
-    let opts = {};
-
-    if (this.props.darkMode) {
-      opts["dark"] = "dark";
-    } else {
-      opts["light"] = "light";
-    }
-
-    return opts;
-  };
-
   render() {
     const overlay = (
       <div
@@ -78,7 +65,8 @@ class Navbar extends React.Component {
       <div>
         <MDBNavbar
           color={this.props.darkMode ? "agency-dark" : "white"}
-          {...this.getMode()}
+          light={!this.props.darkMode}
+          dark={this.props.darkMode}
           expand="md"
           fixed="top"
           scrolling
@@ -109,9 +97,15 @@ class Navbar extends React.Component {
                   </a>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <Link to="/me">
-                    <MDBBtn color="agency-red">Kostenlose Analyse</MDBBtn>
-                  </Link>
+                  {location.pathname === "/" ? (
+                    <MDBSmoothScroll to="contactForm">
+                      <MDBBtn color="agency-red">Kostenlose Analyse</MDBBtn>
+                    </MDBSmoothScroll>
+                  ) : (
+                    <MDBNavLink exact to="/">
+                      <MDBBtn color="agency-red">Kostenlose Analyse</MDBBtn>
+                    </MDBNavLink>
+                  )}
                 </MDBNavItem>
                 <MDBNavItem>
                   {location.pathname === "/" ? (

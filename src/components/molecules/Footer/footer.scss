@@ -16,7 +16,6 @@
 // Footer
 footer {
   transition: all 0.5s ease;
-
   a {
     color: #6c757d !important;
     &:hover {
@@ -88,6 +87,7 @@ footer {
   // Company img
   svg {
     width: 80%;
+    max-width: 200px;
   }
 
   // Dark Mode

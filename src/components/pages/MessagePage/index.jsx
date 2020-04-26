@@ -1,6 +1,8 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
+// Router
+import { Link } from "react-router-dom";
 
 //> Additional
 // Copy data to clipboard
@@ -8,7 +10,10 @@ import copy from "copy-to-clipboard";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
-import { MDBContainer, MDBBtn, MDBAlert, MDBIcon, MDBTooltip } from "mdbreact";
+import { MDBContainer, MDBBtn, MDBIcon, MDBTooltip } from "mdbreact";
+
+//> CSS
+import "./message.scss";
 
 class MessagePage extends React.Component {
   state = {};
@@ -133,6 +138,21 @@ class MessagePage extends React.Component {
               Downloads und Kopien dieser Seite sind nur für den privaten, nicht
               kommerziellen Gebrauch gestattet.
             </p>
+          </div>
+        )}
+        {this.props.location.pathname === "/thankyou" && (
+          <div className="py-5 mt-5">
+            <h2>
+              <MDBIcon icon="check-circle" className="blue-text ml-2" />
+              <br />
+              Danke für Deine Nachricht!
+            </h2>
+            <p className="lead mb-2">Wir melden uns schnellstmöglich möglich bei Dir.</p>
+            <Link to="/">
+              <MDBBtn color="agency-red">
+                Zurück zur Hompage
+              </MDBBtn>
+            </Link>
           </div>
         )}
         {this.props.location.pathname === "/privacy" && (

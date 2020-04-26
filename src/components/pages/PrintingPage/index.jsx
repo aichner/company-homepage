@@ -45,11 +45,6 @@ const notusecases = [
 ];
 
 class PrintingPage extends React.Component {
-  componentDidMount = () => {
-    // Set page title
-    document.title = "Ihr verlässlicher Allround-Partner";
-  };
-
   render() {
     const { globalProps } = this.props;
 

@@ -5,21 +5,16 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 //> Components
-/**
- * HomePage: A basic template page
- */
 import {
   HomePage,
   MessagePage,
-  LoginPage,
-  ProfilePage,
   PrintingPage,
   BrandingPage,
   LocationPage,
 } from "./components/pages";
 
 //> MessagePage content
-const messagePage = ["about", "privacy"];
+const messagePage = ["about", "privacy", "thankyou"];
 
 class Routes extends React.Component {
   render() {

@@ -2,7 +2,7 @@
 // Contains all the functionality necessary to define React components
 import React from "react";
 // Router
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -10,7 +10,6 @@ import {
   MDBRow,
   MDBCol,
   MDBBtn,
-  MDBView,
   MDBContainer,
   MDBCard,
   MDBCardBody,
@@ -20,6 +19,12 @@ import {
 
 //> Images
 // To be added
+
+//> Redux
+// Connect
+import { connect } from "react-redux";
+// Actions
+import { createContact } from "../../../../store/actions/contactActions";
 
 //> CSS
 import "./contactForm.scss";
@@ -47,22 +52,36 @@ class ContactForm extends React.Component {
     });
   };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    this.props.createContact({
+      fullname: this.state.fullname,
+      email: this.state.email,
+      phone: this.state.phone,
+      note: this.state.note,
+    });
+  };
+
   render() {
-    const { darkMode } = this.props;
+    const { darkMode, contact } = this.props;
+
+    // Check if sent and redirect
+    if (contact.contactSuccess) return <Redirect to="/thankyou" />;
 
     return (
       <section id="contactForm" className={darkMode ? "dark" : "light"}>
         <MDBContainer className="py-5">
           <MDBRow className="flex-center">
             <MDBCol md="6">
-              <MDBCard>
+              <MDBCard className="mb-3">
                 <MDBCardBody className="py-5">
                   <h3 className="font-weight-bold">Kontakt aufnehmen</h3>
                   <p className="text-muted">
-                    Du hast eine Projektidee und bist Dir nicht sicher um deren
-                    Umsetzung? Du benötigst einen Web-Shop, Imagefilm, eine
-                    Website oder eine individuelle Applikation? Zögere nicht und
-                    kontaktiere uns.
+                    Du hast eine Projektidee und bist Dir nicht sicher bezüglich
+                    deren Umsetzung? Du benötigst einen Web-Shop, Imagefilm,
+                    eine Website oder eine individuelle Applikation? Zögere
+                    nicht und kontaktiere uns.
                   </p>
                   <form onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="input-group my-3">
@@ -74,8 +93,8 @@ class ContactForm extends React.Component {
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Deine voller Name"
-                        aria-label="Deine voller Name"
+                        placeholder="Deine Name"
+                        aria-label="Deine Name"
                         name="fullname"
                         value={this.state.fullname}
                         onChange={(e) => this.onTextChange(e)}
@@ -207,7 +226,20 @@ class ContactForm extends React.Component {
   }
 }
 
-export default ContactForm;
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth,
+    contact: state.contact,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createContact: (newContact) => dispatch(createContact(newContact)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)

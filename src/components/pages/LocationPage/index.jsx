@@ -2,19 +2,13 @@
 // Contains all the functionality necessary to define React components
 import React from "react";
 
+//> Additional
+// React Helmet
+import { Helmet } from "react-helmet";
+
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBBtn,
-  MDBIcon,
-  MDBPopover,
-  MDBPopoverHeader,
-  MDBPopoverBody,
-  MDBView,
-} from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from "mdbreact";
 
 //> CSS
 import "./location.scss";
@@ -33,6 +27,14 @@ class LocationPage extends React.Component {
   render() {
     return (
       <MDBContainer id="location" className="py-5">
+        <Helmet>
+          <title>Wo Du uns findest</title>
+          <meta
+            name="description"
+            content="Gerne sprechen wir mit Dir über deine Ziele und Deine Ideen. Du kannst uns gerne bei
+            unserem Hauptstandort in Villach Landskron besuchen."
+          />
+        </Helmet>
         <MDBRow>
           <MDBCol lg="6" className="mb-4">
             <h2 className="mb-3">Wie Du uns findest</h2>
@@ -102,6 +104,7 @@ class LocationPage extends React.Component {
                 width="450"
                 height="250"
                 frameBorder="0"
+                title="Location"
                 style={{ Border: 0 }}
                 src={url + `&key=${process.env.REACT_APP_GOOGLE_MAPS}`}
                 allowFullScreen

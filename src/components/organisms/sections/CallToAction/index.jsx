@@ -2,7 +2,7 @@
 // Contains all the functionality necessary to define React components
 import React from "react";
 // React Router DOM bindings
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 //> Additional libraries
 // Parallax
@@ -10,7 +10,15 @@ import { Parallax } from "react-scroll-parallax";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
-import { MDBRow, MDBCol, MDBBtn, MDBView, MDBIcon, MDBMask } from "mdbreact";
+import {
+  MDBRow,
+  MDBCol,
+  MDBBtn,
+  MDBView,
+  MDBIcon,
+  MDBMask,
+  MDBSmoothScroll,
+} from "mdbreact";
 
 //> Images
 // Rocket
@@ -25,7 +33,7 @@ class CallToAction extends React.Component {
     const { darkMode } = this.props;
 
     return (
-      <section id="calltoaction">
+      <section id="calltoaction" className={darkMode ? "dark" : "light"}>
         <MDBRow>
           <MDBCol className="text-center">
             <MDBRow className="space-left">
@@ -53,20 +61,24 @@ class CallToAction extends React.Component {
               Es ist einfach, <strong>jetzt</strong> zu starten!
             </h2>
             <p>Und der Einstieg und die Erstberatung sind kostenlos.</p>
-            <Link to="/analysis">
+            <MDBSmoothScroll to="contactForm">
               <MDBBtn color="agency-red" size="lg">
                 <MDBIcon icon="rocket" className="pr-2" />
                 Jetzt starten
               </MDBBtn>
-            </Link>
+            </MDBSmoothScroll>
           </MDBCol>
           <MDBCol>
-            <MDBRow className="space-right">
+            <MDBRow className="space-right mt-5 mt-sm-0">
               <MDBCol>
-                <MDBView>
+                <MDBView className="d-none d-sm-block">
                   <Parallax className="planet2" y={[60, 0]} tagOuter="figure">
                     <img className="rotate" src={planet1} alt="Moon" />
                   </Parallax>
+                  <MDBMask />
+                </MDBView>
+                <MDBView className="d-block d-sm-none">
+                  <img className="mobile-moon" src={planet1} alt="Moon" />
                   <MDBMask />
                 </MDBView>
               </MDBCol>

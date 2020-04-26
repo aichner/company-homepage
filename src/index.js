@@ -85,9 +85,11 @@ const store = createStore(
 store.firebaseAuthIsReady.then(() => {
   // Render the DOM
   ReactDOM.render(
-    <ParallaxProvider store={store}>
-      <App />
-    </ParallaxProvider>,
+    <Provider store={store}>
+      <ParallaxProvider store={store}>
+        <App />
+      </ParallaxProvider>
+    </Provider>,
     document.getElementById("root")
   );
   registerServiceWorker();

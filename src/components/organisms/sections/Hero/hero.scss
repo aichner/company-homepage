@@ -1,56 +1,83 @@
 @import "../../../../utilities/variables";
 
 #hero {
-  // Basic setup
-  h1 {
-    font-size: 4.2rem;
+  // Mobile view background
+  .top-mobile-bg {
+    background-color: darken(white, 10%);
+    position: relative;
+    z-index: 1;
+    &::after {
+      background: inherit;
+      top: 0;
+      margin-top: -20px;
+      content: "";
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      transform: skewY(-1.5deg);
+      transform-origin: 100%;
+      z-index: -1;
+    }
   }
-  // Left column text more center
-  .col-md-6:first-child {
-    margin-bottom: 6rem !important;
-  }
-  .gradient {
-    background: -moz-linear-gradient(
-      45deg,
-      rgba(42, 27, 161, 0.7),
-      rgba(29, 210, 177, 0.7) 100%
-    );
-    background: -webkit-linear-gradient(
-      45deg,
-      rgba(42, 27, 161, 0.7),
-      rgba(29, 210, 177, 0.7) 100%
-    );
-    background: -webkit-gradient(
-      linear,
-      45deg,
-      from(rgba(42, 27, 161, 0.7)),
-      to(rgba(29, 210, 177, 0.7))
-    );
-    background: -o-linear-gradient(
-      45deg,
-      rgba(42, 27, 161, 0.7),
-      rgba(29, 210, 177, 0.7) 100%
-    );
-    background: linear-gradient(
-      45deg,
-      rgba(42, 27, 161, 0.7),
-      rgba(29, 210, 177, 0.7) 100%
-    );
-  }
-  .hero-view {
-    max-height: 100vh;
-  }
-  .container,
-  #hero .hero-row {
-    max-height: 100%;
-  }
-  h6 {
-    line-height: 1.7;
+  // Desktop version
+  .desktop {
+    // Basic setup
+    h1 {
+      font-size: 4.2rem;
+    }
+    // Left column text more center
+    .col-md-6:first-child {
+      margin-bottom: 6rem !important;
+    }
+    .gradient {
+      background: -moz-linear-gradient(
+        45deg,
+        rgba(42, 27, 161, 0.7),
+        rgba(29, 210, 177, 0.7) 100%
+      );
+      background: -webkit-linear-gradient(
+        45deg,
+        rgba(42, 27, 161, 0.7),
+        rgba(29, 210, 177, 0.7) 100%
+      );
+      background: -webkit-gradient(
+        linear,
+        45deg,
+        from(rgba(42, 27, 161, 0.7)),
+        to(rgba(29, 210, 177, 0.7))
+      );
+      background: -o-linear-gradient(
+        45deg,
+        rgba(42, 27, 161, 0.7),
+        rgba(29, 210, 177, 0.7) 100%
+      );
+      background: linear-gradient(
+        45deg,
+        rgba(42, 27, 161, 0.7),
+        rgba(29, 210, 177, 0.7) 100%
+      );
+    }
+    .hero-view {
+      max-height: 100vh;
+    }
+    .container,
+    #hero .hero-row {
+      max-height: 100%;
+    }
+    h6 {
+      line-height: 1.7;
+    }
   }
 
   // Dark mode
   &.dark {
-    background: linear-gradient(to top, $agencyDark 0%, darken($agencyDark, 10%) 100%);
+    background: linear-gradient(
+      to top,
+      $agencyDark 0%,
+      darken($agencyDark, 10%) 100%
+    );
     color: white;
   }
 

@@ -2,7 +2,7 @@
 // Contains all the functionality necessary to define React components
 import React from "react";
 // React Router DOM bindings
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -15,6 +15,7 @@ import {
   MDBBtn,
   MDBSwitch,
   MDBBadge,
+  MDBSmoothScroll,
 } from "mdbreact";
 
 //> Images
@@ -58,6 +59,8 @@ class Footer extends React.PureComponent {
   };
 
   render() {
+    const { location } = this.props;
+
     return (
       <MDBFooter color={this.props.mode ? "agency-dark" : "white text-dark"}>
         <MDBRow className="social">
@@ -260,7 +263,11 @@ class Footer extends React.PureComponent {
                     Villach-Landskron, Kärnten, AT
                   </li>
                 </Link>
-                <a href="https://termin.aichner.cloud" target="_blank">
+                <a
+                  href="https://termin.aichner.cloud"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <li className="list-unstyled">
                     <MDBIcon far icon="calendar" />
                     Termin ausmachen
@@ -295,9 +302,19 @@ class Footer extends React.PureComponent {
             </MDBCol>
             <MDBCol md="12" className="text-center my-5">
               <h4>{this.state.slogan}</h4>
-              <MDBBtn size="lg" rounded color="agency-red">
-                Kontakt
-              </MDBBtn>
+              {location.pathname === "/" ? (
+                <MDBSmoothScroll to="contactForm">
+                  <MDBBtn size="lg" rounded color="agency-red">
+                    Kontakt
+                  </MDBBtn>
+                </MDBSmoothScroll>
+              ) : (
+                <Link exact to="/">
+                  <MDBBtn size="lg" rounded color="agency-red">
+                    Kontakt
+                  </MDBBtn>
+                </Link>
+              )}
             </MDBCol>
           </MDBRow>
         </MDBContainer>
@@ -342,7 +359,7 @@ class Footer extends React.PureComponent {
   }
 }
 
-export default Footer;
+export default withRouter(Footer);
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
