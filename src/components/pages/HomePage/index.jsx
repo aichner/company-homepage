@@ -6,12 +6,6 @@ import React from "react";
 // React Helmet
 import { Helmet } from "react-helmet";
 
-//> Redux
-// Connect
-import { connect } from "react-redux";
-// Actions
-import { signInAnonymous } from "../../../store/actions/authActions.js";
-
 //> Components
 // Sections
 import {
@@ -53,13 +47,7 @@ class HomePage extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    signInAnonymous: () => dispatch(signInAnonymous()),
-  };
-};
-
-export default connect(null, mapDispatchToProps)(HomePage);
+export default HomePage;
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
