@@ -19,24 +19,27 @@ export const signIn = (credentials) => {
   };
 };
 
-export const signInAnonymous = (credentials) => {
-  return (dispatch, getState, { getFirebase }) => {
+export const signInAnonymous = () => {
+  return async (dispatch, getState, { getFirebase }) => {
+    // Create Firebase instance
     const firebase = getFirebase();
 
-    firebase
-      .auth()
-      .signInAnonymously()
-      .then(() => {
-        dispatch({
-          type: "LOGIN_ANON_SUCCESS",
+    // Check if there is a user currently logged in
+    if (firebase.auth().currentUser) {
+      // There is a current user logged in
+      return true;
+    } else {
+      // No user logged in
+      return firebase
+        .auth()
+        .signInAnonymously()
+        .then(() => {
+          return true;
+        })
+        .catch((err) => {
+          return false;
         });
-      })
-      .catch((err) => {
-        dispatch({
-          type: "LOGIN_ANON_ERROR",
-          err,
-        });
-      });
+    }
   };
 };
 

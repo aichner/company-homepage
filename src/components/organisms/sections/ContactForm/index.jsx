@@ -2,7 +2,7 @@
 // Contains all the functionality necessary to define React components
 import React from "react";
 // Router
-import { Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -61,13 +61,11 @@ class ContactForm extends React.Component {
       phone: this.state.phone,
       note: this.state.note,
     });
+    this.props.history.replace("/thankyou");
   };
 
   render() {
-    const { darkMode, contact } = this.props;
-
-    // Check if sent and redirect
-    if (contact.contactSuccess) return <Redirect to="/thankyou" />;
+    const { darkMode } = this.props;
 
     return (
       <section id="contactForm" className={darkMode ? "dark" : "light"}>
@@ -239,7 +237,10 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(ContactForm));
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
