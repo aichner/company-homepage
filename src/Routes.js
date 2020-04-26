@@ -11,6 +11,7 @@ import {
   PrintingPage,
   BrandingPage,
   LocationPage,
+  ErrorPage,
 } from "./components/pages";
 
 //> MessagePage content
@@ -60,6 +61,11 @@ class Routes extends React.Component {
             />
           );
         })}
+        <Route
+          render={(props) => (
+            <ErrorPage {...props} globalProps={globalProps} />
+          )}
+        />
         <Route component={HomePage} />
       </Switch>
     );

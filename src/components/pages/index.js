@@ -6,14 +6,16 @@ import DevelopmentPage from "./DevelopmentPage";
 import PrintingPage from "./PrintingPage";
 import BrandingPage from "./BrandingPage";
 import LocationPage from "./LocationPage";
+import ErrorPage from "./ErrorPage";
 
 export {
-  HomePage,
-  MessagePage,
-  DevelopmentPage,
-  PrintingPage,
-  BrandingPage,
-  LocationPage,
+	HomePage,
+	MessagePage,
+	DevelopmentPage,
+	PrintingPage,
+	BrandingPage,
+	LocationPage,
+	ErrorPage,
 };
 
 /**
