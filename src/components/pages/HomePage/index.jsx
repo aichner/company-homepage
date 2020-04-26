@@ -26,8 +26,8 @@ import {
 // All organisms use their own scss implementation
 
 class HomePage extends React.Component {
-	componentDidMount = async () => {
-		console.log(await this.props.signInAnonymous());
+	componentDidMount = () => {
+		this.props.signInAnonymous();
 	};
 
 	render() {
