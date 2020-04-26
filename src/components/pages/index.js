@@ -9,13 +9,13 @@ import LocationPage from "./LocationPage";
 import ErrorPage from "./ErrorPage";
 
 export {
-	HomePage,
-	MessagePage,
-	DevelopmentPage,
-	PrintingPage,
-	BrandingPage,
-	LocationPage,
-	ErrorPage,
+  HomePage,
+  MessagePage,
+  DevelopmentPage,
+  PrintingPage,
+  BrandingPage,
+  LocationPage,
+  ErrorPage,
 };
 
 /**
