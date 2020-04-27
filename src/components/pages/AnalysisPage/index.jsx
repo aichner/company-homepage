@@ -272,7 +272,7 @@ class AnalysisPage extends React.Component {
                   Vorher / Nachher
                   <small className="text-muted">
                     Der Vergleich macht sich sicher! Wie war der Stand eines
-                    Unternehmens bevor und nacherdem wir deren Online-Präsenz
+                    Unternehmens bevor und nachdem wir deren Online-Präsenz
                     verbessert haben?
                   </small>
                 </p>
