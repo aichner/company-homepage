@@ -1,6 +1,8 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
+// Router bindings
+import { Link } from "react-router-dom";
 
 //> Additional
 // Chart
@@ -123,12 +125,12 @@ class HomePage extends React.Component {
             Unsere kostenlose Analyse zeigt Dir, welches Potential Deine Online
             Präsenz besitzt und was Du davon nutzt.
           </p>
-          <MDBSmoothScroll to="contactForm">
+          <Link to="/analysis">
             <MDBBtn size="lg" color="agency-red" className="btn-start">
               <MDBIcon icon="rocket" className="pr-2" />
               JETZT herausfinden
             </MDBBtn>
-          </MDBSmoothScroll>
+          </Link>
         </div>
         <MDBContainer
           fluid
@@ -147,12 +149,12 @@ class HomePage extends React.Component {
                   aktuellen Stand Deiner gesamten Online-Präsenz und liefert
                   individuelle und unkomplizierte Lösungen.
                 </p>
-                <MDBSmoothScroll to="contactForm">
+                <Link to="/analysis">
                   <MDBBtn size="lg" color="agency-red" className="btn-start">
                     <MDBIcon icon="rocket" className="pr-2" />
                     JETZT kostenlos herausfinden
                   </MDBBtn>
-                </MDBSmoothScroll>
+                </Link>
               </MDBCol>
             </MDBRow>
           </MDBContainer>
