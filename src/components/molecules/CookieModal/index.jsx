@@ -1,4 +1,9 @@
-import React, { Component } from "react";
+//> React
+// Contains all the functionality necessary to define React components
+import React from "react";
+
+//> MDB
+// "Material Design for Bootstrap" is a great UI design framework
 import {
   MDBContainer,
   MDBBtn,
@@ -8,13 +13,14 @@ import {
   MDBRow,
 } from "mdbreact";
 
-class ModalPage extends Component {
+class ModalPage extends React.Component {
   state = {
     modal1: localStorage.getItem("cookie") ? false : true,
   };
 
   toggle = (nr) => () => {
     let modalNumber = "modal" + nr;
+
     this.setState(
       {
         [modalNumber]: !this.state[modalNumber],
