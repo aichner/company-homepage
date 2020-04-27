@@ -25,8 +25,6 @@ class HomePage extends React.Component {
   render() {
     const { globalProps } = this.props;
 
-    console.log(this.state);
-
     if (globalProps) {
       return (
         <>
