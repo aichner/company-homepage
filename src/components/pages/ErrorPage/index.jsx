@@ -4,6 +4,10 @@ import React from "react";
 // Router
 import { Link } from "react-router-dom";
 
+//> Additional
+// React Helmet
+import { Helmet } from "react-helmet";
+
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import { MDBContainer, MDBBtn, MDBIcon } from "mdbreact";
@@ -15,6 +19,13 @@ class ErrorPage extends React.Component {
   render() {
     return (
       <MDBContainer id="error" className="py-5 mb-5 text-center">
+        <Helmet>
+          <title>Seite nicht gefunden</title>
+          <meta
+            name="description"
+            content="Die gewünschte Seite konnte nicht gefunden werden."
+          />
+        </Helmet>
         <div className="mt-sm-5 mt-0">
           <h1>
             <span className="text-danger">4</span>
