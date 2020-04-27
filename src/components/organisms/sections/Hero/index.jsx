@@ -56,7 +56,9 @@ class HomePage extends React.Component {
     let max = Math.floor(100);
     let arr = [1, 2, 3, 4, 5, 6, 7, 8];
     let results = arr.map((item, i) => {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
+      return Math.floor(Math.random() * (max - min + 1)) + min > 100
+        ? 100
+        : Math.floor(Math.random() * (max - min + 1)) + min;
     });
 
     return results;
