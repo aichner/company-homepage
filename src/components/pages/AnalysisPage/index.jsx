@@ -106,7 +106,7 @@ class AnalysisPage extends React.Component {
                       <MDBIcon icon="check" className="green-text" />
                       Erhöhte Reichweite
                       <small className="text-muted">
-                        Eine Website macht Kunden über Dein Unternehmen
+                        Eine Website macht Kunden auf Dein Unternehmen
                         aufmerksam
                       </small>
                     </p>
