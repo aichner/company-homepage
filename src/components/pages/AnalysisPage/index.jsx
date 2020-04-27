@@ -157,84 +157,115 @@ class AnalysisPage extends React.Component {
               <MDBCol md="6">
                 <MDBCard className="mt-4 mb-3 z-depth-1">
                   <MDBCardBody>
-                    <p className="lead mb-1">
-                      Wir benötigen nur wenige Informationen
-                    </p>
-                    <p className="text-muted">
-                      So finden wir alles über Ihr Unternehmen heraus, wie es
-                      ein potentieller Kunde sehen würde.
-                    </p>
-                    <form onSubmit={(e) => this.handleSubmit(e)} method="post">
-                      <div className="input-group my-3">
-                        <div className="input-group-prepend">
-                          <span className="input-group-text" id="basic-addon">
-                            <i className="fa fa-building prefix"></i>
-                          </span>
-                        </div>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Dein Unternehmen"
-                          aria-label="Dein Unternehmen"
-                          name="company"
-                          value={this.state.company}
-                          onChange={(e) => this.onTextChange(e)}
-                          aria-describedby="basic-addon"
-                          required
+                    {this.state.success ? (
+                      <div className="py-4">
+                        <MDBIcon
+                          icon="check-circle"
+                          className="green-text"
+                          size="2x"
                         />
+                        <p className="lead font-weight-bold mb-1">
+                          Erfolgreich angefordert!
+                        </p>
+                        <p className="text-muted mb-0">
+                          Wir bearbeiten Ihren Antrag und analysieren Ihre
+                          Online-Präsenz.
+                        </p>
                       </div>
-                      <div className="input-group my-3">
-                        <div className="input-group-prepend">
-                          <span className="input-group-text" id="basic-addon">
-                            <i className="fa fa-user prefix"></i>
-                          </span>
-                        </div>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Deine Name"
-                          aria-label="Deine Name"
-                          name="full_name"
-                          value={this.state.full_name}
-                          onChange={(e) => this.onTextChange(e)}
-                          aria-describedby="basic-addon"
-                          required
-                        />
-                      </div>
-                      <div className="input-group my-3">
-                        <div className="input-group-prepend">
-                          <span className="input-group-text" id="basic-addon">
-                            <i className="fa fa-at prefix"></i>
-                          </span>
-                        </div>
-                        <input
-                          type="email"
-                          className="form-control"
-                          placeholder="Deine E-Mail"
-                          aria-label="Deine E-Mail"
-                          name="email"
-                          value={this.state.email}
-                          onChange={(e) => this.onTextChange(e)}
-                          aria-describedby="basic-addon"
-                          required
-                        />
-                      </div>
-                      <div className="text-left mb-2">
-                        <small>
-                          Mit dem Anfordern der Analyse bestätigen Sie, dass Sie
-                          damit einverstanden sind, Ihre Analyse per Post zu
-                          erhalten. Weiters bestätigen Sie, unsere{" "}
-                          <Link exact to="privacy" target="_blank">
-                            Datenschutzerklärung
-                          </Link>{" "}
-                          gelesen und akzeptiert zu haben.
-                        </small>
-                      </div>
-                      <MDBBtn color="agency-red" type="submit" size="lg">
-                        <MDBIcon icon="signature" />
-                        Analyse anfordern
-                      </MDBBtn>
-                    </form>
+                    ) : (
+                      <>
+                        <p className="lead mb-1">
+                          Wir benötigen nur wenige Informationen
+                        </p>
+                        <p className="text-muted">
+                          So finden wir alles über Ihr Unternehmen heraus, wie
+                          es ein potentieller Kunde sehen würde.
+                        </p>
+                        <form
+                          onSubmit={(e) => this.handleSubmit(e)}
+                          method="post"
+                        >
+                          <div className="input-group my-3">
+                            <div className="input-group-prepend">
+                              <span
+                                className="input-group-text"
+                                id="basic-addon"
+                              >
+                                <i className="fa fa-building prefix"></i>
+                              </span>
+                            </div>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Dein Unternehmen"
+                              aria-label="Dein Unternehmen"
+                              name="company"
+                              value={this.state.company}
+                              onChange={(e) => this.onTextChange(e)}
+                              aria-describedby="basic-addon"
+                              required
+                            />
+                          </div>
+                          <div className="input-group my-3">
+                            <div className="input-group-prepend">
+                              <span
+                                className="input-group-text"
+                                id="basic-addon"
+                              >
+                                <i className="fa fa-user prefix"></i>
+                              </span>
+                            </div>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Deine Name"
+                              aria-label="Deine Name"
+                              name="full_name"
+                              value={this.state.full_name}
+                              onChange={(e) => this.onTextChange(e)}
+                              aria-describedby="basic-addon"
+                              required
+                            />
+                          </div>
+                          <div className="input-group my-3">
+                            <div className="input-group-prepend">
+                              <span
+                                className="input-group-text"
+                                id="basic-addon"
+                              >
+                                <i className="fa fa-at prefix"></i>
+                              </span>
+                            </div>
+                            <input
+                              type="email"
+                              className="form-control"
+                              placeholder="Deine E-Mail"
+                              aria-label="Deine E-Mail"
+                              name="email"
+                              value={this.state.email}
+                              onChange={(e) => this.onTextChange(e)}
+                              aria-describedby="basic-addon"
+                              required
+                            />
+                          </div>
+                          <div className="text-left mb-2">
+                            <small>
+                              Mit dem Anfordern der Analyse bestätigen Sie, dass
+                              Sie damit einverstanden sind, Ihre Analyse per
+                              Post zu erhalten. Weiters bestätigen Sie, unsere{" "}
+                              <Link exact to="privacy" target="_blank">
+                                Datenschutzerklärung
+                              </Link>{" "}
+                              gelesen und akzeptiert zu haben.
+                            </small>
+                          </div>
+                          <MDBBtn color="agency-red" type="submit" size="lg">
+                            <MDBIcon icon="signature" />
+                            Analyse anfordern
+                          </MDBBtn>
+                        </form>
+                      </>
+                    )}
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
