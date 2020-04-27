@@ -12,6 +12,7 @@ import {
   BrandingPage,
   LocationPage,
   ErrorPage,
+  AnalysisPage,
 } from "./components/pages";
 
 //> MessagePage content
@@ -47,6 +48,13 @@ class Routes extends React.Component {
           path="/branding"
           render={(props) => (
             <BrandingPage {...props} globalProps={globalProps} />
+          )}
+        />
+        <Route
+          exact
+          path="/analysis"
+          render={(props) => (
+            <AnalysisPage {...props} globalProps={globalProps} />
           )}
         />
         {messagePage.map((page, i) => {
