@@ -20,8 +20,12 @@ import {
 // All organisms use their own scss implementation
 
 class HomePage extends React.Component {
+  state = {};
+
   render() {
     const { globalProps } = this.props;
+
+    console.log(this.state);
 
     if (globalProps) {
       return (
@@ -35,7 +39,7 @@ class HomePage extends React.Component {
             />
           </Helmet>
           <Hero darkMode={globalProps.darkMode} />
-          <Services darkMode={globalProps.darkMode} />
+          <Services darkMode={globalProps.darkMode} info={this.state.info} />
           <Trusted darkmode={globalProps.darkMode} />
           <CallToAction darkMode={globalProps.darkMode} />
           <ContactForm darkMode={globalProps.darkMode} />

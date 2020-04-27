@@ -46,6 +46,10 @@
       width: 5000px !important;
     }
   }
+  .form-check-input[type="checkbox"].filled-in:checked+label:after, label.btn input[type="checkbox"].filled-in:checked+label:after{
+    background-color: #4285f4;
+    border: 2px solid #4285f4;
+  }
 }
 
 /** 

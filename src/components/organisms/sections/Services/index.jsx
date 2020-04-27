@@ -20,6 +20,12 @@ class Services extends React.PureComponent {
       <section id="services">
         <MDBContainer className="py-5 text-center">
           <h2 className="gidole h1-responsive font-weight-bold">Dein Nutzen</h2>
+          {this.props.info && (
+            <p className="lead">
+              Wie wir auch Dich mit <strong>{this.props.info.company}</strong>{" "}
+              weiterbringen.
+            </p>
+          )}
           <p className="lead">
             Wir bieten Dir <strong>hochwertige</strong>, auf Deine Vision
             zugeschnittene Lösungen in sämtlichen Bereichen des Marketings.
