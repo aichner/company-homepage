@@ -54,6 +54,7 @@ class AnalysisPage extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
     if (this.state.company && this.state.full_name && this.state.email) {
       // Compact the data
       const data = {
