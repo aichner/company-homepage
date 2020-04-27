@@ -2,7 +2,7 @@
 // Contains all the functionality necessary to define React components
 import React from "react";
 // Router
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -14,6 +14,7 @@ import {
   MDBCard,
   MDBCardBody,
   MDBAlert,
+  MDBInput,
   MDBIcon,
 } from "mdbreact";
 
@@ -34,10 +35,24 @@ import "./contactForm.scss";
 
 class ContactForm extends React.Component {
   state = {
-    fullname: "",
-    email: "",
     phone: "",
+    full_name: "",
+    email: "",
     note: "",
+  };
+
+  componentDidMount = () => {
+    const info = localStorage.getItem("info")
+      ? JSON.parse(localStorage.getItem("info"))
+      : null;
+
+    // Set the info
+    info &&
+      this.setState({
+        full_name: info.full_name,
+        email: info.email,
+        company: info.company,
+      });
   };
 
   onTextChange = (e) => {
@@ -56,7 +71,7 @@ class ContactForm extends React.Component {
     e.preventDefault();
 
     this.props.createContact({
-      fullname: this.state.fullname,
+      full_name: this.state.full_name,
       email: this.state.email,
       phone: this.state.phone,
       note: this.state.note,
@@ -77,9 +92,12 @@ class ContactForm extends React.Component {
                   <h3 className="font-weight-bold">Kontakt aufnehmen</h3>
                   <p className="text-muted">
                     Du hast eine Projektidee und bist Dir nicht sicher bezüglich
-                    deren Umsetzung? Du benötigst einen Web-Shop, Imagefilm,
-                    eine Website oder eine individuelle Applikation? Zögere
-                    nicht und kontaktiere uns.
+                    deren Umsetzung?{" "}
+                    {this.state.company &&
+                      "Du willst " + this.state.company + " weiterbringen? "}
+                    Du benötigst einen Web-Shop, Imagefilm, eine Website oder
+                    eine individuelle Applikation? Zögere nicht und kontaktiere
+                    uns.
                   </p>
                   <form onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="input-group my-3">
@@ -93,8 +111,8 @@ class ContactForm extends React.Component {
                         className="form-control"
                         placeholder="Deine Name"
                         aria-label="Deine Name"
-                        name="fullname"
-                        value={this.state.fullname}
+                        name="full_name"
+                        value={this.state.full_name}
                         onChange={(e) => this.onTextChange(e)}
                         aria-describedby="basic-addon"
                         required
@@ -135,7 +153,7 @@ class ContactForm extends React.Component {
                         aria-describedby="basic-addon"
                       />
                     </div>
-                    <div className="input-group mb-3">
+                    <div className="input-group mb-4">
                       <div className="input-group-prepend">
                         <span className="input-group-text" id="basic-addon">
                           <i className="fas fa-pencil-alt prefix"></i>
@@ -152,6 +170,22 @@ class ContactForm extends React.Component {
                         required
                       ></textarea>
                     </div>
+                    <MDBInput
+                      label={
+                        <p>
+                          Ich habe die{" "}
+                          <Link to="/privacy" target="_blank">
+                            Datenschutzerklärung
+                          </Link>{" "}
+                          gelesen und akzeptiert.
+                        </p>
+                      }
+                      filled
+                      type="checkbox"
+                      id="checkbox1"
+                      required
+                      containerClass="mr-5 mb-3"
+                    />
                     <MDBBtn color="agency-red" type="submit">
                       <MDBIcon icon="paper-plane" />
                       Absenden

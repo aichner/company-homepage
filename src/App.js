@@ -9,7 +9,7 @@ import { BrowserRouter as Router } from "react-router-dom";
  * Footer: Global Footer
  * Navbar: Global navigation bar
  */
-import { Footer, Navbar } from "./components/molecules";
+import { Footer, Navbar, CookieModal } from "./components/molecules";
 import { DevelopmentPage } from "./components/pages";
 import { ScrollToTop } from "./components/atoms";
 // Routes
@@ -37,6 +37,7 @@ class App extends React.Component {
               <Navbar darkMode={this.state.darkMode} />
               <main>
                 <Routes globalProps={{ ...this.state }} />
+                <CookieModal />
               </main>
               <Footer darkMode={this.state.darkMode} />
             </div>

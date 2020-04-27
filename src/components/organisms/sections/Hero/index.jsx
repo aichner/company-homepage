@@ -1,6 +1,8 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
+// Router bindings
+import { Link } from "react-router-dom";
 
 //> Additional
 // Chart
@@ -54,7 +56,9 @@ class HomePage extends React.Component {
     let max = Math.floor(100);
     let arr = [1, 2, 3, 4, 5, 6, 7, 8];
     let results = arr.map((item, i) => {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
+      return Math.floor(Math.random() * (max - min + 1)) + min > 100
+        ? 100
+        : Math.floor(Math.random() * (max - min + 1)) + min;
     });
 
     return results;
@@ -123,12 +127,12 @@ class HomePage extends React.Component {
             Unsere kostenlose Analyse zeigt Dir, welches Potential Deine Online
             Präsenz besitzt und was Du davon nutzt.
           </p>
-          <MDBSmoothScroll to="contactForm">
+          <Link to="/analysis">
             <MDBBtn size="lg" color="agency-red" className="btn-start">
               <MDBIcon icon="rocket" className="pr-2" />
               JETZT herausfinden
             </MDBBtn>
-          </MDBSmoothScroll>
+          </Link>
         </div>
         <MDBContainer
           fluid
@@ -147,12 +151,12 @@ class HomePage extends React.Component {
                   aktuellen Stand Deiner gesamten Online-Präsenz und liefert
                   individuelle und unkomplizierte Lösungen.
                 </p>
-                <MDBSmoothScroll to="contactForm">
+                <Link to="/analysis">
                   <MDBBtn size="lg" color="agency-red" className="btn-start">
                     <MDBIcon icon="rocket" className="pr-2" />
                     JETZT kostenlos herausfinden
                   </MDBBtn>
-                </MDBSmoothScroll>
+                </Link>
               </MDBCol>
             </MDBRow>
           </MDBContainer>

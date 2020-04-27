@@ -1,7 +1,8 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
-import { withRouter } from "react-router-dom";
+// Router bindings
+import { withRouter, Link } from "react-router-dom";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -97,15 +98,9 @@ class Navbar extends React.Component {
                   </a>
                 </MDBNavItem>
                 <MDBNavItem>
-                  {location.pathname === "/" ? (
-                    <MDBSmoothScroll to="contactForm">
-                      <MDBBtn color="agency-red">Kostenlose Analyse</MDBBtn>
-                    </MDBSmoothScroll>
-                  ) : (
-                    <MDBNavLink exact to="/">
-                      <MDBBtn color="agency-red">Kostenlose Analyse</MDBBtn>
-                    </MDBNavLink>
-                  )}
+                  <MDBNavLink exact to="/analysis">
+                    <MDBBtn color="agency-red">Kostenlose Analyse</MDBBtn>
+                  </MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
                   {location.pathname === "/" ? (
