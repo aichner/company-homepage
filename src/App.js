@@ -40,7 +40,7 @@ class App extends React.Component {
   };
 
   // Handler for all child components who can set the mode
-  _handler = () => {
+  handler = () => {
     // Update mode for all child components and write it to localStorage
     this.setState(
       {
@@ -62,13 +62,10 @@ class App extends React.Component {
             <div className="flyout">
               <Navbar darkMode={this.state.darkMode} />
               <main className={this.state.darkMode ? "darkMode" : undefined}>
-                <Routes
-                  mode={this.state.darkMode}
-                  globalProps={{ ...this.state }}
-                />
+                <Routes globalProps={{ ...this.state }} />
                 <CookieModal />
               </main>
-              <Footer darkMode={this.state.darkMode} handler={this._handler} />
+              <Footer darkMode={this.state.darkMode} handler={this.handler} />
             </div>
           </ScrollToTop>
         </Router>
