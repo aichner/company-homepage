@@ -39,6 +39,7 @@ const slogans = [
 class Footer extends React.PureComponent {
   state = {
     slogan: "",
+    darkMode: "",
   };
 
   // Update parent state (Root Component)
@@ -49,6 +50,10 @@ class Footer extends React.PureComponent {
   // When component is ready to mount
   componentWillMount() {
     this._getSlogan();
+  }
+
+  componentDidMount() {
+    this.setState({ darkMode: this.props.darkMode ? true : false });
   }
 
   // Get a random slogan and save to state
@@ -150,7 +155,7 @@ class Footer extends React.PureComponent {
               <h4>Dark Mode</h4>
               <MDBSwitch
                 className="switch-red mb-3"
-                checked={this.props.darkMode}
+                checked={this.state.darkMode}
                 onChange={this.handleSwitchChange}
               />
             </MDBCol>
