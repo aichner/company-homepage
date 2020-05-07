@@ -17,7 +17,7 @@ import data from "./serviceList.js";
 class Services extends React.PureComponent {
   render() {
     return (
-      <section id="services" className={this.props.darkMode ? "dark" : "light"}>
+      <section id="services">
         <MDBContainer className="py-5 text-center">
           <h2 className="gidole h1-responsive font-weight-bold">Dein Nutzen</h2>
           {this.props.info && (
