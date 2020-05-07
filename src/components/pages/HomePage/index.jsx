@@ -38,7 +38,7 @@ class HomePage extends React.Component {
           </Helmet>
           <Hero darkMode={globalProps.darkMode} />
           <Services darkMode={globalProps.darkMode} info={this.state.info} />
-          <Trusted darkmode={globalProps.darkMode} />
+          <Trusted darkMode={globalProps.darkMode} />
           <CallToAction darkMode={globalProps.darkMode} />
           <ContactForm darkMode={globalProps.darkMode} />
         </>

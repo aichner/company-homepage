@@ -38,7 +38,7 @@ const data = [
 class Trusted extends React.PureComponent {
   render() {
     return (
-      <div id="trusted">
+      <div id="trusted" className={this.props.darkMode ? "dark" : "light"}>
         <MDBContainer className="py-5 text-center text-dark">
           <h2 className="gidole h1-responsive font-weight-bold">
             Viele Firmen profitieren von unseren Services
