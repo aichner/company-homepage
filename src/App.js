@@ -15,13 +15,39 @@ import { ScrollToTop } from "./components/atoms";
 // Routes
 import Routes from "./Routes";
 
+// Check if dark or light mode
+function getMode() {
+  let mode = localStorage.getItem("mode");
+  if (mode !== null) {
+    return JSON.parse(mode);
+  } else {
+    // Set default
+    localStorage.setItem("mode", false);
+    return false;
+  }
+}
+
+// Save the mode
+const mode = getMode();
+
 //> Configuration
 // Is the homepage ready to launch?
 const isLive = true;
 
 class App extends React.Component {
   state = {
-    darkMode: false,
+    darkMode: mode,
+  };
+
+  // Handler for all child components who can set the mode
+  _handler = () => {
+    // Update mode for all child components and write it to localStorage
+    this.setState(
+      {
+        darkMode: !this.state.darkMode,
+      },
+      () => localStorage.setItem("mode", this.state.darkMode)
+    );
   };
 
   render() {
@@ -35,11 +61,14 @@ class App extends React.Component {
           <ScrollToTop>
             <div className="flyout">
               <Navbar darkMode={this.state.darkMode} />
-              <main>
-                <Routes globalProps={{ ...this.state }} />
+              <main className={this.state.darkMode ? "darkMode" : undefined}>
+                <Routes
+                  mode={this.state.darkMode}
+                  globalProps={{ ...this.state }}
+                />
                 <CookieModal />
               </main>
-              <Footer darkMode={this.state.darkMode} />
+              <Footer darkMode={this.state.darkMode} handler={this._handler} />
             </div>
           </ScrollToTop>
         </Router>
