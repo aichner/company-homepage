@@ -62,7 +62,9 @@ class Footer extends React.PureComponent {
     const { location } = this.props;
 
     return (
-      <MDBFooter color={this.props.mode ? "agency-dark" : "white text-dark"}>
+      <MDBFooter
+        color={this.props.darkMode ? "agency-dark" : "white text-dark"}
+      >
         <MDBRow className="social">
           <MDBCol md="12" className="text-center">
             <h4>Verbinde Dich mit uns!</h4>
@@ -146,12 +148,10 @@ class Footer extends React.PureComponent {
               <p className="mt-2">Hochwertige und individuelle Lösungen</p>
               <hr />
               <h4>Dark Mode</h4>
-              <small className="text-muted red-text">Bald verfügbar</small>
               <MDBSwitch
                 className="switch-red mb-3"
-                checked={this.props.mode}
+                checked={this.props.darkMode}
                 onChange={this.handleSwitchChange}
-                disabled
               />
             </MDBCol>
             <MDBCol md="3">
