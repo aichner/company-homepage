@@ -10,16 +10,20 @@ import {
   MDBModal,
   MDBModalBody,
   MDBIcon,
+  MDBFormInline,
   MDBRow,
   MDBCol,
   MDBInput,
 } from "mdbreact";
 
+//> CSS
+import "./cookie.scss";
+
 class ModalPage extends React.Component {
   state = {
-    modal1: localStorage.getItem("essenziell") ? false : true,
-    essenziell: true,
-    statistiken: false,
+    modal1: localStorage.getItem("cookie") ? false : true,
+    essential: true,
+    statistics: false,
     marketing: false,
   };
 
@@ -28,13 +32,20 @@ class ModalPage extends React.Component {
   }
 
   checkAll() {
-    this.setState({ essenziell: true, statistiken: true, marketing: true });
+    this.setState({ essential: true, statistics: true, marketing: true }, () =>
+      this.save()
+    );
   }
 
   save() {
-    localStorage.setItem("essenziell", this.state.essenziell);
-    localStorage.setItem("statistiken", this.state.statistiken);
-    localStorage.setItem("marketing", this.state.marketing);
+    localStorage.setItem(
+      "cookie",
+      JSON.stringify({
+        essential: this.state.essential ? true : false,
+        statistics: this.state.statistics ? true : false,
+        marketing: this.state.marketing ? true : false,
+      })
+    );
     this.setState({ modal1: false });
   }
 
@@ -58,35 +69,30 @@ class ModalPage extends React.Component {
       <MDBModal
         isOpen={this.state.modal1}
         toggle={this.toggle(1)}
-        frame
-        position="bottom"
-        backdrop="static"
+        disableFocusTrap={false}
         keyboard={false}
+        className="cookie-modal"
       >
         <MDBModalBody className="text-center py-4">
-          <MDBRow className="justify-content-center align-items-center">
-            <MDBCol>
-              <h2>Cookie Einstellungen</h2>
-              <p>
-                Wir verwenden auf unserer Website Cookies, um die
-                Benutzererfahrung zu optimieren. Einige davon sind essenziell.
-              </p>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="justify-content-center align-items-center">
-            <MDBCol className="col-4"></MDBCol>
-            <MDBCol className="col-2">
+          <h2>Cookie Einstellungen</h2>
+          <p className="text-muted">
+            Wir verwenden auf unserer Website Cookies, um die Benutzererfahrung
+            zu verbessern. Einige davon sind essenziell für den Betrieb der
+            Website.
+          </p>
+          <div className="my-4">
+            <MDBInput
+              label="Essenziell"
+              filled
+              checked={this.state.essential}
+              disabled
+              type="checkbox"
+              id="cookieEssenziell"
+              containerClass="mr-5"
+            />
+            <MDBFormInline className="d-flex justify-content-center">
               <MDBInput
-                label="Essenziell"
-                filled
-                checked={this.state.essenziell}
-                disabled
-                type="checkbox"
-                id="cookieEssenziell"
-                containerClass="mr-5"
-              />
-              <MDBInput
-                label="Marketing"
+                label="Persönliche Ansprache"
                 filled
                 checked={this.state.marketing}
                 name="marketing"
@@ -94,34 +100,30 @@ class ModalPage extends React.Component {
                 type="checkbox"
                 id="cookieMarketing"
                 containerClass="mr-5"
-                onClick={(e) => this.checkBoxCheck(e)}
+                onChange={(e) => this.checkBoxCheck(e)}
               />
-            </MDBCol>
-            <MDBCol className="col-2">
               <MDBInput
                 label="Statistiken"
                 filled
-                checked={this.state.statistiken}
-                name="statistiken"
+                checked={this.state.statistics}
+                name="statistics"
                 type="checkbox"
                 id="cookieStatistiken"
                 containerClass="mr-5"
-                onClick={(e) => this.checkBoxCheck(e)}
+                onChange={(e) => this.checkBoxCheck(e)}
               />
-            </MDBCol>
-            <MDBCol className="col-4"></MDBCol>
-          </MDBRow>
+            </MDBFormInline>
+          </div>
           <MDBRow className="justify-content-center align-items-center">
-            <MDBCol>
+            <MDBCol md="6">
               <MDBBtn color="success" onClick={() => this.checkAll()}>
+                <MDBIcon icon="check-circle" />
                 Alle akzeptieren
               </MDBBtn>
             </MDBCol>
-          </MDBRow>
-          <MDBRow className="justify-content-center align-items-center">
-            <MDBCol>
+            <MDBCol md="6">
               <MDBBtn color="" onClick={() => this.save()}>
-                Speichern
+                Auswahl Speichern
               </MDBBtn>
             </MDBCol>
           </MDBRow>
