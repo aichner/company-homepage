@@ -247,7 +247,7 @@ class Robinett extends React.Component {
                       </p>
                     </MDBCardBody>
                     <MDBCardFooter>
-                      {localStorage.getItem("egg_bottom") ? (
+                      {localStorage.getItem("egg_heart") ? (
                         <>
                           <MDBIcon
                             icon="check-circle"

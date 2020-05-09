@@ -44,6 +44,7 @@ class Footer extends React.PureComponent {
     slogan: "",
     darkMode: "",
     clicks: 0,
+    heart: false,
   };
 
   // Update parent state (Root Component)
@@ -59,6 +60,14 @@ class Footer extends React.PureComponent {
   componentDidMount() {
     this.setState({ darkMode: this.props.darkMode ? true : false });
   }
+
+  componentWillReceiveProps = () => {
+    // Hide eggs again when changing the page
+    this.setState({
+      clicks: 0,
+      heart: false,
+    });
+  };
 
   // Get a random slogan and save to state
   getSlogan = () => {
@@ -367,8 +376,14 @@ class Footer extends React.PureComponent {
             </div>
             <p className="my-2 font-weight-bold gidole">
               Made with{" "}
-              <i className="fas fa-heart pulse red-text" aria-hidden="true"></i>{" "}
-              by us.
+              <i
+                className="fas fa-heart pulse red-text"
+                aria-hidden="true"
+                onClick={() => {
+                  this.setState({ heart: true });
+                }}
+              ></i>{" "}
+              by us. {this.state.heart && <Egg id="heart" />}
             </p>
           </MDBContainer>
         </div>
