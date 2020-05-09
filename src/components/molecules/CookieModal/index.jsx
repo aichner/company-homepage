@@ -123,7 +123,7 @@ class ModalPage extends React.Component {
             </MDBCol>
             <MDBCol md="6">
               <MDBBtn color="white" onClick={() => this.save()}>
-                Auswahl Speichern
+                Auswahl speichern
               </MDBBtn>
             </MDBCol>
           </MDBRow>
