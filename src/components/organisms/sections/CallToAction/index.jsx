@@ -23,7 +23,7 @@ import {
 //> Images
 // Rocket
 import rocket from "../../../../assets/content/icons/rocket.png";
-import planet1 from "../../../../assets/content/icons/planet1.jpg";
+import planet from "../../../../assets/content/icons/planet.png";
 
 //> CSS
 import "./callToAction.scss";
@@ -39,8 +39,8 @@ class CallToAction extends React.Component {
             <MDBRow className="space-left">
               <MDBCol>
                 <MDBView>
-                  <Parallax className="planet1" x={[60, 0]} tagOuter="figure">
-                    <img className="rotate" src={planet1} alt="Moon" />
+                  <Parallax className="planet" x={[60, 0]} tagOuter="figure">
+                    <img className="rotate" src={planet} alt="Moon" />
                   </Parallax>
                   <MDBMask />
                 </MDBView>
@@ -73,12 +73,12 @@ class CallToAction extends React.Component {
               <MDBCol>
                 <MDBView className="d-none d-sm-block">
                   <Parallax className="planet2" y={[60, 0]} tagOuter="figure">
-                    <img className="rotate" src={planet1} alt="Moon" />
+                    <img className="rotate" src={planet} alt="Moon" />
                   </Parallax>
                   <MDBMask />
                 </MDBView>
                 <MDBView className="d-block d-sm-none">
-                  <img className="mobile-moon" src={planet1} alt="Moon" />
+                  <img className="mobile-moon" src={planet} alt="Moon" />
                   <MDBMask />
                 </MDBView>
               </MDBCol>

@@ -28,63 +28,6 @@
     background-size: contain;
   }
 }
-// Specific dark mode changes
-.dark-mode {
-  #printing {
-    // Intersections
-    .whole {
-      background: url("../../../assets/bg/angle_dark.svg");
-    }
-    // Steps
-    .step-content {
-      color: white;
-      background: #2e2e2e;
-    }
-    .stepper.timeline li .step-content:after {
-      border-left: 14px solid #2e2e2e;
-      border-right: 0 solid #2e2e2e;
-    }
-    @media all and (min-width: 1024px) {
-      .stepper.timeline li.timeline-inverted .step-content:after {
-        border-left-width: 0;
-        border-right-width: 14px;
-        left: -14px;
-        right: auto;
-      }
-      .stepper.timeline li.timeline-inverted .step-content:before {
-        border-left-width: 0;
-        border-right-width: 15px;
-        left: -15px;
-        right: auto;
-      }
-    }
-    @media all and (max-width: 1024px) {
-      .stepper.timeline li .step-content:after {
-        border-left-width: 0;
-        border-right-width: 14px;
-        left: -14px;
-        right: auto;
-      }
-      .stepper.timeline li .step-content:before {
-        display: none;
-        border-left-width: 0;
-        border-right-width: 15px;
-        left: -15px;
-        right: auto;
-      }
-    }
-    .stepper.timeline li .step-content:before {
-      border-left: 15px solid #4e4e4e;
-      border-right: 0 solid #4e4e4e;
-    }
-    .step-content {
-      border: 1px #4e4e4e solid;
-    }
-    .stepper.timeline.stepper-vertical li:not(:last-child):after {
-      background-color: #2e2e2e;
-    }
-  }
-}
 
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)

@@ -11,8 +11,14 @@ export default {
     display: false,
   },
   scale: {
+    gridLines: {
+      color: "#808080",
+    },
+    angleLines: {
+      color: "#808080",
+    },
     pointLabels: {
-      fontColor: "#212121",
+      fontColor: "white",
     },
     ticks: {
       beginAtZero: true,

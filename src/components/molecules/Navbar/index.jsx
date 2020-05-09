@@ -91,7 +91,10 @@ class Navbar extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MDBBtn color="agency-red" outline>
+                    <MDBBtn
+                      color={this.props.darkMode ? "white" : "agency-red"}
+                      outline
+                    >
                       <MDBIcon far icon="calendar" />
                       Termin
                     </MDBBtn>
@@ -117,6 +120,7 @@ class Navbar extends React.Component {
                   <a
                     href="https://www.kisy.at"
                     target="_blank"
+                    className="nav-link"
                     rel="noopener noreferrer"
                   >
                     Login

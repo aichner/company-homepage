@@ -6,7 +6,6 @@
     a {
       font-weight: bold;
       margin-right: 1rem;
-      color: $agencyDark;
       &:hover {
         color: lighten($agencyDark, 10%);
       }

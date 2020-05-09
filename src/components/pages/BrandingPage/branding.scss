@@ -1,16 +1,5 @@
 #branding {
   margin-top: 4rem;
-  // Dark mode
-  &.dark {
-    background: #3e3e3e;
-    color: white;
-    .light-item {
-      color: #212529;
-    }
-    .c-light {
-      color: #212529;
-    }
-  }
   // Card
   .card {
     margin-bottom: 1rem;

@@ -49,16 +49,18 @@ class Footer extends React.PureComponent {
 
   // Update parent state (Root Component)
   handleSwitchChange = () => {
-    this.props.handler();
+    this.setState(
+      {
+        darkMode: !this.state.darkMode,
+      },
+      () => this.props.handler()
+    );
   };
 
-  // When component is ready to mount
-  componentWillMount() {
-    this.getSlogan();
-  }
-
   componentDidMount() {
-    this.setState({ darkMode: this.props.darkMode ? true : false });
+    this.setState({ darkMode: this.props.darkMode ? true : false }, () =>
+      this.getSlogan()
+    );
   }
 
   componentWillReceiveProps = () => {
