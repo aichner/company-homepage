@@ -85,7 +85,7 @@ class BrandingPage extends React.Component {
                     >
                       <MDBIcon icon="download" className="pr-2" />
                       .svg
-                    </MDBBtn>jo 
+                    </MDBBtn>
                     <MDBBtn
                       color="white"
                       rounded
