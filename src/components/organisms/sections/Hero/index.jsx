@@ -91,7 +91,6 @@ class HomePage extends React.Component {
 
   render() {
     const { darkMode } = this.props;
-    console.log(darkMode);
 
     return (
       <section id="hero">

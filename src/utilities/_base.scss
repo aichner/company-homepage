@@ -187,7 +187,7 @@
     }
   }
   // Pages
-  #branding{
+  #branding {
     background: #3e3e3e;
     color: white;
     .light-item {
@@ -197,19 +197,19 @@
       color: #212529;
     }
   }
-  #analysis{
-    .card{
+  #analysis {
+    .card {
       background: initial;
     }
-    .z-depth-1{
+    .z-depth-1 {
       background: lighten($agencyDark, 5%);
       border: 5px $agencyRed solid;
     }
   }
   .showcase {
     color: #3e3e3e;
-    .text-muted{
-      color: lighten(#3e3e3e,20%) !important;
+    .text-muted {
+      color: lighten(#3e3e3e, 20%) !important;
     }
   }
   #printing {
@@ -255,7 +255,6 @@
         right: auto;
       }
     }
-
     .stepper.timeline li .step-content:before {
       border-left: 15px solid #4e4e4e;
       border-right: 0 solid #4e4e4e;
