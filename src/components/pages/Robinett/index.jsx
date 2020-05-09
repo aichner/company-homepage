@@ -49,8 +49,7 @@ class Robinett extends React.Component {
 
     if (
       (index === 1 && newIndex === 2) ||
-      (index === 0 && newIndex === 2) ||
-      (index === 2 && newIndex === 1)
+      (index === 0 && newIndex === 2)
     ) {
       if (this.state.locked) {
         this.setState({
@@ -270,7 +269,7 @@ class Robinett extends React.Component {
                 </MDBCol>
               </MDBRow>
               <p className="lead font-weight-bold mt-3 mb-4">
-                Na? Was denkst Du passiert, wenn du alle gefunden hast?
+                Na? Was denkst Du passiert, wenn Du alle gefunden hast?
               </p>
             </>
           )}
