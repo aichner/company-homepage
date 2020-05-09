@@ -151,7 +151,7 @@ class Robinett extends React.Component {
                       </div>
                       <p className="text-muted mb-0">
                         <small>
-                          You must be a developer! Who else would do that?!
+                          Du musst Entwickler sein! Wer sonst würde das tun?!
                         </small>
                       </p>
                     </MDBCardBody>
@@ -184,7 +184,7 @@ class Robinett extends React.Component {
                         <MDBIcon icon="map-signs" className="orange-text" />
                       </div>
                       <p className="text-muted mb-0">
-                        <small>You found this page. Wow.</small>
+                        <small>Du hast diese Seite gefunden. Wow.</small>
                       </p>
                     </MDBCardBody>
                     <MDBCardFooter>
@@ -209,7 +209,7 @@ class Robinett extends React.Component {
                         />
                       </div>
                       <p className="text-muted mb-0">
-                        <small>You really want to go down there, right?</small>
+                        <small>Du willst echt runter, oder?</small>
                       </p>
                     </MDBCardBody>
                     <MDBCardFooter>
