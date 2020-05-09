@@ -13,6 +13,7 @@ import {
   LocationPage,
   ErrorPage,
   AnalysisPage,
+  Robinett,
 } from "./components/pages";
 
 //> MessagePage content
@@ -57,6 +58,11 @@ class Routes extends React.Component {
             <AnalysisPage {...props} globalProps={globalProps} />
           )}
         />
+        <Route
+          exact
+          path="/warren"
+          render={(props) => <Robinett />}
+        />
         {messagePage.map((page, i) => {
           return (
             <Route
@@ -70,9 +76,7 @@ class Routes extends React.Component {
           );
         })}
         <Route
-          render={(props) => (
-            <ErrorPage {...props} globalProps={globalProps} />
-          )}
+          render={(props) => <ErrorPage {...props} globalProps={globalProps} />}
         />
         <Route component={HomePage} />
       </Switch>

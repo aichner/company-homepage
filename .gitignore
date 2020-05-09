@@ -14,7 +14,7 @@ package-lock.json
 /src/assets/content/trusted/*
 
 # MDB
-mdbreact-*
+mdb*
 
 # Firebase configuration
 src/config/fbConfig.js

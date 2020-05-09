@@ -1,0 +1,31 @@
+#robinett {
+  margin-top: 4rem !important;
+  h1 {
+    font-size: 6rem;
+    font-weight: bold;
+  }
+  .col-md-4{
+    margin-bottom: 2rem;
+  }
+}
+.SortableItem {
+  outline: none;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-size: 6rem;
+  font-weight: bold;
+  cursor: move;
+}
+.SortableList {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019-2020 Werbeagentur Christian Aichner
+ */
