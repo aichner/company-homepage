@@ -34,7 +34,7 @@ class BrandingPage extends React.Component {
     const { globalProps } = this.props;
 
     return (
-      <div id="branding" className={globalProps.darkMode ? "dark" : undefined}>
+      <div id="branding">
         <Helmet>
           <title>Evolving Our Identity</title>
           <meta
@@ -85,7 +85,7 @@ class BrandingPage extends React.Component {
                     >
                       <MDBIcon icon="download" className="pr-2" />
                       .svg
-                    </MDBBtn>
+                    </MDBBtn>jo 
                     <MDBBtn
                       color="white"
                       rounded

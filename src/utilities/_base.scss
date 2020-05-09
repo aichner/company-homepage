@@ -187,6 +187,31 @@
     }
   }
   // Pages
+  #branding{
+    background: #3e3e3e;
+    color: white;
+    .light-item {
+      color: #212529;
+    }
+    .c-light {
+      color: #212529;
+    }
+  }
+  #analysis{
+    .card{
+      background: initial;
+    }
+    .z-depth-1{
+      background: lighten($agencyDark, 5%);
+      border: 5px $agencyRed solid;
+    }
+  }
+  .showcase {
+    color: #3e3e3e;
+    .text-muted{
+      color: lighten(#3e3e3e,20%) !important;
+    }
+  }
   #printing {
     // Intersections
     .whole {
