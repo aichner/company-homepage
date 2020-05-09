@@ -28,7 +28,7 @@ import { ReactComponent as Working } from "../../../../assets/content/hero/worki
 import "./hero.scss";
 
 //> Settings
-import radarSettings from "./radarSettings.js";
+import radarSettings from "./radarSettings";
 import radarSettingsDark from "./radarSettingsDark.js";
 
 class HomePage extends React.Component {
