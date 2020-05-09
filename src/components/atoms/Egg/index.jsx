@@ -12,6 +12,9 @@ import {
   MDBAnimation,
 } from "mdbreact";
 
+//> CSS
+import "./egg.scss";
+
 class Egg extends React.Component {
   state = {};
 

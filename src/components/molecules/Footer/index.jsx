@@ -18,11 +18,14 @@ import {
   MDBSmoothScroll,
 } from "mdbreact";
 
+//> Components
+import { Egg } from "../../atoms";
+
 //> Images
 // Logo
 import { ReactComponent as Logo } from "../../../assets/content/logo_main.svg";
 
-//>CSS
+//> CSS
 import "./footer.scss";
 
 //> Dynamic texts
@@ -40,6 +43,7 @@ class Footer extends React.PureComponent {
   state = {
     slogan: "",
     darkMode: "",
+    clicks: 0,
   };
 
   // Update parent state (Root Component)
@@ -49,7 +53,7 @@ class Footer extends React.PureComponent {
 
   // When component is ready to mount
   componentWillMount() {
-    this._getSlogan();
+    this.getSlogan();
   }
 
   componentDidMount() {
@@ -57,7 +61,7 @@ class Footer extends React.PureComponent {
   }
 
   // Get a random slogan and save to state
-  _getSlogan = () => {
+  getSlogan = () => {
     this.setState({
       slogan: slogans[Math.floor(Math.random() * slogans.length)],
     });
@@ -331,7 +335,16 @@ class Footer extends React.PureComponent {
               <small className="text-muted">
                 Stable release
                 <span className="pl-2 pr-2">·</span>
-                Version v{process.env.REACT_APP_VERSION}
+                <span
+                  className="clickable user-select-none"
+                  value={this.state.clicks}
+                  onClick={(e) =>
+                    this.setState({ clicks: this.state.clicks + 1 })
+                  }
+                >
+                  Version v{process.env.REACT_APP_VERSION}
+                </span>
+                {this.state.clicks > 20 && <Egg id="dev" />}
                 <span className="pl-2 pr-2">·</span>
                 <a
                   href="https://github.com/aichner/Company-Homepage"
