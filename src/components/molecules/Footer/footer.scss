@@ -97,6 +97,14 @@ footer {
       margin: 0;
       background-color: rgba(0, 0, 0, 0.2);
     }
+    ul {
+      i {
+        color: darken(white, 10%) !important;
+      }
+      a {
+        color: darken(white, 10%) !important;
+      }
+    }
     svg {
       &#logo {
         .st0 {

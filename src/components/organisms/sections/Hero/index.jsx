@@ -29,6 +29,7 @@ import "./hero.scss";
 
 //> Settings
 import radarSettings from "./radarSettings.js";
+import radarSettingsDark from "./radarSettingsDark.js";
 
 class HomePage extends React.Component {
   state = {
@@ -46,6 +47,8 @@ class HomePage extends React.Component {
       1000
     );
   };
+
+  componentWillReceiveProps = () => {};
 
   componentWillUnmount() {
     clearInterval(this.interval);
@@ -88,14 +91,18 @@ class HomePage extends React.Component {
 
   render() {
     const { darkMode } = this.props;
+    console.log(darkMode);
 
     return (
-      <section id="hero" className={darkMode ? "dark" : "light"}>
+      <section id="hero">
         <MDBContainer className="pt-5">
           <MDBView className="hero-view">
             <MDBRow className="flex-center d-flex d-sm-none pt-5 mt-3">
               <MDBCol md="6" className="text-center">
-                <Radar data={this.getRadarData} options={radarSettings} />
+                <Radar
+                  data={this.getRadarData}
+                  options={darkMode ? radarSettingsDark : radarSettings}
+                />
                 <h1 className="mt-3 font-weight-bold pb-4">
                   Deine Vision ist unser Auftrag
                 </h1>
@@ -142,7 +149,10 @@ class HomePage extends React.Component {
           <MDBContainer>
             <MDBRow className="h-100">
               <MDBCol md="3" className="p-0">
-                <Radar data={this.getRadarData} options={radarSettings} />
+                <Radar
+                  data={this.getRadarData}
+                  options={darkMode ? radarSettingsDark : radarSettings}
+                />
               </MDBCol>
               <MDBCol md="7" className="p-0">
                 <h3>Was taugt Deine Online-Präsenz?</h3>

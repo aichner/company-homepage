@@ -112,6 +112,79 @@
   }
 }
 
+// Dark Mode
+.darkMode {
+  // General
+  background: $agencyDark;
+  color: white;
+  a:not(.btn) {
+    color: lighten(#0056b3, 30%);
+    &:hover {
+      color: lighten(#0056b3, 40%);
+    }
+  }
+  .btn-outline-agency-red {
+    color: white !important;
+    background-color: transparent !important;
+    border: 2px solid white !important;
+    &:hover {
+      border: 2px solid darken(white, 10%) !important;
+    }
+  }
+  .card {
+    background: lighten($agencyDark, 5%);
+    input,
+    textarea {
+      background: lighten($agencyDark, 10%);
+      color: white;
+      &::placeholder {
+        color: darken(white, 30%) !important;
+      }
+    }
+  }
+  .text-muted {
+    color: darken(white, 20%) !important;
+  }
+  // Individual sections
+  #contactForm {
+    background: darken($agencyDark, 5%);
+  }
+  #calltoaction {
+    background: lighten($agencyDark, 20%);
+  }
+  #hero {
+    background: linear-gradient(
+      to top,
+      $agencyDark 0%,
+      darken($agencyDark, 10%) 100%
+    );
+    color: white;
+    .top-mobile-bg {
+      background-color: #2d3339;
+    }
+  }
+  #seperator {
+    background-image: url("../assets/bg/title-curve-dark.svg");
+    color: white !important;
+  }
+  #services {
+    .container {
+      position: relative;
+    }
+    &::before {
+      content: " ";
+      background: linear-gradient(#2d3339, #212529) !important;
+      height: 300px;
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+    }
+    img {
+      filter: invert(1);
+    }
+  }
+}
+
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)
  * Copyright © 2019-2020 Werbeagentur Christian Aichner

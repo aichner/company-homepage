@@ -71,21 +71,8 @@
     }
   }
 
-  // Dark mode
-  &.dark {
-    background: linear-gradient(
-      to top,
-      $agencyDark 0%,
-      darken($agencyDark, 10%) 100%
-    );
-    color: white;
-  }
-
-  // Light mode
-  &.light {
-    background: linear-gradient(to top, white 0%, darken(white, 10%) 100%);
-    color: $agencyDark !important;
-  }
+  background: linear-gradient(to top, white 0%, darken(white, 10%) 100%);
+  color: $agencyDark;
 }
 
 #seperator {
