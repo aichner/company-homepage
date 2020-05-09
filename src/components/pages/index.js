@@ -8,6 +8,7 @@ import BrandingPage from "./BrandingPage";
 import LocationPage from "./LocationPage";
 import ErrorPage from "./ErrorPage";
 import AnalysisPage from "./AnalysisPage";
+import Robinett from "./Robinett";
 
 export {
   HomePage,
@@ -18,6 +19,7 @@ export {
   LocationPage,
   ErrorPage,
   AnalysisPage,
+  Robinett,
 };
 
 /**

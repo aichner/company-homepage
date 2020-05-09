@@ -18,11 +18,14 @@ import {
   MDBSmoothScroll,
 } from "mdbreact";
 
+//> Components
+import { Egg } from "../../atoms";
+
 //> Images
 // Logo
 import { ReactComponent as Logo } from "../../../assets/content/logo_main.svg";
 
-//>CSS
+//> CSS
 import "./footer.scss";
 
 //> Dynamic texts
@@ -40,6 +43,8 @@ class Footer extends React.PureComponent {
   state = {
     slogan: "",
     darkMode: "",
+    clicks: 0,
+    heart: false,
   };
 
   // Update parent state (Root Component)
@@ -49,15 +54,23 @@ class Footer extends React.PureComponent {
 
   // When component is ready to mount
   componentWillMount() {
-    this._getSlogan();
+    this.getSlogan();
   }
 
   componentDidMount() {
     this.setState({ darkMode: this.props.darkMode ? true : false });
   }
 
+  componentWillReceiveProps = () => {
+    // Hide eggs again when changing the page
+    this.setState({
+      clicks: 0,
+      heart: false,
+    });
+  };
+
   // Get a random slogan and save to state
-  _getSlogan = () => {
+  getSlogan = () => {
     this.setState({
       slogan: slogans[Math.floor(Math.random() * slogans.length)],
     });
@@ -202,6 +215,14 @@ class Footer extends React.PureComponent {
                     </MDBBadge>
                   </li>
                 </Link>
+                {Math.round(Math.random() * 10) === 5 && (
+                  <Link to="/warren">
+                    <li className="list-unstyled">
+                      <MDBIcon icon="egg" />
+                      Adventure
+                    </li>
+                  </Link>
+                )}
               </ul>
             </MDBCol>
             <MDBCol md="3">
@@ -331,7 +352,16 @@ class Footer extends React.PureComponent {
               <small className="text-muted">
                 Stable release
                 <span className="pl-2 pr-2">·</span>
-                Version v{process.env.REACT_APP_VERSION}
+                <span
+                  className="clickable user-select-none"
+                  value={this.state.clicks}
+                  onClick={(e) =>
+                    this.setState({ clicks: this.state.clicks + 1 })
+                  }
+                >
+                  Version v{process.env.REACT_APP_VERSION}
+                </span>
+                {this.state.clicks > 20 && <Egg id="dev" />}
                 <span className="pl-2 pr-2">·</span>
                 <a
                   href="https://github.com/aichner/Company-Homepage"
@@ -354,8 +384,14 @@ class Footer extends React.PureComponent {
             </div>
             <p className="my-2 font-weight-bold gidole">
               Made with{" "}
-              <i className="fas fa-heart pulse red-text" aria-hidden="true"></i>{" "}
-              by us.
+              <i
+                className="fas fa-heart pulse red-text"
+                aria-hidden="true"
+                onClick={() => {
+                  this.setState({ heart: true });
+                }}
+              ></i>{" "}
+              by us. {this.state.heart && <Egg id="heart" />}
             </p>
           </MDBContainer>
         </div>
