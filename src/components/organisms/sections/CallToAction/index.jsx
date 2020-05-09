@@ -33,7 +33,7 @@ class CallToAction extends React.Component {
     const { darkMode } = this.props;
 
     return (
-      <section id="calltoaction" className={darkMode ? "dark" : "light"}>
+      <section id="calltoaction">
         <MDBRow>
           <MDBCol className="text-center">
             <MDBRow className="space-left">

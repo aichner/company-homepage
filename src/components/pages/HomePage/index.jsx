@@ -36,11 +36,11 @@ class HomePage extends React.Component {
               liefert individuelle und unkomplizierte Lösungen."
             />
           </Helmet>
-          <Hero darkMode={globalProps.darkMode} />
-          <Services darkMode={globalProps.darkMode} info={this.state.info} />
-          <Trusted darkmode={globalProps.darkMode} />
-          <CallToAction darkMode={globalProps.darkMode} />
-          <ContactForm darkMode={globalProps.darkMode} />
+          <Hero />
+          <Services info={this.state.info} />
+          <Trusted />
+          <CallToAction />
+          <ContactForm />
         </>
       );
     } else {
