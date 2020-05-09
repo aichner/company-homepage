@@ -23,7 +23,7 @@ import {
 //> Images
 // Rocket
 import rocket from "../../../../assets/content/icons/rocket.png";
-import planet1 from "../../../../assets/content/icons/planet1.jpg";
+import planet1 from "../../../../assets/content/icons/planet.png";
 
 //> CSS
 import "./callToAction.scss";
