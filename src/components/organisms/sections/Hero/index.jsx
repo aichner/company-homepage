@@ -29,7 +29,7 @@ import "./hero.scss";
 
 //> Settings
 import radarSettings from "./radarSettings";
-import radarSettingsDark from "./radarSettingsDark.js";
+import radarSettingsDark from "./radarSettingsDark";
 
 class HomePage extends React.Component {
   state = {
