@@ -18,11 +18,13 @@ import Routes from "./Routes";
 // Check if dark or light mode
 function getMode() {
   let mode = localStorage.getItem("mode");
+
   if (mode !== null) {
     return JSON.parse(mode);
   } else {
     // Set default
     localStorage.setItem("mode", false);
+
     return false;
   }
 }
