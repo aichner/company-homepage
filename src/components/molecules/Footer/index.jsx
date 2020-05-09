@@ -215,6 +215,14 @@ class Footer extends React.PureComponent {
                     </MDBBadge>
                   </li>
                 </Link>
+                {Math.round(Math.random() * 10) === 5 && (
+                  <Link to="/warren">
+                    <li className="list-unstyled">
+                      <MDBIcon icon="egg" />
+                      Adventure
+                    </li>
+                  </Link>
+                )}
               </ul>
             </MDBCol>
             <MDBCol md="3">
