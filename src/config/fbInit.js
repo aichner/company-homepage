@@ -9,10 +9,13 @@ import config from "./fbConfig.js";
 
 // Init Firebase
 firebase.initializeApp(config);
-// Init analytics
-if (config.measurementId) {
+/**
+ * Initialize Google Analytics
+ * Once we implement it ourselves, this is not required for now
+ */
+/*if (config.measurementId) {
   firebase.analytics();
-}
+}*/
 
 // timestampsInSnapshots: true already enabled by default
 firebase.firestore();
