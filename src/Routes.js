@@ -61,7 +61,11 @@ class Routes extends React.Component {
 					exact
 					path="/analysis"
 					render={(props) => (
-						<AnalysisPage {...props} globalProps={globalProps} />
+						<AnalysisPage
+							{...props}
+							globalProps={globalProps}
+							googleAnalytics={globalFunctions.googleAnalytics}
+						/>
 					)}
 				/>
 				<Route exact path="/warren" render={(props) => <Robinett />} />
