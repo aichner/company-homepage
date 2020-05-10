@@ -253,7 +253,7 @@ class AnalysisPage extends React.Component {
                               Mit dem Anfordern der Analyse bestätigen Sie, dass
                               Sie damit einverstanden sind, Ihre Analyse per
                               Post zu erhalten. Weiters bestätigen Sie, unsere{" "}
-                              <Link exact to="privacy" target="_blank">
+                              <Link to="privacy" target="_blank">
                                 Datenschutzerklärung
                               </Link>{" "}
                               gelesen und akzeptiert zu haben.
