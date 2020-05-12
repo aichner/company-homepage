@@ -75,7 +75,7 @@ class App extends React.Component {
               userId,
             },
           });
-          this.registerPageView();
+          ReactGA.pageview(window.location.pathname + window.location.search);
 
           // Facebook Pixel
           if (cookie.marketing) {
@@ -89,6 +89,7 @@ class App extends React.Component {
             }
 
             ReactPixel.init(process.env.REACT_APP_FB_PIXEL, advancedMatching);
+            ReactPixel.pageView();
           }
         }
       }
@@ -99,15 +100,12 @@ class App extends React.Component {
     this.checkCookies();
   };
 
-  registerPageView = () => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  };
-
   registerAnalysisButton = () => {
     ReactGA.event({
       category: "Analysis",
       action: "Analysis button pressed",
     });
+    ReactPixel.track("Analysis button pressed");
   };
 
   registerAnalysisStart = () => {
@@ -115,6 +113,7 @@ class App extends React.Component {
       category: "Analysis",
       action: "Analysis input started",
     });
+    ReactPixel.track("Analysis input started");
   };
 
   registerAnalysisSend = () => {
@@ -122,6 +121,7 @@ class App extends React.Component {
       category: "Analysis",
       action: "Analysis requested",
     });
+    ReactPixel.track("Analysis requested");
   };
 
   registerContactStart = () => {
@@ -129,6 +129,7 @@ class App extends React.Component {
       category: "Contact",
       action: "Contact input started",
     });
+    ReactPixel.track("Contact input started");
   };
 
   registerContactSend = () => {
@@ -136,6 +137,7 @@ class App extends React.Component {
       category: "Contact",
       action: "Contact sent",
     });
+    ReactPixel.track("Contact sent");
   };
 
   // Handler for all child components who can set the mode
