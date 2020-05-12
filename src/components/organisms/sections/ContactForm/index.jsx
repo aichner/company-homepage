@@ -86,13 +86,14 @@ class ContactForm extends React.Component {
 
     // Analytics
     this.props.googleAnalytics.registerContactSend();
-
+    // Create the contact on Firebase
     this.props.createContact({
       full_name: this.state.full_name,
       email: this.state.email,
       phone: this.state.phone,
       note: this.state.note,
     });
+    // Redirect to thank you page
     this.props.history.replace("/thankyou");
   };
 
