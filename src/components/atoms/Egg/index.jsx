@@ -38,7 +38,7 @@ class Egg extends React.Component {
 
   registerEasterEgg = (id) => {
     ReactGA.event({
-      category: "Analysis",
+      category: "Easter Egg",
       action: "Easter Egg Found",
       label: id,
     });
