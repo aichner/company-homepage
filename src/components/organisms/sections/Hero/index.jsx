@@ -160,7 +160,7 @@ class HomePage extends React.Component {
                 <h3>Was taugt Deine Online-Präsenz?</h3>
                 <p className="lead">
                   Unsere <strong>kostenlose</strong> Analyse zeigt Dir den
-                  aktuellen Stand Deiner gesamten Online-Präsenz und liefert
+                  aktuellen Stand Deiner gesamten Online-Präsenz und liefert Dir
                   individuelle und unkomplizierte Lösungen.
                 </p>
                 <Link

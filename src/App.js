@@ -54,14 +54,17 @@ class App extends React.Component {
   checkCookies = () => {
     // Create custom user id for tracking
     let userId = localStorage.getItem("userId");
+
     if (!userId) {
       const sha256 = require("js-sha256");
+
       userId = sha256.create();
       localStorage.setItem("userId", userId);
     }
 
     // Check cookies
     let cookie = localStorage.getItem("cookie");
+
     if (cookie) {
       cookie = JSON.parse(cookie);
       if (cookie.marketing || cookie.statistics) {
