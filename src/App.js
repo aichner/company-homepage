@@ -105,7 +105,7 @@ class App extends React.Component {
       category: "Analysis",
       action: "Analysis button pressed",
     });
-    ReactPixel.track("Analysis button pressed");
+    ReactPixel.trackCustom("Analysis button pressed");
   };
 
   registerAnalysisStart = () => {
@@ -113,7 +113,7 @@ class App extends React.Component {
       category: "Analysis",
       action: "Analysis input started",
     });
-    ReactPixel.track("Analysis input started");
+    ReactPixel.trackCustom("Analysis input started");
   };
 
   registerAnalysisSend = () => {
@@ -121,7 +121,7 @@ class App extends React.Component {
       category: "Analysis",
       action: "Analysis requested",
     });
-    ReactPixel.track("Analysis requested");
+    ReactPixel.trackCustom("Analysis requested");
   };
 
   registerContactStart = () => {
@@ -129,7 +129,7 @@ class App extends React.Component {
       category: "Contact",
       action: "Contact input started",
     });
-    ReactPixel.track("Contact input started");
+    ReactPixel.trackCustom("Contact input started");
   };
 
   registerContactSend = () => {
@@ -137,7 +137,7 @@ class App extends React.Component {
       category: "Contact",
       action: "Contact sent",
     });
-    ReactPixel.track("Contact sent");
+    ReactPixel.trackCustom("Contact sent");
   };
 
   // Handler for all child components who can set the mode
