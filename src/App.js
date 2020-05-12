@@ -5,8 +5,10 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 //> Additional
-// Analytics
+// Google Analytics
 import ReactGA from "react-ga";
+// Facebook Pixel
+import ReactPixel from "react-facebook-pixel";
 
 //> Components
 /**
@@ -68,12 +70,26 @@ class App extends React.Component {
           window.location.hostname !== "127.0.0.1"
         ) {
           // Google Analytics
-          ReactGA.initialize("UA-148740308-4", {
+          ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS, {
             gaOptions: {
               userId,
             },
           });
           this.registerPageView();
+
+          // Facebook Pixel
+          if (cookie.marketing) {
+            // Advanced matching
+            let advancedMatching = {};
+            const info = localStorage.getItem("info");
+
+            if (info) {
+              // Store user email to match
+              advancedMatching = { em: JSON.parse(info).email };
+            }
+
+            ReactPixel.init(process.env.REACT_APP_FB_PIXEL, advancedMatching);
+          }
         }
       }
     }
