@@ -14,11 +14,7 @@ import {
   MDBCardBody,
   MDBRow,
   MDBCol,
-  MDBBtn,
-  MDBView,
   MDBIcon,
-  MDBMask,
-  MDBSmoothScroll,
   MDBRating,
 } from "mdbreact";
 
@@ -49,8 +45,6 @@ const reviews = [
 
 class CallToAction extends React.Component {
   render() {
-    const { darkMode, googleAnalytics } = this.props;
-
     return (
       <section id="reviews" className="py-5 text-center">
         <MDBContainer>
