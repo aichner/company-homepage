@@ -75,11 +75,11 @@ class CallToAction extends React.Component {
           <MDBRating
             feedback
             className="text-center"
-            getValue={(value) => {
+            getValue={(rating) => {
               ReactGA.event({
                 category: "Rating",
                 action: "Rating set",
-                label: "Rating: " + value,
+                label: rating.title + " - " + rating.value,
               });
             }}
             submitHandler={(event, title, rating, msg) => {
