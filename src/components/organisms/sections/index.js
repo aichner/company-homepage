@@ -5,6 +5,7 @@ import ContactForm from "./ContactForm";
 import Services from "./Services";
 import CallToAction from "./CallToAction";
 import Trusted from "./Trusted";
+import Reviews from "./Reviews";
 
 export {
   Hero,
@@ -12,6 +13,7 @@ export {
   Services,
   CallToAction,
   Trusted,
+  Reviews,
 };
 
 /**

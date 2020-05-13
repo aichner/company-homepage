@@ -14,6 +14,7 @@ import {
   Services,
   CallToAction,
   Trusted,
+  Reviews,
 } from "../../organisms/sections";
 
 //> CSS
@@ -43,6 +44,7 @@ class HomePage extends React.Component {
           <Services info={this.state.info} />
           <Trusted />
           <CallToAction googleAnalytics={globalFunctions.googleAnalytics} />
+          <Reviews />
           <ContactForm googleAnalytics={globalFunctions.googleAnalytics} />
         </>
       );
