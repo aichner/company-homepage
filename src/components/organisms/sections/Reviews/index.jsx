@@ -79,7 +79,7 @@ class CallToAction extends React.Component {
               ReactGA.event({
                 category: "Rating",
                 action: "Rating set",
-                label: value,
+                label: "Rating: " + value,
               });
             }}
             submitHandler={(event, title, rating, msg) => {
