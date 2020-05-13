@@ -2,6 +2,10 @@
 // Contains all the functionality necessary to define React components
 import React from "react";
 
+//> Additional
+// Analytics
+import ReactGA from "react-ga";
+
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
@@ -32,6 +36,14 @@ class Egg extends React.Component {
     }
   };
 
+  registerEasterEgg = (id) => {
+    ReactGA.event({
+      category: "Easter Egg",
+      action: "Easter Egg Found",
+      label: id,
+    });
+  };
+
   setEgg = () => {
     if (!this.state.found) {
       this.setState(
@@ -39,7 +51,10 @@ class Egg extends React.Component {
           found: true,
           set: true,
         },
-        () => localStorage.setItem("egg_" + this.props.id, true)
+        () => {
+          this.registerEasterEgg("egg_" + this.props.id);
+          localStorage.setItem("egg_" + this.props.id, true);
+        }
       );
     }
   };

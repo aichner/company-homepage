@@ -30,7 +30,7 @@ import "./callToAction.scss";
 
 class CallToAction extends React.Component {
   render() {
-    const { darkMode } = this.props;
+    const { darkMode, googleAnalytics } = this.props;
 
     return (
       <section id="calltoaction">
@@ -61,7 +61,10 @@ class CallToAction extends React.Component {
               Es ist einfach, <strong>jetzt</strong> zu starten!
             </h2>
             <p>Und der Einstieg und die Erstberatung sind kostenlos.</p>
-            <Link to="/analysis">
+            <Link
+              to="/analysis"
+              onClick={() => googleAnalytics.registerAnalysisButton()}
+            >
               <MDBBtn color="agency-red" size="lg">
                 <MDBIcon icon="rocket" className="pr-2" />
                 Jetzt starten

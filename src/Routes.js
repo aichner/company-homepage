@@ -21,14 +21,20 @@ const messagePage = ["about", "privacy", "thankyou"];
 
 class Routes extends React.Component {
   render() {
-    const { globalProps } = this.props;
+    const { globalProps, globalFunctions } = this.props;
 
     return (
       <Switch>
         <Route
           exact
           path="/"
-          render={(props) => <HomePage {...props} globalProps={globalProps} />}
+          render={(props) => (
+            <HomePage
+              {...props}
+              globalProps={globalProps}
+              globalFunctions={globalFunctions}
+            />
+          )}
         />
         <Route
           exact
@@ -55,14 +61,14 @@ class Routes extends React.Component {
           exact
           path="/analysis"
           render={(props) => (
-            <AnalysisPage {...props} globalProps={globalProps} />
+            <AnalysisPage
+              {...props}
+              globalProps={globalProps}
+              googleAnalytics={globalFunctions.googleAnalytics}
+            />
           )}
         />
-        <Route
-          exact
-          path="/warren"
-          render={(props) => <Robinett />}
-        />
+        <Route exact path="/warren" render={(props) => <Robinett />} />
         {messagePage.map((page, i) => {
           return (
             <Route

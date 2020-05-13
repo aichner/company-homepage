@@ -36,11 +36,24 @@ import "./analysis.scss";
 class AnalysisPage extends React.Component {
   state = {
     company: "",
-    full_Name: "",
+    full_name: "",
     email: "",
   };
 
   onTextChange = (e) => {
+    const { company, full_name, email } = this.state;
+
+    if (
+      email === "" &&
+      full_name === "" &&
+      company === "" &&
+      !this.state.firstChange
+    ) {
+      this.setState({ firstChange: true }, () =>
+        this.props.googleAnalytics.registerAnalysisStart()
+      );
+    }
+
     this.setState({
       [e.target.name]: e.target.value,
     });
@@ -54,6 +67,9 @@ class AnalysisPage extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
+    // Analytics
+    this.props.googleAnalytics.registerAnalysisSend();
 
     if (this.state.company && this.state.full_name && this.state.email) {
       // Compact the data
@@ -253,7 +269,7 @@ class AnalysisPage extends React.Component {
                               Mit dem Anfordern der Analyse bestätigen Sie, dass
                               Sie damit einverstanden sind, Ihre Analyse per
                               Post zu erhalten. Weiters bestätigen Sie, unsere{" "}
-                              <Link exact to="privacy" target="_blank">
+                              <Link to="privacy" target="_blank">
                                 Datenschutzerklärung
                               </Link>{" "}
                               gelesen und akzeptiert zu haben.

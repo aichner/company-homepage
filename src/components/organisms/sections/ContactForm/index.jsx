@@ -56,6 +56,20 @@ class ContactForm extends React.Component {
   };
 
   onTextChange = (e) => {
+    const { email, full_name, phone, note } = this.state;
+
+    if (
+      email === "" &&
+      full_name === "" &&
+      phone === "" &&
+      note === "" &&
+      !this.state.firstChange
+    ) {
+      this.setState({ firstChange: true }, () =>
+        this.props.googleAnalytics.registerContactStart()
+      );
+    }
+
     this.setState({
       [e.target.name]: e.target.value,
     });
@@ -70,12 +84,16 @@ class ContactForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
+    // Analytics
+    this.props.googleAnalytics.registerContactSend();
+    // Create the contact on Firebase
     this.props.createContact({
       full_name: this.state.full_name,
       email: this.state.email,
       phone: this.state.phone,
       note: this.state.note,
     });
+    // Redirect to thank you page
     this.props.history.replace("/thankyou");
   };
 
@@ -83,7 +101,7 @@ class ContactForm extends React.Component {
     const { darkMode } = this.props;
 
     return (
-      <section id="contactForm" className={darkMode ? "dark" : "light"}>
+      <section id="contactForm">
         <MDBContainer className="py-5">
           <MDBRow className="flex-center">
             <MDBCol md="6">

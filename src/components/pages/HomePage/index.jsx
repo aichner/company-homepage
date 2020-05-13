@@ -23,7 +23,7 @@ class HomePage extends React.Component {
   state = {};
 
   render() {
-    const { globalProps } = this.props;
+    const { globalProps, globalFunctions } = this.props;
 
     if (globalProps) {
       return (
@@ -36,11 +36,14 @@ class HomePage extends React.Component {
               liefert individuelle und unkomplizierte Lösungen."
             />
           </Helmet>
-          <Hero darkMode={globalProps.darkMode} />
+          <Hero
+            darkMode={globalProps.darkMode}
+            googleAnalytics={globalFunctions.googleAnalytics}
+          />
           <Services info={this.state.info} />
           <Trusted />
-          <CallToAction />
-          <ContactForm />
+          <CallToAction googleAnalytics={globalFunctions.googleAnalytics} />
+          <ContactForm googleAnalytics={globalFunctions.googleAnalytics} />
         </>
       );
     } else {

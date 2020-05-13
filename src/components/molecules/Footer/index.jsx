@@ -42,7 +42,7 @@ const slogans = [
 class Footer extends React.PureComponent {
   state = {
     slogan: "",
-    darkMode: "",
+    darkMode: false,
     clicks: 0,
     heart: false,
   };
@@ -170,7 +170,7 @@ class Footer extends React.PureComponent {
               <h4>Dark Mode</h4>
               <MDBSwitch
                 className="switch-red mb-3"
-                checked={this.state.darkMode}
+                checked={this.state.darkMode ? true : false}
                 onChange={this.handleSwitchChange}
               />
             </MDBCol>
@@ -337,7 +337,7 @@ class Footer extends React.PureComponent {
                   </MDBBtn>
                 </MDBSmoothScroll>
               ) : (
-                <Link exact to="/">
+                <Link to="/">
                   <MDBBtn size="lg" rounded color="agency-red">
                     Kontakt
                   </MDBBtn>

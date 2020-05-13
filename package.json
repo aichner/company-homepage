@@ -1,6 +1,6 @@
 {
   "name": "company-homepage",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "private": true,
   "license": "(EUPL-1.2)",
   "homepage": ".",
@@ -8,9 +8,12 @@
     "copy-to-clipboard": "^3.3.1",
     "firebase": "^7.2.0",
     "gh-pages": "^2.2.0",
-    "mdbreact": "mdbreact-4.25.6.tgz",
+    "js-sha256": "^0.9.0",
     "mdb-react-sortable": "mdb-react-sortable-4.26.0.tgz",
+    "mdbreact": "mdbreact-4.25.6.tgz",
     "node-sass": "^4.13.0",
+    "react-facebook-pixel": "^0.1.3",
+    "react-ga": "^2.7.0",
     "react-helmet": "^6.0.0",
     "react-redux": "^7.1.1",
     "react-redux-firebase": "^2.4.1",
@@ -43,5 +46,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "prettier": {
+    "useTabs": false
+  }
 }

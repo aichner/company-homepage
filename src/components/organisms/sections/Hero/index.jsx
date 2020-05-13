@@ -90,7 +90,7 @@ class HomePage extends React.Component {
   };
 
   render() {
-    const { darkMode } = this.props;
+    const { darkMode, googleAnalytics } = this.props;
 
     return (
       <section id="hero">
@@ -133,7 +133,10 @@ class HomePage extends React.Component {
             Unsere kostenlose Analyse zeigt Dir, welches Potential Deine Online
             Präsenz besitzt und was Du davon nutzt.
           </p>
-          <Link to="/analysis">
+          <Link
+            to="/analysis"
+            onClick={() => googleAnalytics.registerAnalysisButton()}
+          >
             <MDBBtn size="lg" color="agency-red" className="btn-start">
               <MDBIcon icon="rocket" className="pr-2" />
               JETZT herausfinden
@@ -157,10 +160,13 @@ class HomePage extends React.Component {
                 <h3>Was taugt Deine Online-Präsenz?</h3>
                 <p className="lead">
                   Unsere <strong>kostenlose</strong> Analyse zeigt Dir den
-                  aktuellen Stand Deiner gesamten Online-Präsenz und liefert
+                  aktuellen Stand Deiner gesamten Online-Präsenz und liefert Dir
                   individuelle und unkomplizierte Lösungen.
                 </p>
-                <Link to="/analysis">
+                <Link
+                  to="/analysis"
+                  onClick={() => googleAnalytics.registerAnalysisButton()}
+                >
                   <MDBBtn size="lg" color="agency-red" className="btn-start">
                     <MDBIcon icon="rocket" className="pr-2" />
                     JETZT kostenlos herausfinden
