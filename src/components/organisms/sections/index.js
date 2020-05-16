@@ -6,6 +6,7 @@ import Services from "./Services";
 import CallToAction from "./CallToAction";
 import Trusted from "./Trusted";
 import Reviews from "./Reviews";
+import Referral from "./Referral";
 
 export {
   Hero,
@@ -14,6 +15,7 @@ export {
   CallToAction,
   Trusted,
   Reviews,
+  Referral,
 };
 
 /**
