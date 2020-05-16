@@ -18,12 +18,11 @@ class Referral extends React.Component {
   state = {};
 
   render() {
-    const { darkMode, googleAnalytics } = this.props;
+    const { ref } = this.props;
 
     return (
       <section id="referral">
-        <MDBContainer className="pt-5">
-          {" "}
+        <MDBContainer className="py-5">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
@@ -32,7 +31,7 @@ class Referral extends React.Component {
           g elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
           mag na aliquyam erat, sed diam voluptua. At vero eos et accusam et
           just o duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.{" "}
+          takimata sanctus est Lorem ipsum dolor sit amet.
         </MDBContainer>
       </section>
     );

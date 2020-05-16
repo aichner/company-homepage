@@ -50,7 +50,9 @@ class HomePage extends React.Component {
             darkMode={globalProps.darkMode}
             googleAnalytics={globalFunctions.googleAnalytics}
           />
-          {location?.search && location.search.includes("ref") && <Referral />}
+          {location?.search && location.search.includes("ref") && (
+            <Referral ref={location.search} />
+          )}
           <Services info={this.state.info} />
           <Trusted />
           <CallToAction googleAnalytics={globalFunctions.googleAnalytics} />
