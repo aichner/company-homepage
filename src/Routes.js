@@ -85,6 +85,17 @@ class Routes extends React.Component {
           render={(props) => <ErrorPage {...props} globalProps={globalProps} />}
         />
         <Route component={HomePage} />
+        <Route
+          exact
+          path="/:ref"
+          render={(props) => (
+            <HomePage
+              {...props}
+              globalProps={globalProps}
+              globalFunctions={globalFunctions}
+            />
+          )}
+        />
       </Switch>
     );
   }
