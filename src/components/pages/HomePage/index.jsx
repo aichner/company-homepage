@@ -1,6 +1,8 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
+// Router DOM bindings
+import { withRouter } from "react-router-dom";
 
 //> Additional
 // React Helmet
@@ -31,62 +33,38 @@ class HomePage extends React.Component {
   }
 
   render() {
-    const { globalProps, globalFunctions } = this.props;
+    const { globalProps, globalFunctions, location } = this.props;
 
     if (globalProps) {
-      if (this.state.ref) {
-        return (
-          <>
-            <Helmet>
-              <title>Werbeagentur Christian Aichner - Ihr Partner</title>
-              <meta
-                name="description"
-                content="Unsere kostenlose Analyse zeigt Dir den aktuellen Stand Deiner gesamten Online-Präsenz und
+      return (
+        <>
+          <Helmet>
+            <title>Werbeagentur Christian Aichner - Ihr Partner</title>
+            <meta
+              name="description"
+              content="Unsere kostenlose Analyse zeigt Dir den aktuellen Stand Deiner gesamten Online-Präsenz und
               liefert individuelle und unkomplizierte Lösungen."
-              />
-            </Helmet>
-            <Hero
-              darkMode={globalProps.darkMode}
-              googleAnalytics={globalFunctions.googleAnalytics}
             />
-            <Referral />
-            <Services info={this.state.info} />
-            <Trusted />
-            <CallToAction googleAnalytics={globalFunctions.googleAnalytics} />
-            <Reviews />
-            <ContactForm googleAnalytics={globalFunctions.googleAnalytics} />
-          </>
-        );
-      } else {
-        return (
-          <>
-            <Helmet>
-              <title>Werbeagentur Christian Aichner - Ihr Partner</title>
-              <meta
-                name="description"
-                content="Unsere kostenlose Analyse zeigt Dir den aktuellen Stand Deiner gesamten Online-Präsenz und
-              liefert individuelle und unkomplizierte Lösungen."
-              />
-            </Helmet>
-            <Hero
-              darkMode={globalProps.darkMode}
-              googleAnalytics={globalFunctions.googleAnalytics}
-            />
-            <Services info={this.state.info} />
-            <Trusted />
-            <CallToAction googleAnalytics={globalFunctions.googleAnalytics} />
-            <Reviews />
-            <ContactForm googleAnalytics={globalFunctions.googleAnalytics} />
-          </>
-        );
-      }
+          </Helmet>
+          <Hero
+            darkMode={globalProps.darkMode}
+            googleAnalytics={globalFunctions.googleAnalytics}
+          />
+          {location?.search && location.search.includes("ref") && <Referral />}
+          <Services info={this.state.info} />
+          <Trusted />
+          <CallToAction googleAnalytics={globalFunctions.googleAnalytics} />
+          <Reviews />
+          <ContactForm googleAnalytics={globalFunctions.googleAnalytics} />
+        </>
+      );
     } else {
       return null;
     }
   }
 }
 
-export default HomePage;
+export default withRouter(HomePage);
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)

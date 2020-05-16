@@ -53,7 +53,7 @@ class CallToAction extends React.Component {
           <MDBRow>
             {reviews.map((review, i) => {
               return (
-                <MDBCol className="text-center item" md="4">
+                <MDBCol className="text-center item" md="4" key={i}>
                   <MDBCard>
                     <MDBCardBody>
                       <div className="mb-3">
