@@ -6,6 +6,9 @@ import React from "react";
 // "Material Design for Bootstrap" is a great UI design framework
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
+//> Components
+import { PartnerModal } from "../../../molecules";
+
 //> CSS
 import "./trusted.scss";
 
@@ -36,6 +39,19 @@ const data = [
 ];
 
 class Trusted extends React.PureComponent {
+  state = {
+    showModal: false,
+    partner: "",
+  };
+
+  imageClick(partner) {
+    this.setState({ showModal: true, partner: partner });
+  }
+
+  changeShow() {
+    this.setState({ showModal: false });
+  }
+
   render() {
     return (
       <div id="trusted">
@@ -50,13 +66,23 @@ class Trusted extends React.PureComponent {
           <MDBRow className="flex-center">
             {data.map((item, i) => {
               return (
-                <MDBCol sm="2" className="p-3" key={i}>
+                <MDBCol
+                  sm="2"
+                  className="p-3 partner"
+                  key={i}
+                  onClick={() => this.imageClick(item.alt)}
+                >
                   <img src={item.src} alt={item.alt} className="img-fluid" />
                 </MDBCol>
               );
             })}
           </MDBRow>
         </MDBContainer>
+        <PartnerModal
+          show={this.state.showModal}
+          partner={this.state.partner}
+          changeShow={() => this.changeShow()}
+        />
       </div>
     );
   }
