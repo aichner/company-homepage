@@ -1,6 +1,18 @@
-.partner {
-  text-align: center;
+#partnermodal {
+  .logo {
+    text-align: center;
+    background-color: #efefef;
+  }
+
+  .card {
+    margin-top: 15px;
+    background-color: #ffffff;
+    .card-footer {
+      background: darken(white, 2%);
+    }
+  }
 }
+
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
  * Copyright © 2019-2020 Werbeagentur Christian Aichner
