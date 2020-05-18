@@ -4,7 +4,16 @@ import React from "react";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
-import { MDBModal, MDBModalBody } from "mdbreact";
+import {
+  MDBModal,
+  MDBModalBody,
+  MDBCard,
+  MDBCardBody,
+  MDBCardFooter,
+  MDBBtn,
+  MDBRow,
+  MDBCol,
+} from "mdbreact";
 
 //> CSS
 import "./partnermodal.scss";
@@ -23,16 +32,91 @@ import e4yIMG from "../../../assets/content/trusted/e4y.png";
 
 //> Data
 const data = [
-  { src: pharmaziegasseIMG, alt: "Pharmaziegasse Logo" },
-  { src: snekIMG, alt: "SNEK" },
-  { src: gasserPartnerIMG, alt: "Gasser+Partner" },
-  { src: kelagbigbandIMG, alt: "KELAG BigBand" },
-  { src: e4yIMG, alt: "Emotions 4 You" },
-  { src: erlebnishotelIMG, alt: "Erlebnishotel Mölltal" },
-  { src: psvIMG, alt: "Polizeisportverein" },
-  { src: rauchIMG, alt: "Andreas Rauch" },
-  { src: kelagIMG, alt: "KELAG" },
-  { src: bluelupiIMG, alt: "Blue Lupi" },
+  {
+    src: pharmaziegasseIMG,
+    alt: "Pharmaziegasse Logo",
+    projects: [
+      {
+        titel: "projekt1",
+        beschreibung: "lol",
+        link: "https://www.nasa.com",
+      },
+      { titel: "projekt2", beschreibung: "rofl", link: "abc" },
+      { titel: "projekt3", beschreibung: "lmao", link: "abc" },
+    ],
+  },
+  {
+    src: snekIMG,
+    alt: "SNEK",
+    projects: [
+      { titel: "projekt1", beschreibung: "lol", link: "abc" },
+      { titel: "projekt2", beschreibung: "rofl", link: "abc" },
+      { titel: "projekt3", beschreibung: "lmao", link: "abc" },
+    ],
+  },
+  {
+    src: gasserPartnerIMG,
+    alt: "Gasser+Partner",
+  },
+  {
+    src: kelagbigbandIMG,
+    alt: "KELAG BigBand",
+    projects: [
+      { titel: "projekt1", beschreibung: "lol", link: "abc" },
+      { titel: "projekt2", beschreibung: "rofl", link: "abc" },
+      { titel: "projekt3", beschreibung: "lmao", link: "abc" },
+    ],
+  },
+  {
+    src: e4yIMG,
+    alt: "Emotions 4 You",
+    projects: [
+      { titel: "projekt1", beschreibung: "lol", link: "abc" },
+      { titel: "projekt2", beschreibung: "rofl", link: "abc" },
+      { titel: "projekt3", beschreibung: "lmao", link: "abc" },
+    ],
+  },
+  {
+    src: erlebnishotelIMG,
+    alt: "Erlebnishotel Mölltal",
+    projects: [
+      { titel: "projekt1", beschreibung: "lol", link: "abc" },
+      { titel: "projekt2", beschreibung: "rofl", link: "abc" },
+      { titel: "projekt3", beschreibung: "lmao", link: "abc" },
+    ],
+  },
+  {
+    src: psvIMG,
+    alt: "Polizeisportverein",
+    projects: [
+      { titel: "projekt1", beschreibung: "lol", link: "abc" },
+      { titel: "projekt2", beschreibung: "rofl", link: "abc" },
+      { titel: "projekt3", beschreibung: "lmao", link: "abc" },
+    ],
+  },
+  {
+    src: rauchIMG,
+    alt: "Andreas Rauch",
+    projects: [
+      { titel: "projekt1", beschreibung: "lol", link: "abc" },
+      { titel: "projekt2", beschreibung: "rofl", link: "abc" },
+      { titel: "projekt3", beschreibung: "lmao", link: "abc" },
+    ],
+  },
+  {
+    src: kelagIMG,
+    alt: "KELAG",
+    projects: [{ titel: "projekt1", beschreibung: "lol", link: "abc" }],
+  },
+  {
+    src: bluelupiIMG,
+    alt: "Blue Lupi",
+    projects: [
+      { titel: "projekt1", beschreibung: "lol", link: "abc" },
+      { titel: "projekt2", beschreibung: "rofl", link: "abc" },
+      { titel: "projekt3", beschreibung: "lmao", link: "abc" },
+    ],
+  },
 ];
 
 class PartnerModal extends React.PureComponent {
@@ -55,12 +139,37 @@ class PartnerModal extends React.PureComponent {
         isOpen={this.props.show}
         disableFocusTrap={true}
         toggle={() => this.props.changeShow()}
-        className="partner"
+        id="partnermodal"
       >
-        <MDBModalBody>
-          <h1>{this.props.partner}</h1>
-          <div>Lorem ipsum dolor sit amet</div>
+        <MDBModalBody className="logo">
           <img src={img.src} alt={img.alt} className="img-fluid" />
+          <div>Lorem ipsum dolor sit amet</div>
+          <MDBRow>
+            {img.projects &&
+              img.projects.map((p) => {
+                return (
+                  <MDBCol>
+                    <MDBCard className="card">
+                      <MDBCardBody>
+                        <h2>{p.titel}</h2>
+                        <div>{p.beschreibung}</div>
+                      </MDBCardBody>
+                      <MDBCardFooter>
+                        <a
+                          href={p.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <MDBBtn color="agency-red" outline rounded>
+                            Click here - not a scam
+                          </MDBBtn>
+                        </a>
+                      </MDBCardFooter>
+                    </MDBCard>
+                  </MDBCol>
+                );
+              })}
+          </MDBRow>
         </MDBModalBody>
       </MDBModal>
     );
