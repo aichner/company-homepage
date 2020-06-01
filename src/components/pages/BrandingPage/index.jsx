@@ -51,7 +51,7 @@ class BrandingPage extends React.Component {
                 <MDBCardBody>
                   <p className="lead">Logo (on light)</p>
                   <Logo className="logo-light" />
-                  <div>
+                  {/*<div>
                     <MDBBtn
                       color="elegant"
                       rounded
@@ -68,7 +68,7 @@ class BrandingPage extends React.Component {
                       <MDBIcon icon="download" className="pr-2" />
                       .png
                     </MDBBtn>
-                  </div>
+                    </div>*/}
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
@@ -77,7 +77,7 @@ class BrandingPage extends React.Component {
                 <MDBCardBody className="elegant-color white-text">
                   <p className="lead">Logo (on dark)</p>
                   <Logo className="logo-dark" />
-                  <div>
+                  {/*<div>
                     <MDBBtn
                       color="white"
                       rounded
@@ -94,7 +94,7 @@ class BrandingPage extends React.Component {
                       <MDBIcon icon="download" className="pr-2" />
                       .png
                     </MDBBtn>
-                  </div>
+                  </div>*/}
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
@@ -108,14 +108,14 @@ class BrandingPage extends React.Component {
                     alt="Weddings logo"
                   />
                   <div>
-                    <MDBBtn
+                    {/*<MDBBtn
                       color="white"
                       rounded
                       onClick={() => this.downloadImage("wedding", "png")}
                     >
                       <MDBIcon icon="download" className="pr-2" />
                       .png
-                    </MDBBtn>
+                    </MDBBtn>*/}
                   </div>
                 </MDBCardBody>
               </MDBCard>
