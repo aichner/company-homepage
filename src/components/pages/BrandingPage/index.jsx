@@ -68,7 +68,7 @@ class BrandingPage extends React.Component {
                       <MDBIcon icon="download" className="pr-2" />
                       .png
                     </MDBBtn>
-                    </div>*/}
+                  </div>*/}
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
