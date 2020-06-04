@@ -6,6 +6,8 @@ import React from "react";
 // React Helmet
 import { Helmet } from "react-helmet";
 
+import Backendless from "backendless";
+
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
@@ -30,6 +32,31 @@ import { ReactComponent as Logo } from "../../../assets/content/logo_full.svg";
 import weddingsLogo from "../../../assets/content/weddings.png";
 
 class BrandingPage extends React.Component {
+  downloadImage() {
+    Backendless.initApp(
+      "B47C51E2-8DC1-7B33-FFEB-4F2A1BE95B00",
+      "F504C432-4194-48BA-ABE9-6314D312C298"
+    );
+
+    const fileURL =
+      "https://backendlessappcontent.com/B47C51E2-8DC1-7B33-FFEB-4F2A1BE95B00" +
+      "/2FBC5597-9DF4-40AE-8525-7146FC192CF0/files/logos/agency_dark.svg";
+
+    const onSuccess = (fileContent) => {
+      console.log("File content is:\n===========================");
+      console.log(fileContent);
+      console.log("===========================");
+    };
+
+    const onError = (error) => {
+      console.error("Server reported an error: ", error.message);
+      console.error("error code: ", error.code);
+      console.error("http status: ", error.status);
+    };
+
+    Backendless.Request.get(fileURL).then(onSuccess).catch(onError);
+  }
+
   render() {
     const { globalProps } = this.props;
 
@@ -77,24 +104,26 @@ class BrandingPage extends React.Component {
                 <MDBCardBody className="elegant-color white-text">
                   <p className="lead">Logo (on dark)</p>
                   <Logo className="logo-dark" />
-                  {/*<div>
-                    <MDBBtn
-                      color="white"
-                      rounded
-                      onClick={() => this.downloadImage("light", "svg")}
-                    >
-                      <MDBIcon icon="download" className="pr-2" />
-                      .svg
-                    </MDBBtn>
-                    <MDBBtn
-                      color="white"
-                      rounded
-                      onClick={() => this.downloadImage("light", "png")}
-                    >
-                      <MDBIcon icon="download" className="pr-2" />
-                      .png
-                    </MDBBtn>
-                  </div>*/}
+                  {
+                    <div>
+                      <MDBBtn
+                        color="white"
+                        rounded
+                        onClick={() => this.downloadImage()}
+                      >
+                        <MDBIcon icon="download" className="pr-2" />
+                        .svg
+                      </MDBBtn>
+                      <MDBBtn
+                        color="white"
+                        rounded
+                        onClick={() => this.downloadImage("light", "png")}
+                      >
+                        <MDBIcon icon="download" className="pr-2" />
+                        .png
+                      </MDBBtn>
+                    </div>
+                  }
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
