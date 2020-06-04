@@ -21,6 +21,9 @@ import { ScrollToTop } from "./components/atoms";
 // Routes
 import Routes from "./Routes";
 
+//> Bilingual Object
+import { textVariables } from "./utilities/language";
+
 // Check if dark or light mode
 function getMode() {
   let mode = localStorage.getItem("mode");
