@@ -1,0 +1,23 @@
+#packages {
+  background: #e7e7e7;
+  .item {
+    .fa-star {
+      color: #ffc107;
+      margin: 0 0.2rem;
+    }
+  }
+  .mdb-rating {
+    justify-content: center !important;
+    i {
+      font-size: 1.4rem;
+    }
+  }
+  .title {
+    margin-top: 10px;
+  }
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019-2020 Werbeagentur Christian Aichner
+ */
