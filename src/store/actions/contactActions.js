@@ -5,8 +5,7 @@ export const createContact = (newContact) => {
     // Create contact contact
     firestore
       .collection("contact")
-      .doc()
-      .set({
+      .add({
         ...newContact,
         timestamp: new Date().getTime(),
         assigned: null,
@@ -28,8 +27,7 @@ export const createAnalysisRequest = (newRequest) => {
     // Create contact contact
     firestore
       .collection("requests")
-      .doc()
-      .set({
+      .add({
         ...newRequest,
         timestamp: new Date().getTime(),
         assigned: null,

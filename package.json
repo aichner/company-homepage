@@ -1,6 +1,6 @@
 {
   "name": "company-homepage",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "private": true,
   "license": "(EUPL-1.2)",
   "homepage": ".",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aichner/Company-Homepage.git"
+    "url": "git+https://github.com/aichner/Company-Homepage.git"
   },
   "scripts": {
     "start": "react-scripts start",
