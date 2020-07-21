@@ -27,8 +27,6 @@ import "./index.scss";
 // Root component
 import App from "./App";
 
-import registerServiceWorker from "./registerServiceWorker";
-
 //> Redux
 // Store, Middleware, Compose
 import { createStore, applyMiddleware, compose } from "redux";
@@ -92,7 +90,6 @@ store.firebaseAuthIsReady.then(() => {
     </Provider>,
     document.getElementById("root")
   );
-  registerServiceWorker();
 });
 
 /**
