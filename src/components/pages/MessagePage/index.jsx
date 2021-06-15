@@ -147,11 +147,11 @@ class MessagePage extends React.Component {
               <br />
               Danke für Deine Nachricht!
             </h2>
-            <p className="lead mb-2">Wir melden uns schnellstmöglich möglich bei Dir.</p>
+            <p className="lead mb-2">
+              Wir melden uns schnellstmöglich möglich bei Dir.
+            </p>
             <Link to="/">
-              <MDBBtn color="agency-red">
-                Zurück zur Hompage
-              </MDBBtn>
+              <MDBBtn color="agency-red">Zurück zur Hompage</MDBBtn>
             </Link>
           </div>
         )}
@@ -1078,6 +1078,16 @@ class MessagePage extends React.Component {
               Cloudflare ist aktiver Teilnehmer beim EU-U.S. Privacy Shield
               Framework, wodurch der korrekte und sichere Datentransfer
               persönlicher Daten geregelt wird.
+            </p>
+            <p>
+              Quelle: Erstellt mit dem{" "}
+              <a
+                href="https://www.adsimple.at/datenschutz-generator/"
+                target="_blank"
+              >
+                Datenschutz Generator
+              </a>{" "}
+              von AdSimple
             </p>
           </div>
         )}
